@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Rexy's Holiday Race</title>
+  </head>
+
+  <body>
+    <style>
+      :root {
+        --projectColor: #F0EAE4;
+        --nextProjectColor: #FEBD28;
+      }
+    </style>
+
+      <div id="navGrid">
+        <div id="nav">
+          <div class="navItems">
+            <div class="menuBtn">
+              <input type="checkbox">
+              <span></span>
+              <span></span>
+            </div>
+            <h1 class="title">Rexy's Holiday Race</h1>
+            <h1 class="year">2019</h1>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="menu">
+        <div class="menuItems">
+          <li id="2020">2020</li>
+          <li id="2019">2019</li>
+          <li id="2018">2018</li>
+          <img src="img/logo.svg" alt="">
+          <ul class="menuSecondary">
+            <li id="p1"></li>
+            <li id="p2"></li>
+            <li id="p3"></li>
+            <li id="p4"></li>
+            <li id="p5"></li>
+            <li id="p6"></li>
+          </ul>
+        </div>
+      </div>
+      <div class="menuOverlay"></div>
+
+
+      <div id="grid">
+
+        <span id="backgroundColor"></span>
+        <h1 id="introCopy">To support the 2019 Holiday campaign we partnered with the Coach Japan team to create an entertainment first experience. Following on from the narrative of the campaign we opted for an immersive game to be played via Social media channels, where players tried to get Rexy to her holiday party.</h1>
+        <img id="heroImage" src="img/rexyrace/hero.png" alt="">
+        <a href="#"><span>Launch the Game</span></a>
+
+        <p class="textSection">With Gen-Z being the primary target audience we opted to explore an nostalgic arcade asethetic, often seen in the early 90s. Throughout the game design we designed with that era in mind, resulting in the gameplay and menu being contextual to arcade experiences from that age.</p>
+        <img class="imageSection" src="img/rexyrace/screens.png" alt="">
+        <p class="caption">Gameplay Screens</p>
+        <p class="textSection">3 bespoke avatars were created for players to choose from at the beginning of the game. Working closely with the Illustrator to render out Rexy in Pixel Art for the first time.</p>
+        <video class="imageSection slim" src="img/rexyrace/avatars.mp4" autoplay loop poster="img/rexyrace/avatars.jpg"></video>
+        <p class="caption">Avatars</p>
+        <p class="textSection">In total we created four scenes, all made from a mixture of elements from Tokyo and New York City.</p>
+
+        <div class="carouselSection">
+          <div class="carousel-cell">
+            <img src="img/rexyrace/stage1.png" alt="">
+          </div>
+          <div class="carousel-cell">
+            <img src="img/rexyrace/stage2.png" alt="">
+          </div>
+          <div class="carousel-cell">
+            <img src="img/rexyrace/stage3.png" alt="">
+          </div>
+        </div>
+        <p class="caption carouselCaption">Stage Artwork</p>
+
+        <p class="textSection">Throughout the game we introduced Collectibles. These included bespoke drawings from the Horse & Carriage collection along with other everyday objects (found within the scenes).</p>
+        <img class="imageSection" src="img/rexyrace/collectibles.png" alt="">
+        <p class="caption">Game Collectibles</p>
+
+        <div class="footer">
+
+        <div class="results">
+          <div class="column">
+            <h1>Key Results</h1>
+          </div>
+          <div class="column">
+            <p class="row">
+              Number of Unique Players<br>
+              <b>211,497</b>
+            </p>
+            <p class="row">
+              Number of Unique Game Plays<br>
+              <b>264,318</b>
+            </p>
+            <p class="row">
+              Audience Demographics<br>
+              <b>18-35</b>
+            </p>
+          </div>
+        </div>
+
+        <div class="credits">
+          <div class="column">
+            <h1>Credits</h1>
+          </div>
+          <div class="column">
+          <p><b>
+            Art Direction<br>
+            Copywriting<br>
+            Illustration<br>
+            Development<br>
+            Project Management
+          </b></p>
+          <p>
+            Coach Creative Team<br>
+            Coach Creative Team<br>
+            Jude Buffem<br>
+            The Goal (Japan)<br>
+            The Goal & Coach Japan
+          </p>
+        </div>
+        </div>
+      </div>
+
+
+    <h1 class="nextProject">Life Coach</h1>
+
+    </div>   <!-- #grid -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.0/gsap.min.js"></script>
+
+  <!-- menu -->
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $(".menuBtn").click(function(){
+          $("#menu").animate({
+              width: "toggle"
+            });
+          $(".menuOverlay").fadeToggle(500);
+          $(".menuItems").children().fadeToggle(500);
+          $("#menu").css('transition', 'width 0s ease');
+      });
+
+      $(".menuItems").children().hover(function() {
+        $("#menu").css('width', '50%');
+        $("#menu").css('transition', 'width .3s ease');
+          $("#menu").mouseout(function() {
+            $("#menu").css('width', '20%');
+          });
+      });
+
+      $("#2020").hover(function() {
+            $("#p1").text("Isetan");
+            $("#p2").text("CitySole AR");
+            $("#p3").text("Richard Bernstein");
+            $("#p4").text("");
+            $("#p5").text("");
+            $("#p6").text("");
+      });
+      $("#2019").hover(function() {
+            $("#p1").text("Coach x MBJ");
+            $("#p2").text("Life Coach");
+            $("#p3").text("Rexy's Holiday Race");
+            $("#p4").text("Summer of Signature");
+            $("#p5").text("Digital Graffiti");
+            $("#p6").text("");
+      });
+      $("#2018").hover(function() {
+            $("#p1").text("Scene Stealers");
+            $("#p2").text("Graffiti Map");
+            $("#p3").text("The Arcade");
+            $("#p4").text("");
+            $("#p5").text("");
+            $("#p6").text("");
+      });
+  });
+  </script>
+
+
+
+
+  </body>
+</html>
