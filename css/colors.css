@@ -1,0 +1,39 @@
+/*
+___  ____ ____  _ ____ ____ ___    ____ ____ _    ____ ____ ____
+|__] |__/ |  |  | |___ |     |     |    |  | |    |  | |__/ [__
+|    |  \ |__| _| |___ |___  |     |___ |__| |___ |__| |  \ ___]
+*/
+:root {
+/* 2019 */
+  --RexyRace: #F0EAE4;
+  --LifeCoach: #FEBD28;
+  --MBJ: #EA9828;
+  --CitySole: #DF592A;
+/* 2018 */
+  --SceneStealers: #6291A3;
+/* 2017 */
+  --Arcade: #FF00FF;
+}
+
+
+/* 2019 */
+.lifecoach:hover ~ .menuBackground {
+  background-color: var(--LifeCoach);
+}
+.rexyrace:hover ~ .menuBackground {
+  background-color: var(--RexyRace);
+}
+.mbj:hover ~ .menuBackground {
+  background-color: var(--MBJ);
+}
+.citysole:hover ~ .menuBackground {
+  background-color: var(--CitySole);
+}
+/* 2018 */
+.scenestealers:hover ~ .menuBackground {
+  background-color: var(--SceneStealers);
+}
+/* 2017 */
+.arcade:hover ~ .menuBackground {
+  background-color: var(--Arcade);
+}

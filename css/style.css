@@ -26,14 +26,14 @@ a {
   text-align: center;
 }
 a span {
-  border-bottom: 2px solid rgba(0,0,0,.3);
+  border-bottom: 2px solid rgba(0,0,0,.5);
   padding-bottom: 3px;
   transition: all .3s ease;
 
 }
 a span:hover {
-  border-bottom: 2px solid rgba(0,0,0,1);
-  padding-bottom: 4px;
+  border-bottom: 2px solid var(--projectColor);
+  padding-bottom: 3px;
   transition: all .3s ease;
 }
 :root {
@@ -116,56 +116,71 @@ _  _ ____ _  _
   left: 0;
   top: 0;
   height: 100%;
-  width: 20%;
-  /* max-width: 350px; */
+  width: 17%;
   background-color: white;
   display: none;
   z-index: 1;
   overflow: hidden;
+  pointer-events: none;
 }
-#menu .menuItems {
+.menuItems {
   display: grid;
   padding: 25vh 0 0 6.6vw;
   pointer-events: none;
 }
-#menu  .menuItems img {
+.menuItems p {
+  display: none;
+  position: absolute;
+  left: 17.15vw;
+  top: 80px;
+  font-size: 24px;
+}
+.menuItems img {
   display: none;
   position: absolute;
   top: 90vh;
 }
-#menu .menuItems li {
+.menuYear {
   display: none;
   font-size: 35.2px;
   line-height: 80px;
   text-align: left;
   cursor: pointer;
   list-style: none;
-  width: 31%;
+  width: 9vw;
+  transition: opacity .3s ease;
 }
-#menu .menuItems ul li {
+.menuItems:hover > li {
+  opacity: .3;
+}
+.menuItems > li {
+  pointer-events: auto;
+}
+.menuItems li:hover {
+  opacity: 1;
+}
+.menuProject {
+  position: absolute;
+  left: 15vw;
+  top: 25vh;
+  display: none;
+  height: 100vh;
+}
+.menuProject a {
   display: block;
   font-size: 54px;
   line-height: 100px;
-  cursor: pointer;
-  z-index: 10;
-  width: unset;
+  width: 50vw;
+  text-align: left;
+  transition: opacity .3s ease;
 }
-.menuSecondary {
-  position: absolute;
-  left: 18vw;
-  top:25vh;
-  display: none;
-  height: 100vh;
-  width: 28vw;
+.menuProject:hover > a {
+  opacity: .3;
 }
-
-#menu .menuItems:hover > li {
-  opacity: .2;
-}
-#menu .menuItems > li {
+.menuProject > a {
   pointer-events: auto;
 }
-#menu .menuItems li:hover {
+.menuProject a:hover {
   opacity: 1;
 }
 .menuOverlay {
@@ -177,9 +192,17 @@ _  _ ____ _  _
   width: 100vw;
   background-color: rgba(0,0,0,.2);
 }
-
-
-
+.menuBackground {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 60%;
+  background-color: rgba(255,255,255,0);
+  pointer-events: none;
+  z-index: -1;
+  transition: background-color .3s ease;
+}
 
 
 /*
@@ -388,6 +411,4 @@ ____ _  _ ____ ____ _ ____ ____
   .slim {
     grid-column: 2/15;
   }
-
-
 }
