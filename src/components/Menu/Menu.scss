@@ -1,0 +1,90 @@
+#menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 17%;
+  background-color: white;
+  display: none;
+  z-index: 3;
+  overflow: hidden;
+  pointer-events: none;
+}
+.menuItems {
+  display: grid;
+  padding: 25vh 0 0 6.6vw;
+  pointer-events: none;
+  & p {
+    display: none;
+    position: absolute;
+    left: 17.15vw;
+    top: 80px;
+    font-size: 24px;
+  }
+  & img {
+    display: none;
+    position: absolute;
+    top: 90vh;
+  }
+  &:hover > li {
+    opacity: .3;
+  }
+  & li {
+    pointer-events: auto;
+  }
+  & li:hover {
+    opacity: 1;
+  }
+}
+.menuYear {
+  display: none;
+  font-size: 35.2px;
+  line-height: 80px;
+  text-align: left;
+  cursor: pointer;
+  list-style: none;
+  width: 9vw;
+  transition: opacity .3s ease;
+}
+.menuProject {
+  position: absolute;
+  left: 15vw;
+  top: 25vh;
+  display: none;
+  height: 100vh;
+  & li {
+    display: block;
+    font-size: 54px;
+    line-height: 100px;
+    width: 50vw;
+    text-align: left;
+    transition: opacity .3s ease;
+  }
+  &:hover > li {
+    opacity: .3;
+  }
+  & li:hover {
+    opacity: 1;
+  }
+}
+.menuOverlay {
+  position: fixed;
+  display: none;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0,0,0,.2);
+  z-index: 2;
+}
+.menuBackground {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255,255,255,0);
+  pointer-events: none;
+  z-index: -1;
+  transition: background-color .3s ease;
+}

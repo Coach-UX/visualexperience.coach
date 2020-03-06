@@ -1,0 +1,61 @@
+#navGrid {
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  grid-gap: 10px;
+}
+#nav {
+  grid-column: 2/15;
+  margin-top: 75px;
+  height: 60px;
+}
+.navItems {
+  position: relative;
+  height: inherit;
+}
+.title {
+  position: absolute;
+  left: 50%;
+  text-align: center;
+  transform: translateX(-50%);
+}
+.year {
+  position: absolute;
+  right: 0;
+  text-align: right;
+}
+.menuBtn {
+  position: absolute;
+  top: 94px;
+  z-index: 4;
+  cursor: pointer;
+  position: fixed;
+  & input {
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    top: -22px;
+    left: -13px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 5;
+  }
+  & span {
+    width: 20px;
+    background-color: black;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform-origin: 0% 0%;
+    transition: transform 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
+  }
+  & span:nth-child(2) {
+    top: 10px;
+  }
+  & input:checked ~ span {
+    transform: rotate(45deg) translate(-2px, -1px);
+  }
+  & input:checked ~ span:nth-child(2) {
+    transform: rotate(-45deg) translate(-2px, 0.5px);
+  }
+}

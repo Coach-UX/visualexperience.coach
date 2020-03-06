@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,500");
+@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed:800&display=swap');
+
+/*
+___  ____ ____  _ ____ ____ ___    ____ ____ _    ____ ____ ____
+|__] |__/ |  |  | |___ |     |     |    |  | |    |  | |__/ [__
+|    |  \ |__| _| |___ |___  |     |___ |__| |___ |__| |  \ ___]
+*/
+:root {
+/* 2019 */
+  --RexyRace: #9BC4B6;
+  --LifeCoach: #FEBD28;
+  --MBJ: #EA9828;
+  --CitySole: #DF592A;
+/* 2018 */
+  --SceneStealers: #6291A3;
+/* 2017 */
+  --Arcade: #FF00FF;
+}
+
+.lifecoach:hover ~ .menuBackground,
+h1.lifecoach,
+span.lifecoach {
+  background-color: var(--LifeCoach);
+}
+.rexyrace:hover ~ .menuBackground,
+h1.rexyrace,
+span.rexyrace {
+  background-color: var(--RexyRace);
+}
+.mbj:hover ~ .menuBackground,
+h1.mbj,
+span.mbj {
+  background-color: var(--MBJ);
+}
+.citysole:hover ~ .menuBackground,
+h1.citysole,
+span.citysole {
+  background-color: var(--CitySole);
+}
+/* 2018 */
+.scenestealers:hover ~ .menuBackground,
+h1.scenestealers,
+span.scenestealers {
+  background-color: var(--SceneStealers);
+}
+/* 2017 */
+.arcade:hover ~ .menuBackground,
+h1.arcade,
+span.arcade {
+  background-color: var(--Arcade);
+  background-image: linear-gradient(0deg, #7069FF 0%, #FF00FF 100%);
+}
+
+
+
+/*
+____ _    ____ ___  ____ _
+| __ |    |  | |__] |__| |
+|__] |___ |__| |__] |  | |___
+*/
+*, html, body {
+  margin: 0;
+}
+h1, p, a, li {
+  font-family: "Cormorant Garamond", serif;
+  text-decoration: none;
+  color: rgba(0,0,0,1);
+  font-weight: 400;
+  margin: 0;
+}
+h1 {
+  font-size: 1.5rem;
+  line-height: 2.75rem;
+  margin: 0;
+}
+p {
+  font-size: 1.375rem;
+  color: rgba(0,0,0,.8);
+  line-height: 2.375rem;
+}
+a {
+  font-size: 1.5rem;
+  text-align: center;
+  & span { // underline
+    border-bottom: 2px solid rgba(0,0,0,.5);
+    padding-bottom: 3px;
+    transition: all .3s ease;
+  }
+  & span:hover {
+    border-bottom: 2px solid var(--projectColor);
+    padding-bottom: 3px;
+    transition: all .3s ease;
+  }
+}
+li {
+  list-style: none;
+}
+:root {
+  --projectColor: #fff;
+  --nextProjectColor: #fff;
+  --padding: 80px;
+  --gridSection-SM: 5 / 12;
+  --gridSection-MD: 4 / 13;
+  --gridSection-LG: 1 / 16;
+}
+
+
+
+
+.heroMobile {
+  display: none;
+}
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 812px)
+  and (-webkit-min-device-pixel-ratio: 3) {
+    .heroDesktop {
+      display: none;
+    }
+    .heroMobile {
+      display: block;
+    }
+}
+
+
+/*
+____ ____ ____ _  _ _    ___ ____
+|__/ |___ [__  |  | |     |  [__
+|  \ |___ ___] |__| |___  |  ___]
+*/
+.footer {
+  padding: 100px 0;
+  grid-column: var(--gridSection-SM);
+}
+.credits, .results {
+  padding-bottom: 100px;
+  display: flex;
+}
+.footer .column {
+  width: 50%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+.credits p {
+  font-size: 1.2rem;
+  line-height: 1.9rem;
+  color: rgba(0, 0, 0, 0.6);
+  width: 50%;
+}
+.credits b {
+  color: rgba(0, 0, 0, 1);
+  font-weight: 400;
+  padding-right: 10px;
+}
+.footer .row {
+  padding-bottom: 50px;
+  width: 100%;
+}
+.footer .row b {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 6.25rem;
+  line-height: 6.25rem;
+}
+#nextProject {
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  padding: 50px 0;
+  cursor: pointer;
+  position: fixed;
+  bottom: -145px;
+}
+
+/*
+____ _  _ ____ ____ _ ____ ____
+|  | |  | |___ |__/ | |___ [__
+|_\| |__| |___ |  \ | |___ ___]
+*/
+@media only screen and (max-width: 1600px) {
+  .footer .column:nth-child(1) {
+    width: 40%;
+  }
+  .footer .column:nth-child(2) {
+    width: 60%;
+  }
+  .row b {
+    font-size: 8vw;
+  }
+}
+@media only screen and (max-width: 1112px) {
+  :root {
+    --gridSection-SM: 4 / 13;
+    --gridSection-MD: 3 / 14;
+  }
+  #menu {
+    width: 300px;
+  }
+  #grid a {
+    grid-column: 5/12;
+  }
+  .footer {
+    padding: 0px 0;
+  }
+  .footer .row b {
+    line-height: 80px;
+  }
+}
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 812px)
+  and (-webkit-min-device-pixel-ratio: 3)
+   {
+    h1, a {
+      font-size: 2rem;
+      line-height: 2.875rem;
+    }
+    p {
+      font-size:1.75rem;
+      line-height: 2.5625rem;
+    }
+    // ProjectWrapper
+    #backgroundColor {
+      height:80%;
+    }
+    #introCopy {
+      padding: 15vh 0 13vh;
+    }
+    // footer
+    .nextProject {
+      height: 90px;
+      padding: 80px 0 40px;
+      bottom: -210px;
+    }
+    .credits {
+      padding-bottom: 300px
+    }
+    // Nav
+    .menuBtn span {
+      width: 30px;
+      height: 1.5px
+    }
+    .menuBtn span:nth-child(2) {
+      top: 15px;
+    }
+    // HeroLaptop
+    #screen {
+      width: 70%;
+      top: 1.5%;
+    }
+    #screenMask {
+      margin-top: -2vh;
+      height: 42vh;
+    }
+    #trigger {
+      top: 70vh;
+    }
+}
