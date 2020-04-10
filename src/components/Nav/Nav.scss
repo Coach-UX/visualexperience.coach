@@ -1,3 +1,5 @@
+@import "../../Mixins.scss" ;
+
 #navGrid {
   display: grid;
   grid-template-columns: repeat(15, 1fr);
@@ -7,6 +9,9 @@
   grid-column: 2/15;
   margin-top: 75px;
   height: 60px;
+  @include mobile {
+    margin-top: 40px;
+  }
 }
 .navItems {
   position: relative;
@@ -24,9 +29,11 @@
   text-align: right;
 }
 .menuBtn {
-  position: absolute;
   top: 94px;
   z-index: 4;
+  @include mobile {
+    top: 50px;
+  }
   cursor: pointer;
   position: fixed;
   & input {
@@ -48,9 +55,16 @@
     top: 0;
     transform-origin: 0% 0%;
     transition: transform 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
+    @include mobile {
+      width: 20px;
+      height: 1px
+    }
   }
   & span:nth-child(2) {
     top: 10px;
+    @include mobile {
+      top: 10px;
+    }
   }
   & input:checked ~ span {
     transform: rotate(45deg) translate(-2px, -1px);

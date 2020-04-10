@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import ScrollMagic from "scrollmagic";
 import {gsap, Power2} from "gsap";
+import media from "../../Mixins";
 
 // styled components
 const HeroLaptopWrapper = styled.div`
@@ -10,6 +11,9 @@ const HeroLaptopWrapper = styled.div`
   padding-bottom: 150px;
   z-index: 1;
   position: relative;
+  ${media.sm`
+      padding-bottom: 100px;
+  `}
 `;
 const Laptop = styled.img`
   position: relative;
@@ -26,6 +30,11 @@ const LaptopScreen = styled.video`
   opacity: 1;
   left: 50%;
   margin-left: -23%;
+  ${media.sm`
+    width: 70%;
+    top: 1.5%;
+    margin-left: -35%;
+  `}
 `;
 const LaptopScreenMask = styled.div`
   width: 100vw;
@@ -34,23 +43,32 @@ const LaptopScreenMask = styled.div`
   position: relative;
   margin-top: -6vh;
   z-index: 1;
+  ${media.sm`
+    margin-top: -2vh;
+    height: 42vh;
+  `}
 `;
 const Trigger = styled.div`
   position: absolute;
   top: 110vh;
+  ${media.sm`
+    top: 100vh;
+  `}
 `;
 
 // desktop
 if (window.innerWidth > window.innerHeight) {
   var laptopScale = "2.19";
-  var screenTop = "24.5%";
-  var laptopTop = "11.5%"
+  var screenTop = "21.5%";
+  var laptopTop = "4.5%";
+  var screenMaskHeight = "137vw"
 }
 // mobile
 else {
   var laptopScale = "1.43";
   var screenTop = "-5%";
   var laptopTop = "-28.5%"
+  var screenMaskHeight = "129vw"
 }
 
 
@@ -61,8 +79,8 @@ class HeroLaptop extends React.Component {
     var tl2 = gsap.timeline({paused:true});
     tl2.to("#screen", 0.3, { scale: laptopScale, top: screenTop, ease:Power2.easeInOut }, 0)
       .to("#laptop", 0.3, { scale: laptopScale, marginTop: laptopTop, ease:Power2.easeInOut }, 0)
-      .to("#screenMask", 0.2, { autoAlpha: 0, height: "137vw" }, 0)
-      // .to(".introCopyScroll", 0.2, { autoAlpha: 0 }, 0)
+      .to("#screenMask", 0.2, { autoAlpha: 0, height: screenMaskHeight }, 0)
+      .to("#introCopy", 0.2, { autoAlpha: 0 }, 0)
       .to("#laptop", 0.2, { autoAlpha: 0 }, 0);
     var scaleLaptop = new ScrollMagic.Scene({ triggerElement: "#trigger" })
        .setTween(tl2)

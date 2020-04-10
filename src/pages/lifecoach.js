@@ -4,16 +4,9 @@ import React from 'react';
 import ProjectLink from "../components/ProjectLink";
 import { CarouselSection, CarouselImage, CarouselVideo } from "../components/Carousel/CarouselSection";
 import ProjectWrapper from "../components/ProjectWrapper"
-import {
-  IntroSection,
-  TextSection,
-  HeroImageSection,
-  ImageSection,
-  ImageSectionSlim,
-  VideoSection,
-  VideoSectionSlim
-} from '../components/Sections';
-import HeroLaptop from "../components/HeroLaptop";
+import { TextSection, ImageSection, ImageSectionSlim, VideoSection, VideoSectionSlim } from '../components/Sections';
+import { IntroSection } from "../components/Hero/Hero";
+import HeroLaptop from "../components/Hero/HeroLaptop";
 
 
 // project details
@@ -31,7 +24,7 @@ var projectName = "Life Coach",
 export default class LifeCoach extends React.Component {
   render() {
     return (
-      <ProjectWrapper projectName={projectName} projectYear={projectYear} projectClass={projectClass} nextProjectLink={nextProjectLink} nextProjectName={nextProjectName} nextProjectClass={nextProjectClass} >
+      <ProjectWrapper projectName={projectName} projectYear={projectYear} projectClass={projectClass} nextProjectLink={nextProjectLink} nextProjectName={nextProjectName} nextProjectClass={nextProjectClass} className="heroLaptop" >
 
         <IntroSection>
           Your future is calling. Are ready to pick up? And with that subversive messaging, we kicked off Coach’s first immersive pop-up experience. The interactive, open-to-the-public, pop-up melded established brand codes (NYC, nostalgia and Americana) with of-the-moment mysticism (tarot, sound baths and astrology). The result; an unexpected experiential that put a premium on user experience, production values and content opportunities over overt product marketing.

@@ -2,8 +2,9 @@ import React from 'react';
 import Styled from 'styled-components';
 import ScrollMagic from "scrollmagic";
 import {gsap, Linear} from "gsap";
+import media from "../Mixins";
 
-import Menu from "../components/Menu/Menu";
+import Menu from "../components/Menu2/Menu";
 import Nav from "../components/Nav/Nav";
 import Footer from "../components/Footer";
 import NextProjectButton from "../components/NextProjectButton";
@@ -24,6 +25,19 @@ const BackgroundColor = Styled.span`
   width: 100%;
   height: 100vh;
   z-index: -1;
+  &.rexyrace {
+    height: 100%;
+  }
+  &.lifecoach {
+    height: 120%;
+  }
+  &.scenestealers {
+    height: 100%;
+  }
+  &.arcade {
+    height: 100%;
+  }
+
 `;
 
 export default class ProjectWrapper extends React.Component {

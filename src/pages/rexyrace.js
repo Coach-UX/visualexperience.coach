@@ -4,15 +4,9 @@ import React from 'react';
 import ProjectLink from "../components/ProjectLink";
 import { CarouselSection, CarouselImage, CarouselVideo } from "../components/Carousel/CarouselSection";
 import ProjectWrapper from "../components/ProjectWrapper"
-import {
-  IntroSection,
-  TextSection,
-  HeroImageSection,
-  ImageSection,
-  ImageSectionSlim,
-  VideoSection,
-  VideoSectionSlim
-} from '../components/Sections';
+import { TextSection, ImageSection, ImageSectionSlim, VideoSection, VideoSectionSlim } from '../components/Sections';
+import { IntroSection, HeroImage } from "../components/Hero/Hero";
+
 
 
 // project details
@@ -32,18 +26,14 @@ export default class RexyRace extends React.Component {
     <ProjectWrapper projectName={projectName} projectYear={projectYear} projectClass={projectClass} nextProjectLink={nextProjectLink} nextProjectName={nextProjectName} nextProjectClass={nextProjectClass} >
 
       <IntroSection>
-        To support the 2019 Holiday campaign we partnered with the Coach Japan
-        team to create an entertainment first experience. Following on from the
-        narrative of the campaign we opted for an immersive game to be played
-        via Social media channels, where players tried to get Rexy to her
-        holiday party.
+        To support the 2019 Holiday campaign we partnered with the Coach Japan team to create an entertainment first experience. Following on from the narrative of the campaign we opted for an immersive game to be played via Social media channels, where players attempted to get Rexy to her holiday party.
       </IntroSection>
 
-      <HeroImageSection projectClass={projectClass} />
+      <HeroImage projectClass={projectClass} />
       <ProjectLink href={externalLink} label={externalLinkLabel}/>
 
       <TextSection>
-        With Gen-Z being the primary target audience we opted to explore an nostalgic arcade asethetic, often seen in the early 90s. Throughout the game design we designed with that era in mind, resulting in the gameplay and menu being contextual to arcade experiences from that age.
+        With a Gen-Z audience being the primary target audience we opted to explore an nostalgic arcade aesthetic, often seen in the early 90s. Throughout the game design we designed with that era in mind, resulting in the gameplay and menu being contextual to arcade experiences from that age.
       </TextSection>
 
       <ImageSection src='img/rexyrace/screens.png' caption='Gameplay Screens' />

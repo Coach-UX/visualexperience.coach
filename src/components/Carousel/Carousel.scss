@@ -1,6 +1,7 @@
 /*! Flickity v2.2.1
 https://flickity.metafizzy.co
 ---------------------------------------------- */
+@import "../../Mixins.scss";
 
 .flickity-enabled {
   position: relative;
@@ -117,6 +118,9 @@ https://flickity.metafizzy.co
   list-style: none;
   text-align: center;
   line-height: 1;
+  @include mobile {
+    bottom: -35px;
+  }
 }
 
 .flickity-rtl .flickity-page-dots { direction: rtl; }
@@ -144,17 +148,12 @@ ____ _  _ ____ ___ ____ _  _
 |    |  | [__   |  |  | |\/|
 |___ |__| ___]  |  |__| |  |
 */
-
-
 .carouselSection {
   grid-column: var(--gridSection-LG);
   padding-bottom: 10px;
 }
 .carousel-cell, .carousel-cell img  {
   width: 100%;
-}
-.carouselCaption {
-  padding-top: 25px;
 }
 .flickity-page-dots .dot {
   height: 2px;
@@ -163,13 +162,21 @@ ____ _  _ ____ ___ ____ _  _
   border-radius: 0;
   background: #000;
   opacity: .15;
+  @include mobile {
+    height: 1.5px;
+    width: 60px;
+  }
 }
 .flickity-button, .flickity-button:hover {
   background: transparent;
 }
 .flickity-prev-next-button {
-  width: 125px;
-  height: 125px;
+  width: 60px;
+  height: 60px;
+  @include mobile {
+    width: 60px;
+    height: 60px;
+  }
 }
 .flickity-button-icon {
   fill: white;

@@ -9,21 +9,18 @@ class Footer extends React.Component {
             <h1>Key Results</h1>
           </div>
           <div className="column">
-            <p className="row">
-              Number of Unique Players
-              <br />
+            <div className="row">
+              <p>Number of Unique Players</p>
               <b>211,497</b>
-            </p>
-            <p className="row">
-              Number of Unique Game Plays
-              <br />
+            </div>
+            <div className="row">
+              <p>Number of Unique Game Plays</p>
               <b>264,318</b>
-            </p>
-            <p className="row">
-              Audience Demographics
-              <br />
+            </div>
+            <div className="row">
+              <p>Audience Demographics</p>
               <b>18-35</b>
-            </p>
+            </div>
           </div>
         </div>
         <div className="credits">

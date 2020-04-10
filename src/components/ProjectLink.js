@@ -8,11 +8,9 @@ import {
 
 export default class ProjectLink extends React.Component {
   render() {
-    const { href } = this.props;
-    const { label } = this.props;
     return (
-      <a href="{href}">
-        <span>{label}</span>
+      <a href={this.props.href}>
+        <span>{this.props.label}</span>
       </a>
     );
   }

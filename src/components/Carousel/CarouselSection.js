@@ -2,13 +2,18 @@ import React from "react";
 import Flickity from "react-flickity-component";
 import styled from 'styled-components';
 import {Caption} from '../../components/Sections';
+import media from '../../Mixins.js';
 
 // css
-import "./Carousel.css";
+import "./Carousel.scss";
 
 // styled components
 const CarouselCaption = styled(Caption)`
   padding-top: 65px;
+  ${media.sm`
+      padding-top: 55px;
+  `}
+
 `;
 
 class CarouselImage extends React.Component {
