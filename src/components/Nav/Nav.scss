@@ -17,11 +17,22 @@
   position: relative;
   height: inherit;
 }
-.title {
+// .title {
+//   position: absolute;
+//   left: 50%;
+//   text-align: center;
+//   transform: translateX(-50%);
+// }
+
+.client {
   position: absolute;
   left: 50%;
+  transform: translate(-50%, 0px);
   text-align: center;
-  transform: translateX(-50%);
+  @include mobile {
+    line-height: 20px;
+    top: 5px;
+  }
 }
 .year {
   position: absolute;
