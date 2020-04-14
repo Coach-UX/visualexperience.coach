@@ -4,10 +4,12 @@ import ScrollMagic from "scrollmagic";
 import {gsap, Linear} from "gsap";
 import media from "../Mixins";
 
-import Menu from "../components/Menu2/Menu";
+
+import Menu from "../components/Menu/Menu";
 import Nav from "../components/Nav/Nav";
-import Footer from "../components/Footer";
 import NextProjectButton from "../components/NextProjectButton";
+import { Footer, FooterSection, Results } from "../components/Footer";
+
 
 const Grid = Styled.div`
   display: grid;
@@ -23,21 +25,17 @@ const BackgroundColor = Styled.span`
   position: absolute;
   top: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   z-index: -1;
-  &.rexyrace {
-    height: 100%;
-  }
   &.lifecoach {
     height: 120%;
+    ${media.sm`
+      height: 100%;
+    `}
+    ${media.portrait`
+      height: 100%;
+    `}
   }
-  &.scenestealers {
-    height: 100%;
-  }
-  &.arcade {
-    height: 100%;
-  }
-
 `;
 
 export default class ProjectWrapper extends React.Component {
@@ -51,13 +49,12 @@ export default class ProjectWrapper extends React.Component {
   return (
     <React.Fragment>
       <Menu />
-      <Nav projectName={this.props.projectName} projectYear={this.props.projectYear} />
+      <Nav client={this.props.client} projectYear={this.props.projectYear} />
       <Grid id="grid">
         <BackgroundColor id="backgroundColor" className={this.props.projectClass} />
 
         {this.props.children}
 
-        <Footer />
       </Grid>
       <NextProjectButton nextProjectLink={this.props.nextProjectLink} nextProjectName={this.props.nextProjectName}  nextProjectColor={this.props.nextProjectClass}/>
     </React.Fragment>

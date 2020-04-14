@@ -12,6 +12,7 @@ import "../src/style.scss";
 
 // pages
 import RexyRace from "./pages/rexyrace";
+import MBJ from "./pages/mbj";
 import LifeCoach from "./pages/lifecoach";
 import SceneStealers from "./pages/scenestealers";
 import Arcade from "./pages/arcade";
@@ -26,6 +27,7 @@ const App = () => (
       <ScrollToTop />
 
       <Route exact path="/" component={RexyRace} />
+      <Route path="/mbj" component={MBJ}/>
       <Route path="/lifecoach" component={LifeCoach}/>
       <Route path="/scenestealers" component={SceneStealers}/>
       <Route path="/arcade" component={Arcade}/>

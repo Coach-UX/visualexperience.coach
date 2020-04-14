@@ -1,6 +1,12 @@
-@import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,500");
-@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed:800&display=swap');
 @import 'Mixins.scss';
+
+// fonts
+@font-face {
+  font-family: 'Gt Eesti Display Bold';
+  src: url(/fonts/GT-Eesti-Pro-Display-Bold.woff2);
+}
+
+
 /*
 ___  ____ ____  _ ____ ____ ___    ____ ____ _    ____ ____ ____
 |__] |__/ |  |  | |___ |     |     |    |  | |    |  | |__/ [__
@@ -10,43 +16,42 @@ ___  ____ ____  _ ____ ____ ___    ____ ____ _    ____ ____ ____
 /* 2019 */
   --RexyRace: #9BC4B6;
   --LifeCoach: #FEBD28;
-  --MBJ: #EA9828;
-  --CitySole: #DF592A;
+  --MBJ: #E05927;
 /* 2018 */
   --SceneStealers: #6291A3;
 /* 2017 */
   --Arcade: #FF00FF;
 }
 
+#nextBtn.lifecoach, #prevBtn.lifecoach,
 .lifecoach:hover ~ .menuBackground,
-h1.lifecoach,
+h2.lifecoach,
 span.lifecoach{
   background-color: var(--LifeCoach);
 }
+#nextBtn.rexyrace, #prevBtn.rexyrace,
 .rexyrace:hover ~ .menuBackground,
-h1.rexyrace,
+h2.rexyrace,
 span.rexyrace {
   background-color: var(--RexyRace);
 }
+#nextBtn.mbj, #prevBtn.mbj,
 .mbj:hover ~ .menuBackground,
-h1.mbj,
+h2.mbj,
 span.mbj {
   background-color: var(--MBJ);
 }
-.citysole:hover ~ .menuBackground,
-h1.citysole,
-span.citysole {
-  background-color: var(--CitySole);
-}
 /* 2018 */
+#nextBtn.scenestealers, #prevBtn.scenestealers,
 .scenestealers:hover ~ .menuBackground,
-h1.scenestealers,
+h2.scenestealers,
 span.scenestealers {
   background-color: var(--SceneStealers);
 }
 /* 2017 */
+#nextBtn.arcade, #prevBtn.arcade,
 .arcade:hover ~ .menuBackground,
-h1.arcade,
+h2.arcade,
 span.arcade {
   background-color: var(--Arcade);
   background-image: linear-gradient(0deg, #7069FF 0%, #FF00FF 100%);
@@ -63,48 +68,100 @@ ____ _    ____ ___  ____ _
 *, html, body {
   margin: 0;
 }
-h1, p, a, li {
-  font-family: "Cormorant Garamond", serif;
-  text-decoration: none;
+
+@font-face {
+  font-family: 'eksell';
+  src: url(/fonts/eksell.woff2);
+  // src: url(/fonts/HugeGothic-Bold.woff);
+}
+h1, h2, li {
+  font-family: "eksell";
   color: rgba(0,0,0,1);
-  font-weight: 400;
+  font-weight: normal;
+  text-decoration: none;
   margin: 0;
 }
-h1, a {
-  font-size: 1.5rem;
-  line-height: 2.75rem;
+  h1 {
+    text-align: center;
+    font-size: 8vw;
+    line-height: 7.5vw;
+    @include mobile {
+      font-size: 50px;
+      line-height: 48px;
+    }
+  }
+  h2{
+    font-size: 2rem;
+    line-height: 2.6rem;
+    margin: 0;
+    @include mobile {
+      font-size: 28px;
+      line-height: 30px;
+    }
+  }
+  li {
+    font-size: 3.5vw;
+    line-height: 3vw;
+    width: 50vw;
+    text-align: left;
+    list-style: none;
+    padding: 15px 0;
+    @include portrait {
+      font-size: 7.5vw;
+      line-height: 6.5vw;
+      width: 85vw;
+    }
+    @include mobile {
+      font-size: 34px;
+      line-height: 24px;
+      width: 100vw
+    }
+  }
+
+@font-face {
+  font-family: 'Gt Eesti Display Light';
+  src: url(/fonts/GT-Eesti-Pro-Display-Light.woff2);
+}
+h3, a, p {
+  font-family: "Gt Eesti Display Light", sans-serif;
+  color: rgba(0,0,0,.95);
+  font-weight: normal;
+  text-decoration: none;
   margin: 0;
-  @include mobile {
-    font-size: 18px;
-    line-height: 30px;
-  }
 }
-p {
-  font-size: 1.375rem;
-  line-height: 2.375rem;
-  color: rgba(0,0,0,.8);
-  @include mobile {
-    font-size: 16px;
-    line-height: 26px;
+  h3, a {
+    font-size: 1.3rem;
+    line-height: 2.3rem;
+    margin: 0;
+    @include mobile {
+      font-size: 18px;
+      line-height: 30px;
+    }
   }
-}
-a {
-  text-align: center;
-  color: rgba(0,0,0,.8);
-  & span { // underline
-    border-bottom: 2px solid rgba(0,0,0,.5);
-    padding-bottom: 3px;
-    transition: all .3s ease;
+  p {
+    font-size: 1.25rem;
+    line-height: 2.25rem;
+    color: rgba(0,0,0,.75);
+    @include mobile {
+      font-size: 16px;
+      line-height: 26px;
+    }
   }
-  & span:hover {
-    border-color: rgba(0,0,0,.25);
-    color: rgba(0,0,0,.5);
-    transition: all .3s ease;
+  a {
+    text-align: center;
+    color: rgba(0,0,0,.8);
+    & span { // underline
+      border-bottom: 2px solid rgba(0,0,0,.5);
+      padding-bottom: 3px;
+      transition: all .3s ease;
+    }
+    & span:hover {
+      border-color: rgba(0,0,0,.25);
+      color: rgba(0,0,0,.5);
+      transition: all .3s ease;
+    }
   }
-}
-li {
-  list-style: none;
-}
+
 
 :root {
   --projectColor: #fff;
@@ -119,12 +176,18 @@ li {
 
 .heroDesktop {
   display: block;
+  @include portrait {
+    display: none;
+  }
   @include mobile {
     display: none;
   }
 }
 .heroMobile {
   display: none;
+  @include portrait {
+    display: block;
+  }
   @include mobile {
     display: block;
   }
@@ -136,8 +199,11 @@ ____ ____ ____ _  _ _    ___ ____
 |  \ |___ ___] |__| |___  |  ___]
 */
 .footer {
-  padding: 100px 0;
+  padding: 100px 0 15vh 0;
   grid-column: var(--gridSection-SM);
+  @include mobile {
+    padding: 0px 0 15vh 0;
+  }
 }
 .credits, .results {
   padding-bottom: 100px;
@@ -161,13 +227,26 @@ ____ ____ ____ _  _ _    ___ ____
   padding-right: 10px;
 }
 .footer .row {
-  padding-bottom: 50px;
+  padding-bottom: 30px;
   width: 100%;
 }
 .footer .row b {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: "Gt Eesti Display Bold", sans-serif;
   font-size: 6.25rem;
-  line-height: 6.25rem;
+  line-height: 6rem;
+  letter-spacing: -2px;
+}
+.footer .award{
+  width: 45%;
+  &:nth-child(odd) {
+    padding: 0 5% 10% 0;
+  }
+  &:nth-child(even) {
+    padding: 0 0 10% 5%;
+  }
+  img {
+    width: 100%;
+  }
 }
 
 /*
@@ -198,7 +277,7 @@ ____ _  _ ____ ____ _ ____ ____
     grid-column: 5/12;
   }
   .footer {
-    padding: 0px 0;
+    // padding: 0px 0;
   }
   .footer .row b {
     line-height: 80px;
@@ -206,6 +285,9 @@ ____ _  _ ____ ____ _ ____ ____
 }
 @media only screen and (max-width: 480px) {
     // footer
+    .column h2 {
+      margin-bottom: 30px;
+    }
     .credits {
       padding-bottom: 200px;
       display: block;
@@ -247,7 +329,7 @@ ____ _  _ ____ ____ _ ____ ____
         }
         & p {
           font-size: 16px;
-          line-height: 26px;
+          line-height: 20px;
           width: 45%;
           margin-right: 5%;
         }
