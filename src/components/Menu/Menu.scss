@@ -1,30 +1,41 @@
+@import "../../Mixins.scss";
 #menu {
   position: fixed;
   left: 0;
   top: 0;
   height: 100%;
-  width: 17%;
+  width: 50%;
   background-color: white;
   display: none;
   z-index: 3;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   pointer-events: none;
+  @include portrait {
+    width: 85%;
+  }
+  @include mobile {
+    width: 85%;
+  }
 }
 .menuItems {
   display: grid;
   padding: 25vh 0 0 6.6vw;
   pointer-events: none;
   & p {
-    display: none;
     position: absolute;
-    left: 17.15vw;
-    top: 80px;
+    left: 111px;
+    top: 180px;
     font-size: 24px;
-  }
-  & img {
-    display: none;
-    position: absolute;
-    top: 90vh;
+    @include portrait {
+      left: 10%;
+      top: 18%;
+    }
+    @include mobile {
+      font-size: 18px;
+      left: 10%;
+      top: 18%;
+    }
   }
   &:hover > li {
     opacity: .3;
@@ -36,32 +47,23 @@
     opacity: 1;
   }
 }
-.menuYear {
-  display: none;
-  font-size: 35.2px;
-  line-height: 80px;
-  text-align: left;
-  cursor: pointer;
-  list-style: none;
-  width: 9vw;
-  transition: opacity .3s ease;
-}
 .menuProject {
   position: absolute;
-  left: 15vw;
-  top: 25vh;
-  display: none;
-  height: 100vh;
+  left: 109px;
+  padding: 0;
+  @include portrait {
+    left: 10%;
+  }
+  @include mobile {
+    left: 10%;
+  }
   & li {
     display: block;
-    font-size: 54px;
-    line-height: 100px;
-    width: 50vw;
-    text-align: left;
     transition: opacity .3s ease;
+    cursor: pointer;
   }
   &:hover > li {
-    opacity: .3;
+    opacity: .8;
   }
   & li:hover {
     opacity: 1;
@@ -82,8 +84,17 @@
   left: 0;
   top: 0;
   height: 100%;
-  width: 100%;
+  width: 50%;
   pointer-events: none;
   z-index: -1;
-  transition: background-color .3s ease;
+  transition: all .3s ease;
+  @include mobile {
+    width: 85%;
+  }
+  @include portrait {
+    width: 85%;
+  }
+  @include touch {
+    transition: all 0s ease;
+  }
 }
