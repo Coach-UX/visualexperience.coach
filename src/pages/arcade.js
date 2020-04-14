@@ -2,10 +2,11 @@ import React from 'react';
 
 // components
 import ProjectLink from "../components/ProjectLink";
-import { CarouselSection, CarouselImage, CarouselVideo } from "../components/Carousel/CarouselSection";
+import { CarouselSection, CarouselSectionSlim, CarouselImage, CarouselVideo } from "../components/Carousel/CarouselSection";
 import ProjectWrapper from "../components/ProjectWrapper"
 import { TextSection, ImageSection, ImageSectionSlim, VideoSection, VideoSectionSlim } from '../components/Sections';
 import { IntroSection, HeroImage } from "../components/Hero/Hero";
+import { Footer, FooterSection, Results } from "../components/Footer";
 
 
 // project details
@@ -14,17 +15,18 @@ var projectName = "The Arcade",
     projectYear = "2017",
     externalLink = "#",
     externalLinkLabel="Launch the Game",
+    client="Coach Japan",
 
-    nextProjectName="Rexy's Holiday Race",
+    nextProjectName="Rexy's\nHoliday Race",
     nextProjectClass="rexyrace",
     nextProjectLink="/";
 
 export default class Arcade extends React.Component {
   render() {
   return (
-    <ProjectWrapper projectName={projectName} projectYear={projectYear} projectClass={projectClass} nextProjectLink={nextProjectLink} nextProjectName={nextProjectName} nextProjectClass={nextProjectClass} >
+    <ProjectWrapper client={client} projectYear={projectYear} projectClass={projectClass} nextProjectLink={nextProjectLink} nextProjectName={nextProjectName} nextProjectClass={nextProjectClass} >
 
-      <IntroSection>
+      <IntroSection projectName={projectName}>
         To support the 2017 Holiday campaign we partnered with the Coach Japan team to create an entertainment first experience. “The Arcade” featured two distinct games for users to play and enjoy either in-store or on their mobile devices.
       </IntroSection>
 
@@ -69,13 +71,22 @@ export default class Arcade extends React.Component {
         Alongside the mobile experience, physical arcade machines were installed at Coach stores in Omotesando, Ginza and Shinjuku as a way to bridge the customer experence from online to offline, ultimately driving traffic to stores.
       </TextSection>
 
-      <CarouselSection caption='In-Store Experience'>
+      <CarouselSectionSlim caption='In-Store Experience'>
         <CarouselImage src="img/arcade/carousel-1.png" />
         <CarouselImage src="img/arcade/carousel-2.png" />
         <CarouselImage src="img/arcade/carousel-3.png" />
         <CarouselImage src="img/arcade/carousel-4.png" />
         <CarouselImage src="img/arcade/carousel-5.png" />
-      </CarouselSection>
+      </CarouselSectionSlim>
+
+      <Footer>
+        <FooterSection title="Key Results">
+          <Results p="Number of Unique Game Plays" b="65.2K" />
+          <Results p="Plays Per User" b="1.8x" />
+          <Results p="Total Conversions to Coach.com" b="27K" />
+          <Results p="Total Conversions to Store" b="29K" />
+        </FooterSection>
+      </Footer>
 
     </ProjectWrapper>
 

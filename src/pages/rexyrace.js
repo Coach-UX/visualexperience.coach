@@ -6,27 +6,29 @@ import { CarouselSection, CarouselImage, CarouselVideo } from "../components/Car
 import ProjectWrapper from "../components/ProjectWrapper"
 import { TextSection, ImageSection, ImageSectionSlim, VideoSection, VideoSectionSlim } from '../components/Sections';
 import { IntroSection, HeroImage } from "../components/Hero/Hero";
+import { Footer, FooterSection, Results } from "../components/Footer";
 
 
 
 // project details
-var projectName = "Rexy's Holiday Race",
+var projectName = "Rexy's\nHoliday Race",
     projectClass = "rexyrace",
     projectYear = "2019",
     externalLink = "#",
     externalLinkLabel="Launch the Game",
+    client = "Coach Japan",
 
-    nextProjectName="Life Coach",
-    nextProjectClass="lifecoach",
-    nextProjectLink="/lifecoach";
+    nextProjectName="Coach x\nMichael B Jordan",
+    nextProjectClass="mbj",
+    nextProjectLink="/mbj";
 
 export default class RexyRace extends React.Component {
   render() {
   return (
-    <ProjectWrapper projectName={projectName} projectYear={projectYear} projectClass={projectClass} nextProjectLink={nextProjectLink} nextProjectName={nextProjectName} nextProjectClass={nextProjectClass} >
+    <ProjectWrapper client={client} projectYear={projectYear} projectClass={projectClass} nextProjectLink={nextProjectLink} nextProjectName={nextProjectName} nextProjectClass={nextProjectClass} >
 
-      <IntroSection>
-        To support the 2019 Holiday campaign we partnered with the Coach Japan team to create an entertainment first experience. Following on from the narrative of the campaign we opted for an immersive game to be played via Social media channels, where players attempted to get Rexy to her holiday party.
+      <IntroSection projectName={projectName}>
+        To support Coach's 2019 Holiday campaign, we created an entertainment-first experience following on from the narrative of the campaign. We opted for a bespoke web-based game to be played via social media channels.
       </IntroSection>
 
       <HeroImage projectClass={projectClass} />
@@ -44,15 +46,14 @@ export default class RexyRace extends React.Component {
 
       <VideoSectionSlim
         src='img/rexyrace/avatars.mp4'
-        poster='img/rexyrace/avatars.jpg'
-        caption='Avatars'
+        caption='Avatars' muted
       />
 
       <TextSection>
         In total we created four scenes, all made from a mixture of elements from Tokyo and New York City.
       </TextSection>
 
-      <CarouselSection caption='Stage Artwork'>
+      <CarouselSection color={projectClass} caption='Stage Artwork'>
         <CarouselImage src="img/rexyrace/stage1.png" />
         <CarouselImage src="img/rexyrace/stage2.png" />
         <CarouselImage src="img/rexyrace/stage3.png" />
@@ -63,6 +64,14 @@ export default class RexyRace extends React.Component {
       </TextSection>
 
       <ImageSection src='img/rexyrace/collectibles.png' caption='Game Collectibles' />
+
+      <Footer>
+        <FooterSection title="Key Results">
+          <Results p="Number of Unique Players" b="211.5K" />
+          <Results p="Number of Unique Game Plays" b="264.3K" />
+          <Results p="Audience Demographics" b="18-35" />
+        </FooterSection>
+      </Footer>
 
     </ProjectWrapper>
     );
