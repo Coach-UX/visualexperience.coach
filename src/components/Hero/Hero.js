@@ -8,9 +8,11 @@ width: 100%;
 grid-column: var(--gridSection-MD);
 top: 0%;
 padding: 20% 0;
+${media.portrait`
+  padding: 30% 0 30%;
+`}
   ${media.sm`
-    padding: 2vh 0 15vh;
-    padding: 50px 0 100px;
+    padding: 30% 0 30%;
   `}
 `;
 const IntroCopy = styled.h1`
@@ -19,8 +21,7 @@ const IntroCopy = styled.h1`
   padding: 0;
   text-align: left;
   ${media.sm`
-    width: 80%;
-    padding: 0 10%;
+    width: 100%;
   `}
 `;
 export class IntroSection extends React.Component {

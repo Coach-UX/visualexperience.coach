@@ -25,10 +25,12 @@ const NextProject = styled.h1`
   ${media.sm`
     bottom: -210px;
     padding: 40px 0;
+  `}
+  ${media.touch`
     &:hover {
       padding: 40px 0;
     }
-  `}
+ `}
 `;
 
 // gsap animation that triggers when button is clicked

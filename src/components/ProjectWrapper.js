@@ -22,19 +22,10 @@ const BackgroundColor = Styled.span`
   position: absolute;
   top: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   z-index: -1;
-  &.rexyrace {
-    height: 100%;
-  }
   &.lifecoach {
     height: 120%;
-  }
-  &.scenestealers {
-    height: 100%;
-  }
-  &.arcade {
-    height: 100%;
   }
 
 `;

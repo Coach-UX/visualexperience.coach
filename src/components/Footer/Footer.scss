@@ -72,13 +72,6 @@ ____ _  _ ____ ____ _ ____ ____
   }
 }
 @media only screen and (max-width: 1112px) {
-  :root {
-    --gridSection-SM: 4 / 13;
-    --gridSection-MD: 3 / 14;
-  }
-  #menu {
-    width: 300px;
-  }
   #grid a {
     grid-column: 5/12;
   }

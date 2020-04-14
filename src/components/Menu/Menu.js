@@ -38,8 +38,11 @@ export default class Menu extends React.Component {
                 <li className="scenestealers">
                   <MenuLink to="/scenestealers" linktext="Scene Stealers" />
                 </li>
-                <li className="arcade">
-                  <MenuLinkGradient to="/arcade" linktext="The Arcade" />
+                <li className="newyorkdrive">
+                  <MenuLinkGradient to="/newyorkdrive" linktext="New York Drive" />
+                </li>
+                <li className="rainbowhockey">
+                  <MenuLinkGradient to="/rainbowhockey" linktext="Rainbow Hockey" />
                 </li>
                   <div className="menuBackground" />
               </ul>

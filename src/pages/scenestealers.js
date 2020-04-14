@@ -16,9 +16,9 @@ var projectName = "Scene Stealers",
     externalLink = "#",
     externalLinkLabel="Launch the Game",
 
-    nextProjectName="The Arcade",
-    nextProjectClass="arcade",
-    nextProjectLink="/arcade";
+    nextProjectName="New York Drive",
+    nextProjectClass="newyorkdrive",
+    nextProjectLink="/newyorkdrive";
 
 
 export default class SceneStealers extends React.Component {

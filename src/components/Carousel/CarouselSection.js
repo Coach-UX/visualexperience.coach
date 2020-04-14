@@ -11,7 +11,7 @@ import "./Carousel.scss";
 const CarouselCaption = styled(Caption)`
   padding-top: 65px;
   ${media.sm`
-      padding-top: 55px;
+      padding-top: 45px;
   `}
 
 `;

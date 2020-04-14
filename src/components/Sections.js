@@ -35,6 +35,9 @@ const Image = styled.img`
   grid-column: var(--gridSection-LG);
   width: 100%;
   padding-bottom: 10px;
+  ${media.sm`
+    padding-bottom: 0px;
+  `}
 `;
 const ImageSlim = styled(Image)`
   grid-column: var(--gridSection-MD);
@@ -75,6 +78,9 @@ const Video = styled.video`
   grid-column: var(--gridSection-LG);
   width: 100%;
   padding-bottom: 10px;
+  ${media.sm`
+    padding-bottom: 0px;
+  `}
 `;
 const VideoSlim = styled(Video)`
   grid-column: var(--gridSection-MD);

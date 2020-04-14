@@ -14,7 +14,8 @@ import "../src/style.scss";
 import RexyRace from "./pages/rexyrace";
 import LifeCoach from "./pages/lifecoach";
 import SceneStealers from "./pages/scenestealers";
-import Arcade from "./pages/arcade";
+import NewYorkDrive from "./pages/newyorkdrive";
+import RainbowHockey from "./pages/rainbowhockey";
 
 
 ScrollMagicPluginGsap(ScrollMagic, gsap);
@@ -28,7 +29,8 @@ const App = () => (
       <Route exact path="/" component={RexyRace} />
       <Route path="/lifecoach" component={LifeCoach}/>
       <Route path="/scenestealers" component={SceneStealers}/>
-      <Route path="/arcade" component={Arcade}/>
+      <Route path="/newyorkdrive" component={NewYorkDrive}/>
+      <Route path="/rainbowhockey" component={RainbowHockey}/>
 
     </Router>
   </React.Fragment>

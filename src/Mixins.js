@@ -2,7 +2,8 @@ import { css } from 'styled-components';
 
 const breakpoints = {
    sm: "max-width: 480px",
-   portrait: "orientation: portrait"
+   portrait: "orientation: portrait",
+   touch: "hover: none"
 }
 
 export default Object.keys(breakpoints).reduce((acc, label) => {
