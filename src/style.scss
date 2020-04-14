@@ -10,7 +10,7 @@ ___  ____ ____  _ ____ ____ ___    ____ ____ _    ____ ____ ____
 /* 2019 */
   --RexyRace: #9BC4B6;
   --LifeCoach: #FEBD28;
-  --MBJ: #EA9828;
+  --MBJ: #E05927;
   --CitySole: #DF592A;
 /* 2018 */
   --SceneStealers: #6291A3;
@@ -118,17 +118,23 @@ li {
 
 
 .heroDesktop {
-  display: block;
-  @include mobile {
-    display: none;
-  }
-}
-.heroMobile {
-  display: none;
-  @include mobile {
-    display: block;
-  }
-}
+   display: block;
+   @include portrait {
+     display: none;
+   }
+   @include mobile {
+     display: none;
+   }
+ }
+ .heroMobile {
+   display: none;
+   @include portrait {
+     display: block;
+   }
+   @include mobile {
+     display: block;
+   }
+ }
 
 /*
 ____ ____ ____ _  _ _    ___ ____
