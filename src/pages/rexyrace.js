@@ -6,7 +6,7 @@ import { CarouselSection, CarouselImage, CarouselVideo } from "../components/Car
 import ProjectWrapper from "../components/ProjectWrapper"
 import { TextSection, ImageSection, ImageSectionSlim, VideoSection, VideoSectionSlim } from '../components/Sections';
 import { IntroSection, HeroImage } from "../components/Hero/Hero";
-
+import { Footer, FooterSection, Results, Credits } from "../components/Footer/Footer";
 
 
 // project details
@@ -63,6 +63,22 @@ export default class RexyRace extends React.Component {
       </TextSection>
 
       <ImageSection src='img/rexyrace/collectibles.png' caption='Game Collectibles' />
+
+      <Footer>
+       <FooterSection title="Key Results">
+         <Results p="Number of Unique Players" b="211.5K" />
+         <Results p="Number of Unique Game Plays" b="264.3K" />
+         <Results p="Audience Demographics" b="18-35" />
+       </FooterSection>
+       <FooterSection title="Credits">
+         <Credits left="Art Direction" right="Coach Creative Team" />
+         <Credits left="UI/UX Design" right="Coach Creative Team" />
+         <Credits left="Copywriting" right="Coach Creative Team" />
+         <Credits left="Illustration" right="Jude Buffem" />
+         <Credits left="Development" right="The Goal" />
+         <Credits left="Project Management" right="The Goal & Coach Japan" />
+       </FooterSection>
+     </Footer>
 
     </ProjectWrapper>
     );

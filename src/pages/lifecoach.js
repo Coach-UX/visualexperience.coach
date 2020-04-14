@@ -7,6 +7,7 @@ import ProjectWrapper from "../components/ProjectWrapper"
 import { TextSection, ImageSection, ImageSectionSlim, VideoSection, VideoSectionSlim } from '../components/Sections';
 import { IntroSection } from "../components/Hero/Hero";
 import HeroLaptop from "../components/Hero/HeroLaptop";
+import { Footer, FooterSection, Results, Award, Credits } from "../components/Footer/Footer";
 
 
 // project details
@@ -50,6 +51,26 @@ export default class LifeCoach extends React.Component {
           <CarouselImage src="img/lifecoach/carousel3.png" />
           <CarouselImage src="img/lifecoach/carousel4.png" />
         </CarouselSection>
+
+        <Footer>
+         <FooterSection title="Key Results">
+           <Results p="Total Number of Impressions" b="232.4K" />
+           <Results p="Total Number of Conversions" b="14.4K" />
+           <Results p="Tickets Reserved" b="100%" />
+           <Results p="Audience Demographics" b="25-34" />
+         </FooterSection>
+         <FooterSection title="Awards">
+           <Award link="https://drivenxdesign.com/NYC18/project.asp?ID=17871" src="img/lifecoach/award.png" />
+         </FooterSection>
+         <FooterSection title="Credits">
+           <Credits left="Art Direction" right="Coach Creative Team" />
+           <Credits left="UI/UX Design" right="Coach Creative Team" />
+           <Credits left="Development" right="Coach Creative Team" />
+           <Credits left="Copywriting" right="Coach Creative Team" />
+           <Credits left="Set Design" right="Simon Costin" />
+           <Credits left="Project Management" right="Coach Creative Team" />
+         </FooterSection>
+       </Footer>
 
       </ProjectWrapper>
   );

@@ -6,6 +6,8 @@ import { CarouselSection, CarouselImage, CarouselVideo } from "../components/Car
 import ProjectWrapper from "../components/ProjectWrapper"
 import { TextSection, ImageSection, ImageSectionSlim, VideoSection, VideoSectionSlim } from '../components/Sections';
 import { IntroSection, HeroImage } from "../components/Hero/Hero";
+import { Footer, FooterSection, Results, Credits } from "../components/Footer/Footer";
+
 
 // project details
 var projectName = "Scene Stealers",
@@ -69,6 +71,21 @@ export default class SceneStealers extends React.Component {
         poster=''
         caption='Results'
       />
+
+      <Footer>
+       <FooterSection title="Key Results">
+         <Results p="Number of Unique Game Plays" b="23.2K" />
+         <Results p="Game Conversion Rate" b="31.82%" />
+         <Results p="Number of Users on SNOW App" b="1.2M" />
+       </FooterSection>
+       <FooterSection title="Credits">
+         <Credits left="Art Direction" right="Coach Creative Team" />
+         <Credits left="UI/UX Design" right="Coach Creative Team" />
+         <Credits left="Copywriting" right="Coach Creative Team" />
+         <Credits left="Development" right="Dentsu Isobar" />
+         <Credits left="Project Management" right="Dentsu Isobar & Coach Japan" />
+       </FooterSection>
+     </Footer>
 
       </ProjectWrapper>
     );

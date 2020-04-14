@@ -6,7 +6,6 @@ import media from "../Mixins";
 
 import Menu from "../components/Menu/Menu";
 import Nav from "../components/Nav/Nav";
-import Footer from "../components/Footer";
 import NextProjectButton from "../components/NextProjectButton";
 
 const Grid = Styled.div`
@@ -57,7 +56,6 @@ export default class ProjectWrapper extends React.Component {
 
         {this.props.children}
 
-        <Footer />
       </Grid>
       <NextProjectButton nextProjectLink={this.props.nextProjectLink} nextProjectName={this.props.nextProjectName}  nextProjectColor={this.props.nextProjectClass}/>
     </React.Fragment>

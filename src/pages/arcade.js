@@ -6,6 +6,7 @@ import { CarouselSection, CarouselImage, CarouselVideo } from "../components/Car
 import ProjectWrapper from "../components/ProjectWrapper"
 import { TextSection, ImageSection, ImageSectionSlim, VideoSection, VideoSectionSlim } from '../components/Sections';
 import { IntroSection, HeroImage } from "../components/Hero/Hero";
+import { Footer, FooterSection, Results, Credits } from "../components/Footer/Footer";
 
 
 // project details
@@ -76,6 +77,23 @@ export default class Arcade extends React.Component {
         <CarouselImage src="img/arcade/carousel-4.png" />
         <CarouselImage src="img/arcade/carousel-5.png" />
       </CarouselSection>
+
+      <Footer>
+        <FooterSection title="Key Results">
+          <Results p="Number of Unique Game Plays" b="65.2K" />
+          <Results p="Plays Per User" b="1.8x" />
+          <Results p="Total Conversions to Coach.com" b="27K" />
+          <Results p="Total Conversions to Store" b="29K" />
+        </FooterSection>
+        <FooterSection title="Credits">
+          <Credits left="Art Direction" right="Coach Creative Team" />
+          <Credits left="UI/UX Design" right="Coach Creative Team" />
+          <Credits left="Copywriting" right="Coach Creative Team" />
+          <Credits left="Illustration" right="Coach Creative Team" />
+          <Credits left="Development" right="5cream1ouder" />
+          <Credits left="Project Management" right="Dentsu Isobar & Coach Japan" />
+        </FooterSection>
+      </Footer>
 
     </ProjectWrapper>
 
