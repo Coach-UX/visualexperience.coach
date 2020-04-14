@@ -13,17 +13,30 @@ const NextProject = styled.h1`
   cursor: pointer;
   position: fixed;
   bottom: -145px;
+  transition: padding .2s ease-in-out, bottom .3s ease-in-out;
+   &:hover {
+     padding: 70px 0;
+     transition: padding .2s ease-in-out;
+   }
+   ${media.portrait`
+    bottom: -210px;
+    padding: 40px 0;
+  `}
   ${media.sm`
     bottom: -210px;
     padding: 40px 0;
+    &:hover {
+      padding: 40px 0;
+    }
   `}
 `;
 
 // gsap animation that triggers when button is clicked
 function nextProjectTransition() {
   var nextProjectAnim = gsap.timeline();
-  nextProjectAnim.to("#nextProject", .5, {height: "89vh", padding: "7vh 0 3vh", ease:Power2.easeInOut})
-                 .to("#nextProject", .5, {height: "30px", padding: "50px 0", ease:Power2.easeInOut});
+  nextProjectAnim.to("#nextProject", 0, {transition: "all 0s", ease:Power2.easeInOut}, 0)
+                  .to("#nextProject", .2, {color: "rgba(0,0,0,0)", ease:Power2.easeInOut},0)
+                  .to("#nextProject", .3, {padding: "19vh 0 77.8vh", ease:Power2.easeInOut});
   nextProjectAnim.play();
 }
 
@@ -32,7 +45,7 @@ if (window.innerWidth > window.innerHeight) {
   var nextProjectTriggerHook = "0.5"; // desktop
 }
 else {
-  var nextProjectTriggerHook = "1"; // mobile
+  var nextProjectTriggerHook = "0.7"; // mobile
 }
 
 export default class NextProjectButton extends React.Component {
