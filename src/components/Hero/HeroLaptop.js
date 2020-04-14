@@ -14,6 +14,9 @@ const HeroLaptopWrapper = styled.div`
   ${media.sm`
       padding-bottom: 100px;
   `}
+  ${media.portrait`
+          padding-bottom: 100px;
+  `}
 `;
 const Laptop = styled.img`
   position: relative;
@@ -21,6 +24,13 @@ const Laptop = styled.img`
   z-index: 2;
   left: 50%;
   margin-left: -46%;
+  ${media.sm`
+    padding-top: 50px;
+  `}
+  ${media.portrait`
+        padding-top: 50px;
+  `}
+
 `;
 const LaptopScreen = styled.video`
   position: absolute;
@@ -34,6 +44,13 @@ const LaptopScreen = styled.video`
     width: 70%;
     top: 1.5%;
     margin-left: -35%;
+    padding-top: 50px;
+  `}
+  ${media.portrait`
+    width: 70%;
+    top: 1.5%;
+    margin-left: -35%;
+    padding-top: 50px;
   `}
 `;
 const LaptopScreenMask = styled.div`
@@ -47,12 +64,16 @@ const LaptopScreenMask = styled.div`
     margin-top: -2vh;
     height: 42vh;
   `}
+  ${media.portrait`
+    margin-top: -2vh;
+    height: 42vh;
+  `}
 `;
 const Trigger = styled.div`
-  position: absolute;
-  top: 110vh;
+  position: relative;
+  top: 0;
   ${media.sm`
-    top: 100vh;
+
   `}
 `;
 
@@ -82,7 +103,7 @@ class HeroLaptop extends React.Component {
       .to("#screenMask", 0.2, { autoAlpha: 0, height: screenMaskHeight }, 0)
       .to("#introCopy", 0.2, { autoAlpha: 0 }, 0)
       .to("#laptop", 0.2, { autoAlpha: 0 }, 0);
-    var scaleLaptop = new ScrollMagic.Scene({ triggerElement: "#trigger" })
+    var scaleLaptop = new ScrollMagic.Scene({ triggerElement: "#trigger", triggerHook: "0.2" })
        .setTween(tl2)
        .addTo(controller);
   }
