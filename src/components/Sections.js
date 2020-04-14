@@ -15,7 +15,7 @@ export const TextSection = styled.p`
 `;
 // caption
 export const Caption = styled.p`
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   grid-column: var(--gridSection-LG);
   text-align: center;
   padding-bottom: var(--padding);
@@ -100,7 +100,7 @@ export class VideoSectionSlim extends React.Component {
     const { caption } = this.props;
     return (
       <React.Fragment>
-        <VideoSlim src={src} poster={poster} autoPlay muted playsInline loop />
+        <VideoSlim src={src} autoPlay loop playsInline muted />
         <Caption> {caption} </Caption>
       </React.Fragment>
     );
