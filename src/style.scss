@@ -103,8 +103,23 @@ a {
   }
 }
 li {
-  list-style: none;
-}
+    font-size: 3.5vw;
+    line-height: 3vw;
+    width: 50vw;
+    text-align: left;
+    list-style: none;
+    padding: 15px 0;
+    @include portrait {
+      font-size: 7.5vw;
+      line-height: 6.5vw;
+      width: 85vw;
+    }
+    @include mobile {
+      font-size: 34px;
+      line-height: 24px;
+      width: 100vw
+    }
+  }
 
 :root {
   --projectColor: #fff;

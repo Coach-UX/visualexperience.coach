@@ -4,7 +4,7 @@ import ScrollMagic from "scrollmagic";
 import {gsap, Linear} from "gsap";
 import media from "../Mixins";
 
-import Menu from "../components/Menu2/Menu";
+import Menu from "../components/Menu/Menu";
 import Nav from "../components/Nav/Nav";
 import Footer from "../components/Footer";
 import NextProjectButton from "../components/NextProjectButton";

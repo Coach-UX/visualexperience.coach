@@ -162,6 +162,7 @@ ____ _  _ ____ ___ ____ _  _
   border-radius: 0;
   background: #000;
   opacity: .15;
+  padding: 0;
   @include mobile {
     height: 1.5px;
     width: 60px;
