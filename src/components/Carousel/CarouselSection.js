@@ -11,9 +11,8 @@ import "./Carousel.scss";
 const CarouselCaption = styled(Caption)`
   padding-top: 65px;
   ${media.sm`
-      padding-top: 45px;
+      padding-top: 55px;
   `}
-
 `;
 
 class CarouselImage extends React.Component {
@@ -31,16 +30,36 @@ class CarouselVideo extends React.Component {
 
 const flickityOptions = {
   cellAlign: "center",
-  contain: true,
+  wrapAround: "true",
   arrowShape:
-    "M75.735105,40.438312 C76.344587,41.0492176 77.3339066,41.0503718 77.9448122,40.4408899 C78.5557179,39.8314079 78.556872,38.8420883 77.9473901,38.2311827 L40.3878808,0.583935367 C39.778737,-0.0266314187 38.7900863,-0.0281726181 38.1790418,0.580492027 L0.959803519,37.6547718 C0.348419891,38.2637743 0.346489573,39.2530927 0.955492033,39.8644763 C1.56449449,40.4758599 2.55381289,40.4777902 3.16519652,39.8687878 L39.278295,3.89633973 L75.735105,40.438312 Z"
+    "M18.4827369,0.710118336 L34.6224202,16.8498017 C35.0146078,17.2419892 35.0147822,17.8776764 34.6212697,18.2711889 L34.0101666,18.882292 C33.6173437,19.2751149 32.9791226,19.2737856 32.5887794,18.8834425 L17.779,4.073 L2.74375914,19.1095345 C2.38344239,19.4698512 1.81191601,19.4987005 1.41715504,19.192041 L1.32237194,19.108384 L0.711268865,18.4972809 C0.317756375,18.1037684 0.317930808,17.4680812 0.710118336,17.0758937 L0.710118336,17.0758937 L16.3619282,1.42308149 C16.3887566,1.38808005 16.4181958,1.35442273 16.4502466,1.32237194 L17.0613497,0.711268865 C17.4541726,0.318445918 18.0923937,0.319775194 18.4827369,0.710118336 Z"
 };
+
 
 class CarouselSection extends React.Component {
   render() {
     const { caption } = this.props;
     return (
       <div className="carouselSection">
+      <div className={this.props.color} id="prevBtn" />
+      <div className={this.props.color} id="nextBtn" />
+        <Flickity
+          className={"carousel"}
+          elementType={"div"}
+          options={flickityOptions}
+        >
+        {this.props.children}
+        </Flickity>
+        <CarouselCaption> {caption} </CarouselCaption>
+      </div>
+    );
+  }
+}
+class CarouselSectionSlim extends React.Component {
+  render() {
+    const { caption } = this.props;
+    return (
+      <div className="carouselSectionSlim">
         <Flickity
           className={"carousel"}
           elementType={"div"}
@@ -54,4 +73,4 @@ class CarouselSection extends React.Component {
   }
 }
 
-export {CarouselSection, CarouselImage, CarouselVideo};
+export {CarouselSection, CarouselSectionSlim, CarouselImage, CarouselVideo};

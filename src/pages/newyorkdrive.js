@@ -2,7 +2,7 @@ import React from 'react';
 
 // components
 import ProjectLink from "../components/ProjectLink";
-import { CarouselSection, CarouselImage, CarouselVideo } from "../components/Carousel/CarouselSection";
+import { CarouselSection, CarouselImage, CarouselVideo, CarouselSectionSlim } from "../components/Carousel/CarouselSection";
 import ProjectWrapper from "../components/ProjectWrapper"
 import { TextSection, ImageSection, ImageSectionSlim, VideoSection, VideoSectionSlim } from '../components/Sections';
 import { IntroSection, HeroImage } from "../components/Hero/Hero";
@@ -70,6 +70,17 @@ export default class NewYorkDrive extends React.Component {
 
       <ImageSectionSlim src='img/newyorkdrive/car.png' caption='Car Artwork' />
 
+      <TextSection>
+        Alongside the mobile experience, physical arcade machines were installed at Coach stores in Omotesando, Ginza and Shinjuku as a way to bridge the customer experence from online to offline, ultimately driving traffic to stores.
+      </TextSection>
+
+      <CarouselSectionSlim caption='In-Store Experience'>
+        <CarouselImage src="img/newyorkdrive/carousel-1.png" />
+        <CarouselImage src="img/newyorkdrive/carousel-2.png" />
+        <CarouselImage src="img/newyorkdrive/carousel-3.png" />
+        <CarouselImage src="img/newyorkdrive/carousel-4.png" />
+        <CarouselImage src="img/newyorkdrive/carousel-5.png" />
+      </CarouselSectionSlim>
 
       <TextSection>
         Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at.
@@ -77,17 +88,6 @@ export default class NewYorkDrive extends React.Component {
 
       <ImageSectionSlim src='img/newyorkdrive/snapchat.png' caption='Custom Snapchat Pins'  />
 
-      <TextSection>
-        Alongside the mobile experience, physical arcade machines were installed at Coach stores in Omotesando, Ginza and Shinjuku as a way to bridge the customer experence from online to offline, ultimately driving traffic to stores.
-      </TextSection>
-
-      <CarouselSection caption='In-Store Experience'>
-        <CarouselImage src="img/newyorkdrive/carousel-1.png" />
-        <CarouselImage src="img/newyorkdrive/carousel-2.png" />
-        <CarouselImage src="img/newyorkdrive/carousel-3.png" />
-        <CarouselImage src="img/newyorkdrive/carousel-4.png" />
-        <CarouselImage src="img/newyorkdrive/carousel-5.png" />
-      </CarouselSection>
 
       <Footer>
         <FooterSection title="Key Results">

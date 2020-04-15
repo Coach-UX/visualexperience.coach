@@ -56,7 +56,7 @@ export default class SceneStealers extends React.Component {
       Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla iaculis vitae. Donec sagittis faucibus lacus eget blandi.
       </TextSection>
 
-      <CarouselSection caption='Level Artwork'>
+      <CarouselSection color={projectClass} caption='Level Artwork'>
         <CarouselVideo src="img/scenestealers/carousel-1.mp4" />
         <CarouselVideo src="img/scenestealers/carousel-2.mp4" />
         <CarouselVideo src="img/scenestealers/carousel-3.mp4" />

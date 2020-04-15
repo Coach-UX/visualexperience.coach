@@ -11,7 +11,6 @@ ___  ____ ____  _ ____ ____ ___    ____ ____ _    ____ ____ ____
   --RexyRace: #9BC4B6;
   --LifeCoach: #FEBD28;
   --MBJ: #E05927;
-  --CitySole: #DF592A;
 /* 2018 */
   --SceneStealers: #6291A3;
 /* 2017 */
@@ -20,39 +19,40 @@ ___  ____ ____  _ ____ ____ ___    ____ ____ _    ____ ____ ____
 }
 
 .lifecoach:hover ~ .menuBackground,
+#nextBtn.lifecoach, #prevBtn.lifecoach,
 h1.lifecoach,
 span.lifecoach{
   background-color: var(--LifeCoach);
 }
 .rexyrace:hover ~ .menuBackground,
+#nextBtn.rexyrace, #prevBtn.rexyrace,
 h1.rexyrace,
 span.rexyrace {
   background-color: var(--RexyRace);
 }
 .mbj:hover ~ .menuBackground,
+#nextBtn.mbj, #prevBtn.mbj,
 h1.mbj,
 span.mbj {
   background-color: var(--MBJ);
 }
-.citysole:hover ~ .menuBackground,
-h1.citysole,
-span.citysole {
-  background-color: var(--CitySole);
-}
 /* 2018 */
 .scenestealers:hover ~ .menuBackground,
+#nextBtn.scenestealers, #prevBtn.scenestealers,
 h1.scenestealers,
 span.scenestealers {
   background-color: var(--SceneStealers);
 }
 /* 2017 */
 .newyorkdrive:hover ~ .menuBackground,
+#nextBtn.newyorkdrive, #prevBtn.newyorkdrive,
 h1.newyorkdrive,
 span.newyorkdrive {
   background-color: var(--NewYorkDrive);
   background-image: linear-gradient(0deg, #7069FF 0%, #FF00FF 100%);
 }
 .rainbowhockey:hover ~ .menuBackground,
+#nextBtn.rainbowhockey, #prevBtn.rainbowhockey,
 h1.rainbowhockey,
 span.rainbowhockey {
   background-color: var(--RainbowHockey);

@@ -52,7 +52,7 @@ export default class RexyRace extends React.Component {
         In total we created four scenes, all made from a mixture of elements from Tokyo and New York City.
       </TextSection>
 
-      <CarouselSection caption='Stage Artwork'>
+      <CarouselSection color={projectClass} caption='Stage Artwork'>
         <CarouselImage src="img/rexyrace/stage1.png" />
         <CarouselImage src="img/rexyrace/stage2.png" />
         <CarouselImage src="img/rexyrace/stage3.png" />

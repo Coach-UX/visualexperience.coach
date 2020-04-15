@@ -2,7 +2,7 @@ import React from 'react';
 
 // components
 import ProjectLink from "../components/ProjectLink";
-import { CarouselSection, CarouselImage, CarouselVideo } from "../components/Carousel/CarouselSection";
+import { CarouselSection, CarouselImage, CarouselVideo, CarouselSectionSlim } from "../components/Carousel/CarouselSection";
 import ProjectWrapper from "../components/ProjectWrapper"
 import { TextSection, ImageSection, ImageSectionSlim, VideoSection, VideoSectionSlim } from '../components/Sections';
 import { IntroSection } from "../components/Hero/Hero";
@@ -45,12 +45,12 @@ export default class LifeCoach extends React.Component {
         Created in collaboration with set designer Simon Costin, the playfully surreal experience included a DIY graffiti room, tarot readings, fairground games, live performances and nightly DJs sets. The entire experience was conceived and executed as a way to surprise and delight guests.
         </TextSection>
 
-        <CarouselSection caption='SoHo, NY Event Space'>
+        <CarouselSectionSlim caption='SoHo, NY Event Space'>
           <CarouselImage src="img/lifecoach/carousel1.png" />
           <CarouselImage src="img/lifecoach/carousel2.png" />
           <CarouselImage src="img/lifecoach/carousel3.png" />
           <CarouselImage src="img/lifecoach/carousel4.png" />
-        </CarouselSection>
+        </CarouselSectionSlim>
 
         <Footer>
          <FooterSection title="Key Results">
