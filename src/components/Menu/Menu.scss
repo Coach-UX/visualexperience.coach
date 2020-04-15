@@ -40,6 +40,14 @@
   & img {
   position: absolute;
   top: 90vh;
+  left: 111px;
+  @include portrait {
+    left: 10%;
+  }
+  @include mobile {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
   &:hover > li {
     opacity: .3;
