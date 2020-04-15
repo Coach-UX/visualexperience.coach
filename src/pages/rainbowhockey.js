@@ -48,6 +48,9 @@ export default class RainbowHockey extends React.Component {
         Vestibulum nec erat ut mi sollicitudin porttitor id sit amet risus. Nam tempus vel odio vitae aliquam. In imperdiet eros id lacus vestibulum ves.
       </TextSection>
 
+      <ImageSectionSlim src='img/rainbowhockey/detail.png' caption='Artwork detail' />
+
+
       <VideoSectionSlim
         src='img/rainbowhockey/RH-RallyModule.mp4'
         poster=''
@@ -77,6 +80,7 @@ export default class RainbowHockey extends React.Component {
         <CarouselImage src="img/newyorkdrive/carousel-4.png" />
         <CarouselImage src="img/newyorkdrive/carousel-5.png" />
       </CarouselSectionSlim>
+
 
       <TextSection>
         Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at.
