@@ -98,7 +98,6 @@ export default class NewYorkDrive extends React.Component {
         </FooterSection>
         <FooterSection title="Credits">
           <Credits left="Art Direction" right="Coach Creative Team" />
-          <Credits left="UI/UX Design" right="Coach Creative Team" />
           <Credits left="Copywriting" right="Coach Creative Team" />
           <Credits left="Illustration" right="Coach Creative Team" />
           <Credits left="Development" right="5cream1ouder" />
