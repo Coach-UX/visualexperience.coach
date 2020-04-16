@@ -13,7 +13,7 @@ import { Footer, FooterSection, Results, Award, Credits } from "../components/Fo
 // project details
 var projectName = "Life Coach",
     projectClass = "lifecoach",
-    projectYear = "2017",
+    projectYear = "2018",
     externalLink = "#",
     externalLinkLabel="Launch the Site",
 
@@ -31,7 +31,7 @@ export default class LifeCoach extends React.Component {
           Your future is calling. Are ready to pick up? And with that subversive messaging, we kicked off Coach’s first immersive pop-up experience. The interactive, open-to-the-public, pop-up melded established brand codes (NYC, nostalgia and Americana) with of-the-moment mysticism (tarot, sound baths and astrology). The result; an unexpected experiential that put a premium on user experience, production values and content opportunities over overt product marketing.
         </IntroSection>
 
-        <HeroLaptop src="img/lifecoach/lc-ny-1.mp4" projectClass={projectClass} />
+        <HeroLaptop src="img/lifecoach/lc-tokyo-.mp4" projectClass={projectClass} />
 
         <ProjectLink href={externalLink} label={externalLinkLabel}/>
 
@@ -40,6 +40,24 @@ export default class LifeCoach extends React.Component {
         </TextSection>
 
         <ImageSection src='img/lifecoach/screens.png' caption='Website Screens' />
+
+        <VideoSectionSlim
+          src='img/lifecoach/programming.mp4'
+          poster=''
+          caption='Programming schedule'
+        />
+
+        <VideoSectionSlim
+          src='img/lifecoach/phone.mp4'
+          poster=''
+          caption='Phone interaction'
+        />
+
+        <VideoSectionSlim
+          src='img/lifecoach/headline.mp4'
+          poster=''
+          caption='Headline glitch interaction'
+        />
 
         <TextSection>
         Created in collaboration with set designer Simon Costin, the playfully surreal experience included a DIY graffiti room, tarot readings, fairground games, live performances and nightly DJs sets. The entire experience was conceived and executed as a way to surprise and delight guests.

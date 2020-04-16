@@ -69,7 +69,7 @@ if (window.innerWidth > window.innerHeight) {
   var laptopScale = "2.19";
   var screenTop = "21.5%";
   var laptopTop = "4.5%";
-  var screenMaskHeight = "137vw"
+  var screenMaskHeight = "150vw"
 }
 // mobile
 else {
