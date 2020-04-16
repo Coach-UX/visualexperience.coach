@@ -142,6 +142,7 @@ li {
   }
   @include mobile {
       --padding: 40px;
+      --gridSection-SM: 3 / 14;
   }
 }
 
