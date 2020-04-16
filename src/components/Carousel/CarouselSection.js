@@ -17,14 +17,12 @@ const CarouselCaption = styled(Caption)`
 
 class CarouselImage extends React.Component {
   render() {
-    const { src } = this.props;
-    return <img className="carousel-cell" src={src} />;
+    return <img className="carousel-cell" src={"img/" + this.props.folder + "/" + this.props.src} />;
   }
 };
 class CarouselVideo extends React.Component {
   render() {
-    const { src } = this.props;
-    return <video className="carousel-cell" autoPlay muted playsInline loop src={src} />;
+    return <video className="carousel-cell" autoPlay muted playsInline loop src={"img/" + this.props.folder + "/" + this.props.src} />;
   }
 };
 
@@ -38,7 +36,6 @@ const flickityOptions = {
 
 class CarouselSection extends React.Component {
   render() {
-    const { caption } = this.props;
     return (
       <div className="carouselSection">
       <div className={this.props.color} id="prevBtn" />
@@ -50,7 +47,7 @@ class CarouselSection extends React.Component {
         >
         {this.props.children}
         </Flickity>
-        <CarouselCaption> {caption} </CarouselCaption>
+        <CarouselCaption> {this.props.caption} </CarouselCaption>
       </div>
     );
   }
@@ -67,7 +64,7 @@ class CarouselSectionSlim extends React.Component {
         >
         {this.props.children}
         </Flickity>
-        <CarouselCaption> {caption} </CarouselCaption>
+        <CarouselCaption> {this.props.caption} </CarouselCaption>
       </div>
     );
   }

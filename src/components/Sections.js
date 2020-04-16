@@ -44,24 +44,20 @@ const ImageSlim = styled(Image)`
 `;
 export class ImageSection extends React.Component {
   render() {
-    const { src } = this.props;
-    const { caption } = this.props;
     return (
       <React.Fragment>
-        <Image src={src} />
-        <Caption> {caption} </Caption>
+        <Image src={"img/" + this.props.folder + "/" + this.props.src} />
+        <Caption> {this.props.caption} </Caption>
       </React.Fragment>
     );
   }
 };
 export class ImageSectionSlim extends React.Component {
   render() {
-    const { src } = this.props;
-    const { caption } = this.props;
     return (
       <React.Fragment>
-        <ImageSlim src={src} />
-        <Caption> {caption} </Caption>
+        <ImageSlim src={"img/" + this.props.folder + "/" + this.props.src} />
+        <Caption> {this.props.caption} </Caption>
       </React.Fragment>
     );
   }
@@ -88,26 +84,20 @@ const VideoSlim = styled(Video)`
 
 export class VideoSection extends React.Component {
   render() {
-    const { src } = this.props;
-    const { poster } = this.props;
-    const { caption } = this.props;
     return (
       <React.Fragment>
-        <Video src={src} poster={poster} autoPlay muted playsInline loop />
-        <Caption> {caption} </Caption>
+        <Video src={"img/" + this.props.folder + "/" + this.props.src} autoPlay muted playsInline loop />
+        <Caption> {this.props.caption} </Caption>
       </React.Fragment>
     );
   }
 };
 export class VideoSectionSlim extends React.Component {
   render() {
-    const { src } = this.props;
-    const { poster } = this.props;
-    const { caption } = this.props;
     return (
       <React.Fragment>
-        <VideoSlim src={src} poster={poster} autoPlay muted playsInline loop />
-        <Caption> {caption} </Caption>
+        <VideoSlim src={"img/" + this.props.folder + "/" + this.props.src} autoPlay muted playsInline loop />
+        <Caption> {this.props.caption} </Caption>
       </React.Fragment>
     );
   }

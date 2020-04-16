@@ -103,7 +103,7 @@ class HeroLaptop extends React.Component {
           <Laptop id="laptop" className="heroDesktop" src={"img/" + this.props.projectClass + "/hero.png"} />
           <Laptop id="laptop" className="heroMobile" src={"img/" + this.props.projectClass + "/hero-mobile.png"} />
           <LaptopScreenMask id="screenMask"></LaptopScreenMask>
-          <LaptopScreen id="screen" src={src} autoPlay muted playsInline loop></LaptopScreen>
+          <LaptopScreen id="screen" src={"img/" + this.props.projectClass + "/" + this.props.src} autoPlay muted playsInline loop></LaptopScreen>
         </HeroLaptopWrapper>
         </React.Fragment>
     );

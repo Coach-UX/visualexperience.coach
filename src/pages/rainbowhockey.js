@@ -36,37 +36,36 @@ export default class RainbowHockey extends React.Component {
         New York Drive and Rainbow Hockey took the campaign and brought it to life in an fun, unxpected way. Brand motifs, neon and 80’s inspired graphics were used to reimagine some of the classic arcade games of the era.
       </TextSection>
 
-      <ImageSectionSlim src='img/rainbowhockey/logo.png' caption='"Rainbow Hockey" Logo' />
+      <ImageSectionSlim src='logo.png' caption='"Rainbow Hockey" Logo' folder={projectClass} />
 
       <TextSection>
         Vestibulum nec erat ut mi sollicitudin porttitor id sit amet risus. Nam tempus vel odio vitae aliquam. In imperdiet eros id lacus vestibulum ves.
       </TextSection>
 
-      <ImageSection src='img/rainbowhockey/screens.png' caption='Gameplay Screens' />
+      <ImageSection src='screens.png' caption='Gameplay Screens' folder={projectClass} />
 
       <TextSection>
         Vestibulum nec erat ut mi sollicitudin porttitor id sit amet risus. Nam tempus vel odio vitae aliquam. In imperdiet eros id lacus vestibulum ves.
       </TextSection>
 
-      <ImageSectionSlim src='img/rainbowhockey/detail.png' caption='Artwork detail' />
-
+      <ImageSectionSlim src='detail.png' caption='Artwork detail' folder={projectClass} />
 
       <VideoSectionSlim
-        src='img/rainbowhockey/RH-RallyModule.mp4'
-        poster=''
+        src='RH-RallyModule.mp4'
         caption='Gameplay'
+        folder={projectClass}
       />
 
       <VideoSectionSlim
-        src='img/rainbowhockey/RH-GoalModule.mp4'
-        poster=''
+        src='RH-GoalModule.mp4'
         caption='"Goal" animation'
+        folder={projectClass}
       />
 
       <VideoSectionSlim
-        src='img/rainbowhockey/RH-YouWinModule.mp4'
-        poster=''
+        src='RH-YouWinModule.mp4'
         caption='"You Win" animation'
+        folder={projectClass}
       />
 
       <TextSection>
@@ -74,21 +73,18 @@ export default class RainbowHockey extends React.Component {
       </TextSection>
 
       <CarouselSectionSlim caption='In-Store Experience'>
-        <CarouselImage src="img/newyorkdrive/carousel-1.png" />
-        <CarouselImage src="img/newyorkdrive/carousel-2.png" />
-        <CarouselImage src="img/newyorkdrive/carousel-3.png" />
-        <CarouselImage src="img/newyorkdrive/carousel-4.png" />
-        <CarouselImage src="img/newyorkdrive/carousel-5.png" />
+        <CarouselImage src="carousel-1.png" folder={projectClass} />
+        <CarouselImage src="carousel-2.png" folder={projectClass} />
+        <CarouselImage src="carousel-3.png" folder={projectClass} />
+        <CarouselImage src="carousel-4.png" folder={projectClass} />
+        <CarouselImage src="carousel-5.png" folder={projectClass} />
       </CarouselSectionSlim>
-
 
       <TextSection>
         Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at.
       </TextSection>
 
-      <ImageSectionSlim src='img/rainbowhockey/snapchat.png' caption='Custom Snapchat Pins'  />
-
-
+      <ImageSectionSlim src='snapchat.png' caption='Custom Snapchat Pins'  folder={projectClass} />
 
       <Footer>
         <FooterSection title="Key Results">

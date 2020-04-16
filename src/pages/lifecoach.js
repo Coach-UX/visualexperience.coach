@@ -31,7 +31,7 @@ export default class LifeCoach extends React.Component {
           Your future is calling. Are ready to pick up? And with that subversive messaging, we kicked off Coach’s first immersive pop-up experience. The interactive, open-to-the-public, pop-up melded established brand codes (NYC, nostalgia and Americana) with of-the-moment mysticism (tarot, sound baths and astrology). The result; an unexpected experiential that put a premium on user experience, production values and content opportunities over overt product marketing.
         </IntroSection>
 
-        <HeroLaptop src="img/lifecoach/lc-tokyo-.mp4" projectClass={projectClass} />
+        <HeroLaptop src="lc-tokyo-.mp4" projectClass={projectClass} />
 
         <ProjectLink href={externalLink} label={externalLinkLabel}/>
 
@@ -39,24 +39,24 @@ export default class LifeCoach extends React.Component {
         Held in SoHo, New York in June 2018, the week-long, immersive pop-up invited guests to explore four interactive spaces designed around the themes of creativity and self-expression.
         </TextSection>
 
-        <ImageSection src='img/lifecoach/screens.png' caption='Website Screens' />
+        <ImageSection src='screens.png' caption='Website Screens' folder={projectClass} />
 
         <VideoSectionSlim
-          src='img/lifecoach/programming.mp4'
-          poster=''
+          src='programming.mp4'
           caption='Programming schedule'
+          folder={projectClass}
         />
 
         <VideoSectionSlim
-          src='img/lifecoach/phone.mp4'
-          poster=''
+          src='phone.mp4'
           caption='Phone interaction'
+          folder={projectClass}
         />
 
         <VideoSectionSlim
-          src='img/lifecoach/headline.mp4'
-          poster=''
+          src='headline.mp4'
           caption='Headline glitch interaction'
+          folder={projectClass}
         />
 
         <TextSection>
@@ -64,10 +64,10 @@ export default class LifeCoach extends React.Component {
         </TextSection>
 
         <CarouselSectionSlim caption='SoHo, NY Event Space'>
-          <CarouselImage src="img/lifecoach/carousel1.png" />
-          <CarouselImage src="img/lifecoach/carousel2.png" />
-          <CarouselImage src="img/lifecoach/carousel3.png" />
-          <CarouselImage src="img/lifecoach/carousel4.png" />
+          <CarouselImage src="carousel1.png" folder={projectClass}/>
+          <CarouselImage src="carousel2.png" folder={projectClass}/>
+          <CarouselImage src="carousel3.png" folder={projectClass}/>
+          <CarouselImage src="carousel4.png" folder={projectClass}/>
         </CarouselSectionSlim>
 
         <Footer>

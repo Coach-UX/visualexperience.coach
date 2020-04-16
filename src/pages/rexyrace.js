@@ -16,9 +16,9 @@ var projectName = "Rexy's Holiday Race",
     externalLink = "#",
     externalLinkLabel="Launch the Game",
 
-    nextProjectName="Life Coach",
-    nextProjectClass="lifecoach",
-    nextProjectLink="/lifecoach";
+    nextProjectName="Coach x Michael B Jordan",
+    nextProjectClass="mbj",
+    nextProjectLink="/mbj";
 
 export default class RexyRace extends React.Component {
   render() {
@@ -36,16 +36,13 @@ export default class RexyRace extends React.Component {
         With a Gen-Z audience being the primary target audience we opted to explore an nostalgic arcade aesthetic, often seen in the early 90s. Throughout the game design we designed with that era in mind, resulting in the gameplay and menu being contextual to arcade experiences from that age.
       </TextSection>
 
-      <ImageSection src='img/rexyrace/screens.png' caption='Gameplay Screens' />
+      <ImageSection src='screens.png' caption='Gameplay Screens' folder={projectClass} />
 
       <TextSection>
         3 bespoke avatars were created for players to choose from at the beginning of the game. Working closely with the Illustrator to render out Rexy in Pixel Art for the first time.
       </TextSection>
 
-      <VideoSectionSlim
-        src='img/rexyrace/avatars.mp4'
-        poster='img/rexyrace/avatars.jpg'
-        caption='Avatars'
+      <VideoSectionSlim src='avatars.mp4' caption='Avatars' folder={projectClass}
       />
 
       <TextSection>
@@ -53,16 +50,16 @@ export default class RexyRace extends React.Component {
       </TextSection>
 
       <CarouselSection color={projectClass} caption='Stage Artwork'>
-        <CarouselImage src="img/rexyrace/stage1.png" />
-        <CarouselImage src="img/rexyrace/stage2.png" />
-        <CarouselImage src="img/rexyrace/stage3.png" />
+        <CarouselImage src="stage1.png" folder={projectClass}/>
+        <CarouselImage src="stage2.png" folder={projectClass}/>
+        <CarouselImage src="stage3.png" folder={projectClass}/>
       </CarouselSection>
 
       <TextSection>
         Throughout the game we introduced Collectibles. These included bespoke drawings from the Horse & Carriage collection along with other everyday objects (found within the scenes).
       </TextSection>
 
-      <ImageSection src='img/rexyrace/collectibles.png' caption='Game Collectibles' />
+      <ImageSection src='collectibles.png' caption='Game Collectibles' folder={projectClass}/>
 
       <Footer>
        <FooterSection title="Key Results">

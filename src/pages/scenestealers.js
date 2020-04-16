@@ -38,9 +38,9 @@ export default class SceneStealers extends React.Component {
       </TextSection>
 
       <VideoSection
-        src='img/scenestealers/gameplay.mp4'
-        poster=''
+        src='gameplay.mp4'
         caption='Gameplay'
+        folder={projectClass}
       />
 
       <TextSection>
@@ -48,8 +48,9 @@ export default class SceneStealers extends React.Component {
       </TextSection>
 
       <ImageSectionSlim
-        src='img/scenestealers/meetthecast.png'
+        src='meetthecast.png'
         caption="Meet the Cast"
+        folder={projectClass}
       />
 
       <TextSection>
@@ -57,9 +58,9 @@ export default class SceneStealers extends React.Component {
       </TextSection>
 
       <CarouselSection color={projectClass} caption='Level Artwork'>
-        <CarouselVideo src="img/scenestealers/carousel-1.mp4" />
-        <CarouselVideo src="img/scenestealers/carousel-2.mp4" />
-        <CarouselVideo src="img/scenestealers/carousel-3.mp4" />
+        <CarouselVideo src="carousel-1.mp4" folder={projectClass}/>
+        <CarouselVideo src="carousel-2.mp4" folder={projectClass}/>
+        <CarouselVideo src="carousel-3.mp4" folder={projectClass}/>
       </CarouselSection>
 
       <TextSection>
@@ -67,9 +68,9 @@ export default class SceneStealers extends React.Component {
       </TextSection>
 
       <VideoSectionSlim
-        src='img/scenestealers/results.mp4'
-        poster=''
+        src='results.mp4'
         caption='Results'
+        folder={projectClass}
       />
 
       <Footer>
