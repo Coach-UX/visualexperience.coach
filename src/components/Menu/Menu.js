@@ -29,9 +29,9 @@ export default class Menu extends React.Component {
                 <li className="rexyrace">
                   <MenuLink to="/" linktext="Rexy's Holiday Race" />
                 </li>
-                  {/*<li className="mbj">
+                  <li className="mbj">
                    <MenuLink to="/mbj" linktext="Coach x Michael B Jordan" />
-                 </li> */}
+                 </li>
                 <li className="lifecoach">
                   <MenuLink to="/lifecoach" linktext="Life Coach" />
                 </li>

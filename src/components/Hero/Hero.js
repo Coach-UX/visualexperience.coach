@@ -68,7 +68,7 @@ const Video = styled.video`
   object-fit: cover;
   height: 80%;
   margin: 0 20%;
-  box-shadow: 0 100px 70px -50px rgba(0,0,0,.15);
+  box-shadow: 0 70px 70px -50px rgba(0,0,0,.1);
   ${media.sm`
     width: 80%;
     margin: 0 10%;

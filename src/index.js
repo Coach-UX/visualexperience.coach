@@ -12,8 +12,9 @@ import "../src/style.scss";
 
 // pages
 import RexyRace from "./pages/rexyrace";
-import LifeCoach from "./pages/lifecoach";
+import MBJ from "./pages/mbj";
 import SceneStealers from "./pages/scenestealers";
+import LifeCoach from "./pages/lifecoach";
 import NewYorkDrive from "./pages/newyorkdrive";
 import RainbowHockey from "./pages/rainbowhockey";
 
@@ -27,6 +28,7 @@ const App = () => (
       <ScrollToTop />
 
       <Route exact path="/" component={RexyRace} />
+      <Route path="/mbj" component={MBJ}/>
       <Route path="/lifecoach" component={LifeCoach}/>
       <Route path="/scenestealers" component={SceneStealers}/>
       <Route path="/newyorkdrive" component={NewYorkDrive}/>
