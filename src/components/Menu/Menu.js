@@ -32,6 +32,9 @@ export default class Menu extends React.Component {
                   <li className="mbj">
                    <MenuLink to="/mbj" linktext="Coach x Michael B Jordan" />
                  </li>
+                 <li className="signature">
+                  <MenuLink to="/signature" linktext="Art of Signature" />
+                </li>
                 <li className="lifecoach">
                   <MenuLink to="/lifecoach" linktext="Life Coach" />
                 </li>

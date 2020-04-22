@@ -13,6 +13,7 @@ import "../src/style.scss";
 // pages
 import RexyRace from "./pages/rexyrace";
 import MBJ from "./pages/mbj";
+import Signature from "./pages/signature";
 import SceneStealers from "./pages/scenestealers";
 import LifeCoach from "./pages/lifecoach";
 import NewYorkDrive from "./pages/newyorkdrive";
@@ -29,6 +30,7 @@ const App = () => (
 
       <Route exact path="/" component={RexyRace} />
       <Route path="/mbj" component={MBJ}/>
+      <Route path="/signature" component={Signature}/>
       <Route path="/lifecoach" component={LifeCoach}/>
       <Route path="/scenestealers" component={SceneStealers}/>
       <Route path="/newyorkdrive" component={NewYorkDrive}/>

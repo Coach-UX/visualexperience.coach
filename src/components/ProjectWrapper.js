@@ -27,6 +27,9 @@ const BackgroundColor = Styled.span`
   &.lifecoach {
     height: 120%;
   }
+  &.mbj {
+    height: 120%;
+  }
 
 `;
 

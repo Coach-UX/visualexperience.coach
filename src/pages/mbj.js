@@ -16,9 +16,10 @@ var projectName = "Coach x Michael B Jordan",
     externalLink = "#",
     externalLinkLabel="",
 
-    nextProjectName="Life Coach",
-    nextProjectClass="lifecoach",
-    nextProjectLink="/lifecoach";
+    nextProjectName="Art of Signature",
+    nextProjectClass="signature",
+    nextProjectLink="/signature";
+
 
 export default class RexyRace extends React.Component {
   render() {

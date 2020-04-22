@@ -11,6 +11,7 @@ ___  ____ ____  _ ____ ____ ___    ____ ____ _    ____ ____ ____
   --RexyRace: #9BC4B6;
   --LifeCoach: #FEBD28;
   --MBJ: #E05927;
+  --Signature: #CDA479;
 /* 2018 */
   --SceneStealers: #6291A3;
 /* 2017 */
@@ -35,6 +36,12 @@ span.rexyrace {
 h1.mbj,
 span.mbj {
   background-color: var(--MBJ);
+}
+.signature:hover ~ .menuBackground,
+#nextBtn.signature, #prevBtn.signature,
+h1.signature,
+span.signature {
+  background-color: var(--Signature);
 }
 /* 2018 */
 .scenestealers:hover ~ .menuBackground,
