@@ -17,7 +17,7 @@ const CarouselCaption = styled(Caption)`
 
 class CarouselImage extends React.Component {
   render() {
-    return <img className="carousel-cell" src={"img/" + this.props.folder + "/" + this.props.src} />;
+    return <img className="carousel-cell" src={"img/" + this.props.folder + "/" + this.props.src} alt={this.props.alt} />;
   }
 };
 class CarouselVideo extends React.Component {
@@ -54,7 +54,6 @@ class CarouselSection extends React.Component {
 }
 class CarouselSectionSlim extends React.Component {
   render() {
-    const { caption } = this.props;
     return (
       <div className="carouselSectionSlim">
         <Flickity

@@ -88,7 +88,7 @@ export default class LifeCoach extends React.Component {
            <Results p="Audience Demographics" b="25-34" />
          </FooterSection>
          <FooterSection title="Awards">
-           <Award link="https://drivenxdesign.com/NYC18/project.asp?ID=17871" src="img/lifecoach/award.png" />
+           <Award link="https://drivenxdesign.com/NYC18/project.asp?ID=17871" src="img/lifecoach/award.png" alt="DrivenxDesign 2018 New York Design Awards: Gold" />
          </FooterSection>
          <FooterSection title="Credits">
            <Credits left="Art Direction" right="Coach Creative Team" />

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import DelayLink from 'react-delay-link';
-import {gsap, Linear, Power2} from "gsap";
+import {gsap, Power2} from "gsap";
 import $ from 'jquery';
 
 function menuTransition() {

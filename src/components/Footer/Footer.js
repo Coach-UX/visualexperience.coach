@@ -38,8 +38,8 @@ export class Results extends React.Component {
 export class Award extends React.Component {
   render() {
     return (
-        <a className="award" target="_blank" href={this.props.link}>
-          <img src={this.props.src} />
+        <a className="award" target="_blank" rel="noopener noreferrer" href={this.props.link}>
+          <img src={this.props.src} alt={this.props.alt}/>
         </a>
       );
   }

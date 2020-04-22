@@ -62,13 +62,10 @@ export default class NextProjectButton extends React.Component {
     .addTo(controller);
  }
   render() {
-    const { nextProjectName } = this.props;
-    const { nextProjectLink } = this.props;
-    const { nextProjectColor } = this.props;
     return (
-        <DelayLink id="nextProjectBtn" to={nextProjectLink} delay={500} clickAction={nextProjectTransition} replace={false}>
-          <NextProject id="nextProject" className={nextProjectColor}>
-          {nextProjectName}
+        <DelayLink id="nextProjectBtn" to={this.props.nextProjectLink} delay={500} clickAction={nextProjectTransition} replace={false}>
+          <NextProject id="nextProject" className={this.props.nextProjectColor}>
+          {this.props.nextProjectName}
           </NextProject>
        </DelayLink>
     );
