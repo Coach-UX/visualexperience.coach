@@ -6,7 +6,7 @@ import { CarouselSection, CarouselImage, CarouselVideo, CarouselSectionSlim } fr
 import ProjectWrapper from "../components/ProjectWrapper"
 import { TextSection, ImageSection, ImageSectionSlim, VideoSection, VideoSectionSlim } from '../components/Sections';
 import { IntroSection } from "../components/Hero/Hero";
-import HeroLaptop from "../components/Hero/HeroLaptop";
+import { ScrollingHeroLaptop, ScrollingHeroFlex } from "../components/Hero/ScrollingHero";
 import { Footer, FooterSection, Results, Award, Credits } from "../components/Footer/Footer";
 
 
@@ -31,7 +31,17 @@ export default class LifeCoach extends React.Component {
           Your future is calling. Are ready to pick up? And with that subversive messaging, we kicked off Coach’s first immersive pop-up experience. The interactive, open-to-the-public, pop-up melded established brand codes (NYC, nostalgia and Americana) with of-the-moment mysticism (tarot, sound baths and astrology). The result; an unexpected experiential that put a premium on user experience, production values and content opportunities over overt product marketing.
         </IntroSection>
 
-        <HeroLaptop src="lc-tokyo-.mp4" projectClass={projectClass} />
+        <ScrollingHeroFlex
+          desktop="https://res.cloudinary.com/dfiwfoxwx/video/upload/v1587408462/Case%20Study/lifecoach/lc-tokyo-.mp4"
+          mobile="https://res.cloudinary.com/dfiwfoxwx/video/upload/v1587403252/Case%20Study/lifecoach/hero-mobile-video.mp4"
+          poster="img/lifecoach/hero-mobile-video.jpg"
+          adjustmentClass="adjustTop"
+          DesktopScreenTop="21.5%"
+          DesktopScreenMaskHeight="150vw"
+          MobileDeviceTop="15%"
+          MobileScreenTop="32%"
+          MobileScreenMaskHeight="940vw"
+        />
 
         <ProjectLink href={externalLink} label={externalLinkLabel}/>
 
