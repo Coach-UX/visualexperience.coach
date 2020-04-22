@@ -64,10 +64,10 @@ export default class LifeCoach extends React.Component {
         </TextSection>
 
         <CarouselSectionSlim caption='SoHo, NY Event Space'>
-          <CarouselImage src="carousel1.png" folder={projectClass}/>
-          <CarouselImage src="carousel2.png" folder={projectClass}/>
-          <CarouselImage src="carousel3.png" folder={projectClass}/>
-          <CarouselImage src="carousel4.png" folder={projectClass}/>
+          <CarouselImage src="carousel1.jpg" folder={projectClass}/>
+          <CarouselImage src="carousel2.jpg" folder={projectClass}/>
+          <CarouselImage src="carousel3.jpg" folder={projectClass}/>
+          <CarouselImage src="carousel4.jpg" folder={projectClass}/>
         </CarouselSectionSlim>
 
         <Footer>

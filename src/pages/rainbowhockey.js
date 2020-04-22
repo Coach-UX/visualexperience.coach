@@ -36,7 +36,7 @@ export default class RainbowHockey extends React.Component {
         New York Drive and Rainbow Hockey took the campaign and brought it to life in an fun, unxpected way. Brand motifs, neon and 80’s inspired graphics were used to reimagine some of the classic arcade games of the era.
       </TextSection>
 
-      <ImageSectionSlim src='logo.png' caption='"Rainbow Hockey" Logo' folder={projectClass} />
+      <ImageSectionSlim src='logo.jpg' caption='"Rainbow Hockey" Logo' folder={projectClass} />
 
       <TextSection>
         Vestibulum nec erat ut mi sollicitudin porttitor id sit amet risus. Nam tempus vel odio vitae aliquam. In imperdiet eros id lacus vestibulum ves.
@@ -48,7 +48,7 @@ export default class RainbowHockey extends React.Component {
         Vestibulum nec erat ut mi sollicitudin porttitor id sit amet risus. Nam tempus vel odio vitae aliquam. In imperdiet eros id lacus vestibulum ves.
       </TextSection>
 
-      <ImageSectionSlim src='detail.png' caption='Artwork detail' folder={projectClass} />
+      <ImageSectionSlim src='detail.jpg' caption='Artwork detail' folder={projectClass} />
 
       <VideoSectionSlim
         src='RH-RallyModule.mp4'
@@ -73,11 +73,11 @@ export default class RainbowHockey extends React.Component {
       </TextSection>
 
       <CarouselSectionSlim caption='In-Store Experience'>
-        <CarouselImage src="carousel-1.png" folder={projectClass} />
-        <CarouselImage src="carousel-2.png" folder={projectClass} />
-        <CarouselImage src="carousel-3.png" folder={projectClass} />
-        <CarouselImage src="carousel-4.png" folder={projectClass} />
-        <CarouselImage src="carousel-5.png" folder={projectClass} />
+        <CarouselImage src="carousel-1.jpg" folder={projectClass} />
+        <CarouselImage src="carousel-2.jpg" folder={projectClass} />
+        <CarouselImage src="carousel-3.jpg" folder={projectClass} />
+        <CarouselImage src="carousel-4.jpg" folder={projectClass} />
+        <CarouselImage src="carousel-5.jpg" folder={projectClass} />
       </CarouselSectionSlim>
 
       <TextSection>

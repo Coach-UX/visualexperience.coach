@@ -2,10 +2,10 @@ import React from 'react';
 
 // components
 import ProjectLink from "../components/ProjectLink";
-import { CarouselSection, CarouselImage, CarouselVideo } from "../components/Carousel/CarouselSection";
+import { CarouselSection, CarouselSectionSlim, CarouselImage, CarouselVideo } from "../components/Carousel/CarouselSection";
 import ProjectWrapper from "../components/ProjectWrapper"
 import { TextSection, ImageSection, ImageSectionSlim, VideoSection, VideoSectionSlim } from '../components/Sections';
-import { IntroSection, HeroImage } from "../components/Hero/Hero";
+import { IntroSection, HeroImage, HeroVideo } from "../components/Hero/Hero";
 import { Footer, FooterSection, Results, Credits } from "../components/Footer/Footer";
 
 
@@ -38,11 +38,17 @@ export default class RexyRace extends React.Component {
 
       <ImageSection src='screens.png' caption='Gameplay Screens' folder={projectClass} />
 
+      <VideoSectionSlim src='gameplay.mp4' caption='Gameplay' folder={projectClass}
+      />
+
       <TextSection>
         3 bespoke avatars were created for players to choose from at the beginning of the game. Working closely with the Illustrator to render out Rexy in Pixel Art for the first time.
       </TextSection>
 
       <VideoSectionSlim src='avatars.mp4' caption='Avatars' folder={projectClass}
+      />
+
+      <VideoSectionSlim src='ChooseOutfit.mp4' caption='Outfits' folder={projectClass}
       />
 
       <TextSection>
@@ -60,6 +66,18 @@ export default class RexyRace extends React.Component {
       </TextSection>
 
       <ImageSection src='collectibles.png' caption='Game Collectibles' folder={projectClass}/>
+
+      <VideoSectionSlim src='bags.mp4' caption='Game Collectibles' folder={projectClass}/>
+
+
+      <CarouselSectionSlim color={projectClass} caption='Social response'>
+        <CarouselImage src="influencer1.jpg" folder={projectClass}/>
+        <CarouselImage src="influencer2.jpg" folder={projectClass}/>
+        <CarouselImage src="influencer3.jpg" folder={projectClass}/>
+        <CarouselImage src="influencer4.jpg" folder={projectClass}/>
+        <CarouselImage src="influencer5.jpg" folder={projectClass}/>
+        <CarouselVideo src="influencer6.mp4" folder={projectClass}/>
+      </CarouselSectionSlim>
 
       <Footer>
        <FooterSection title="Key Results">

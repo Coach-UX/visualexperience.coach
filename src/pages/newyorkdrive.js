@@ -75,11 +75,11 @@ export default class NewYorkDrive extends React.Component {
       </TextSection>
 
       <CarouselSectionSlim caption='In-Store Experience'>
-        <CarouselImage src="carousel-1.png" folder={projectClass} />
-        <CarouselImage src="carousel-2.png" folder={projectClass} />
-        <CarouselImage src="carousel-3.png" folder={projectClass} />
-        <CarouselImage src="carousel-4.png" folder={projectClass} />
-        <CarouselImage src="carousel-5.png" folder={projectClass} />
+        <CarouselImage src="carousel-1.jpg" folder={projectClass} />
+        <CarouselImage src="carousel-2.jpg" folder={projectClass} />
+        <CarouselImage src="carousel-3.jpg" folder={projectClass} />
+        <CarouselImage src="carousel-4.jpg" folder={projectClass} />
+        <CarouselImage src="carousel-5.jpg" folder={projectClass} />
       </CarouselSectionSlim>
 
       <TextSection>
