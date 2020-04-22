@@ -5,7 +5,7 @@ import ProjectLink from "../components/ProjectLink";
 import { CarouselSection, CarouselSectionSlim, CarouselImage, CarouselVideo } from "../components/Carousel/CarouselSection";
 import ProjectWrapper from "../components/ProjectWrapper"
 import { TextSection, ImageSection, ImageSectionSlim, VideoSection, VideoSectionSlim } from '../components/Sections';
-import { IntroSection, HeroImage, HeroVideo } from "../components/Hero/Hero";
+import { IntroSection, HeroImage, HeroVideoSmall } from "../components/Hero/Hero";
 import { Footer, FooterSection, Results, Credits } from "../components/Footer/Footer";
 
 
@@ -27,39 +27,49 @@ export default class RexyRace extends React.Component {
     <ProjectWrapper projectName={projectName} projectYear={projectYear} projectClass={projectClass} nextProjectLink={nextProjectLink} nextProjectName={nextProjectName} nextProjectClass={nextProjectClass} >
 
       <IntroSection>
-        To support Michael B Jordan’s first collection with Coach we decided to celebrate its Anime influences. Developing an immersive, gesture-led gaming experience, utilizing a mixture of technology frameworks as Coach customers became Students. Just as their hero Naruto had to, Students were tasked with trying to graduate from ‘The Academy’ at the base of Hokage Mountain.
+        To support Michael B Jordan’s first collection with Coach we decided to celebrate its Anime influences. Developing an immersive, gesture-led gaming experience, utilizing a mixture of technology frameworks as Coach customers became "Students". Just as their hero Naruto had to, Students were tasked with trying to graduate from ‘The Academy’ at the base of Hokage Mountain.
       </IntroSection>
 
-      <HeroVideo projectClass={projectClass} />
-      <ProjectLink href={externalLink} label={externalLinkLabel}/>
-
+      <HeroVideoSmall projectClass={projectClass} />
+      {/*<ProjectLink href={externalLink} label={externalLinkLabel}/>
+*/}
       <TextSection>
-        With a collection rooted so much in utility, allowed us to position product as a core component of this experience. Students triggered the experience to start by wearing a key piece of the collection and matching a unique pose. Crafted this contextual contact between Customer and Product resonated with the audience as an authentic way to experience new product ranges.
+        With a collection rooted so much in utility, it made sense for us to position product as a core component of this experience. Students triggered the experience to start by wearing a key piece of the collection and matching a unique pose. Crafted this contextual contact between Customer and Product resonated with the audience as an authentic way to experience new product ranges.
       </TextSection>
 
-      <ImageSection src='placeholder.png' caption=' Influencer wearing Belt Bag' folder={projectClass} />
+      <ImageSection src='beltbag.jpg' caption=' Influencer wearing Belt Bag' folder={projectClass} />
 
       <TextSection>
-        "Students" were tasked to follow Naruto and attempt to perform poses of increasing complexity as they experience his Ninja Training first hand. With a gaming engine built in, the quicker Students were to complete poses the more points they scored–shooting them up the scoreboard
+        Students were tasked to follow Naruto and attempt to perform poses of increasing complexity as they experience his Ninja Training first hand. With a gaming engine built in, the quicker Students were to complete poses the more points they scored–shooting them up the scoreboard.
       </TextSection>
 
       <ImageSection src='poses.png' caption='Naruto poses' folder={projectClass} />
 
+      <VideoSectionSlim src='poses.mp4' caption='Pose rotation' folder={projectClass} />
+
       <TextSection>
-        To celebrate successfully completed Jutsu during the game we developed a number of animation sequences influenced by TV show
+        To celebrate successfully completed Jutsu during the game, we developed a number of animation sequences influenced by the anime show.
       </TextSection>
 
-      <ImageSection src='placeholder.png' caption='Jutsu animations' folder={projectClass} />
+      <ImageSection src='screens.jpg' caption='Jutsu animations' folder={projectClass} />
 
       <TextSection>
-        This immersive experience was experience in multiple countries in parallel, creating a difficult logistical issue.
+        This immersive experience was installed in multiple countries in parallel, creating a difficult logistical challenge for the team.
       </TextSection>
 
       <CarouselSectionSlim color={projectClass} caption='Tokyo and LA Pop-ups'>
-        <CarouselImage src="carousel-1.png" folder={projectClass}/>
-        <CarouselImage src="carousel-2.png" folder={projectClass}/>
-        <CarouselImage src="carousel-3.jpg" folder={projectClass}/>
+        <CarouselImage src="carousel1.jpg" folder={projectClass}/>
+        <CarouselImage src="carousel3.jpg" folder={projectClass}/>
+        <CarouselImage src="carousel4.jpg" folder={projectClass}/>
+        <CarouselImage src="carousel5.jpg" folder={projectClass}/>
       </CarouselSectionSlim>
+
+      <TextSection>
+        At the end of the game, the user received a video of them doing a Jutsu which we encouraged them to share on their social media channels.
+      </TextSection>
+
+      <VideoSectionSlim src='share.mp4' caption='Share page' folder={projectClass} />
+
 
       <Footer>
        <FooterSection title="Key Results">
