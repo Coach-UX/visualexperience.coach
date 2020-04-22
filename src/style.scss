@@ -118,20 +118,20 @@ a {
   }
 }
 li {
-    font-size: 3.5vw;
-    line-height: 3vw;
+    font-size: 3vw;
+    line-height: 4vw;
     width: 50vw;
     text-align: left;
     list-style: none;
-    padding: 15px 0;
+    padding: 0px 0;
     @include portrait {
-      font-size: 7.5vw;
-      line-height: 6.5vw;
+      font-size: 6.5vw;
+      line-height: 8.5vw;
       width: 85vw;
     }
     @include mobile {
-      font-size: 30px;
-      line-height: 20px;
+      font-size: 28px;
+      line-height: 40px;
       width: 100vw
     }
   }
@@ -155,7 +155,7 @@ li {
 
 
 
-.heroDesktop {
+.heroDesktop, .screenDesktop {
    display: block;
    @include portrait {
      display: none;
@@ -164,12 +164,12 @@ li {
      display: none;
    }
  }
- .heroMobile {
-   display: none;
-   @include portrait {
-     display: block;
-   }
-   @include mobile {
-     display: block;
-   }
+.heroMobile, .screenMobile {
+ display: none;
+ @include portrait {
+   display: block;
  }
+ @include mobile {
+   display: block;
+ }
+}
