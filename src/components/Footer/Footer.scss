@@ -16,8 +16,13 @@
   display: flex;
   width: 100%;
 }
+.footer .column:nth-child(1) {
+  width: 40%;
+}
+.footer .column:nth-child(2) {
+  width: 60%;
+}
 .footer .column {
-  width: 50%;
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
@@ -43,12 +48,15 @@
   line-height: 6rem;
 }
 .footer .award{
-   width: 45%;
-   &:nth-child(odd) {
+   width: 25%;
+   &:nth-child(3n+1) {
      padding: 0 5% 10% 0;
    }
-   &:nth-child(even) {
-     padding: 0 0 10% 5%;
+   &:nth-child(3n+2) {
+     padding: 0 5% 10% 5%;
+   }
+   &:nth-child(3n+3) {
+     padding: 0 0% 10% 5%;
    }
    img {
      width: 100%;
