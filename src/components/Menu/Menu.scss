@@ -38,15 +38,19 @@
   }
   & img {
   position: absolute;
-  bottom: 50px;
-  transition: all .2s ease;
-  left: 6.5vw;
+  // bottom: 50px;
+  // left: 6.5vw;
+  top: 94px;
+  left: 38.4vw;
+  display: block;
+  width:5.5vw;
   @include portrait {
 
   }
   @include mobile {
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 58vw;
+    top:51px;
+    width: 20vw;
   }
 }
   &:hover > li {
