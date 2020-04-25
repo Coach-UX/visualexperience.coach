@@ -73,18 +73,18 @@ export default class RainbowHockey extends React.Component {
       </TextSection>
 
       <CarouselSectionSlim caption='In-Store Experience'>
-        <CarouselImage src="carousel-1.jpg" folder={projectClass} />
-        <CarouselImage src="carousel-2.jpg" folder={projectClass} />
-        <CarouselImage src="carousel-3.jpg" folder={projectClass} />
-        <CarouselImage src="carousel-4.jpg" folder={projectClass} />
-        <CarouselImage src="carousel-5.jpg" folder={projectClass} />
+        <CarouselImage src="carousel-1.jpg" folder="newyorkdrive" />
+        <CarouselImage src="carousel-2.jpg" folder="newyorkdrive" />
+        <CarouselImage src="carousel-3.jpg" folder="newyorkdrive" />
+        <CarouselImage src="carousel-4.jpg" folder="newyorkdrive" />
+        <CarouselImage src="carousel-5.jpg" folder="newyorkdrive" />
       </CarouselSectionSlim>
 
       <TextSection>
         Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at.
       </TextSection>
 
-      <ImageSectionSlim src='snapchat.png' caption='Custom Snapchat Pins'  folder={projectClass} />
+      <ImageSectionSlim src='snapchat.png' caption='Custom Snapchat Pins'  folder="newyorkdrive" />
 
       <Footer>
         <FooterSection title="Key Results">

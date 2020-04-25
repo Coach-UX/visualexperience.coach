@@ -53,7 +53,7 @@ export default class Isetan extends React.Component {
         We wanted any technology to be invisible to the customer so all of the crafted interactions were hidden from sight, and leverage RFID allowed us to position antennas and readers at specific locations, so once triggered the customers environment would magically change around them, giving them that surprise factor that we were after.
       </TextSection>
 
-      <VideoSectionSlim src='bounceback2.mp4' caption='Bounceback card with RFID' folder={projectClass} />
+      <VideoSectionSlim src='bounceback.mp4' caption='Bounceback card with RFID' folder={projectClass} />
 
       <TextSection>
         We created a number of videos that reacted to the RFID that transitioned to build the backdrop for a highly shareable moment.

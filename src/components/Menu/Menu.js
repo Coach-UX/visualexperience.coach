@@ -55,7 +55,7 @@ export default class Menu extends React.Component {
                 </li>
                   <div className="menuBackground" />
               </ul>
-              <img id="logo" src="img/logo.svg" alt="COACH logo"/>
+              <img id="logo" src="img/global/logo.svg" alt="COACH logo"/>
         </ul>
       </div>
       <div className="menuOverlay"></div>

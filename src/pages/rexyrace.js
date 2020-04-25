@@ -67,8 +67,11 @@ export default class RexyRace extends React.Component {
 
       <ImageSection src='collectibles.png' caption='Game Collectibles' folder={projectClass}/>
 
-      <VideoSectionSlim src='bags.mp4' caption='Game Collectibles' folder={projectClass}/>
+      {/*<VideoSectionSlim src='bags.mp4' caption='Game Collectibles' folder={projectClass}/>*/}
 
+      <TextSection>
+      Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla iaculis vitae. Donec sagittis faucibus lacus eget blandi.
+      </TextSection>
 
       <CarouselSectionSlim color={projectClass} caption='Social response'>
         <CarouselImage src="influencer1.jpg" folder={projectClass}/>
