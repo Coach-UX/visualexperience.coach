@@ -102,3 +102,14 @@ export class VideoSectionSlim extends React.Component {
     );
   }
 };
+
+export class VideoSectionSlimExternal extends React.Component {
+  render() {
+    return (
+      <React.Fragment>
+        <VideoSlim src={this.props.src} autoPlay muted playsInline loop />
+        <Caption> {this.props.caption} </Caption>
+      </React.Fragment>
+    );
+  }
+};
