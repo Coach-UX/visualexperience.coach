@@ -14,6 +14,7 @@ ___  ____ ____  _ ____ ____ ___    ____ ____ _    ____ ____ ____
   --Signature: #CDA479;
 /* 2018 */
   --SceneStealers: #6291A3;
+  --Isetan: #F0AFA7;
 /* 2017 */
   --NewYorkDrive: #FF00FF;
   --RainbowHockey: #00FF62;
@@ -42,6 +43,12 @@ span.mbj {
 h1.signature,
 span.signature {
   background-color: var(--Signature);
+}
+.isetan:hover ~ .menuBackground,
+#nextBtn.isetan, #prevBtn.isetan,
+h1.isetan,
+span.isetan {
+  background-color: var(--Isetan);
 }
 /* 2018 */
 .scenestealers:hover ~ .menuBackground,

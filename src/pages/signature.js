@@ -17,9 +17,9 @@ var projectName = "Art of Signature",
     externalLink = "#",
     externalLinkLabel="Launch the Site",
 
-    nextProjectName="Life Coach",
-    nextProjectClass="lifecoach",
-    nextProjectLink="/lifecoach";
+    nextProjectName='Isetan "The Stage"',
+    nextProjectClass="isetan",
+    nextProjectLink="/isetan";
 
 
 export default class Signature extends React.Component {
