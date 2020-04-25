@@ -27,7 +27,7 @@ export default class Menu extends React.Component {
           <p>Projects</p>
               <ul className="menuProject">
                 <li className="mothersday">
-                  <MenuLink to="/" linktext="Mother's Day AR" />
+                  <MenuLink to="/mothersday" linktext="Mother's Day AR" />
                 </li>
                 <li className="rexyrace">
                   <MenuLink to="/rexyrace" linktext="Rexy's Holiday Race" />

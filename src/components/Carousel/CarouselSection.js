@@ -2,7 +2,7 @@ import React from "react";
 import Flickity from "react-flickity-component";
 import styled from 'styled-components';
 import {Caption} from '../../components/Sections';
-import media from '../../Mixins.js';
+import media from '../../mixins/mixins.js';
 
 // css
 import "./Carousel.scss";

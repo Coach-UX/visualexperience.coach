@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { ScrollScene } from 'scrollscene'
 import {gsap, Power2} from "gsap";
-import media from "../../Mixins";
+import media from "../../mixins/mixins.js";
 import {FadeIn} from "../Animate";
 
 

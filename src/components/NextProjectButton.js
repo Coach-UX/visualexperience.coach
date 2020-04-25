@@ -3,7 +3,7 @@ import { ScrollScene } from 'scrollscene'
 import {gsap, Power3, Power2} from "gsap";
 import DelayLink from 'react-delay-link';
 import styled from "styled-components";
-import media from "../Mixins";
+import media from "../mixins/mixins.js";
 
 const NextProject = styled.h1`
   width: 100%;

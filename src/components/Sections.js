@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import media from "../Mixins";
+import media from "../mixins/mixins.js";
 
 /*
 ___ ____ _  _ ___
