@@ -7,25 +7,28 @@ ___  ____ ____  _ ____ ____ ___    ____ ____ _    ____ ____ ____
 |    |  \ |__| _| |___ |___  |     |___ |__| |___ |__| |  \ ___]
 */
 :root {
+/* 2020 */
+  --MothersDay: #DB5973;
 /* 2019 */
   --RexyRace: #9BC4B6;
-  --LifeCoach: #FEBD28;
   --MBJ: #E05927;
   --Signature: #CDA479;
 /* 2018 */
+  --LifeCoach: #FEBD28;
   --SceneStealers: #6291A3;
   --Isetan: #F0AFA7;
 /* 2017 */
   --NewYorkDrive: #FF00FF;
   --RainbowHockey: #00FF62;
 }
-
-.lifecoach:hover ~ .menuBackground,
-#nextBtn.lifecoach, #prevBtn.lifecoach,
-h1.lifecoach,
-span.lifecoach{
-  background-color: var(--LifeCoach);
+/* 2020 */
+.mothersday:hover ~ .menuBackground,
+#nextBtn.mothersday, #prevBtn.mothersday,
+h1.mothersday,
+span.mothersday{
+  background-color: var(--MothersDay);
 }
+/* 2019 */
 .rexyrace:hover ~ .menuBackground,
 #nextBtn.rexyrace, #prevBtn.rexyrace,
 h1.rexyrace,
@@ -51,6 +54,12 @@ span.isetan {
   background-color: var(--Isetan);
 }
 /* 2018 */
+.lifecoach:hover ~ .menuBackground,
+#nextBtn.lifecoach, #prevBtn.lifecoach,
+h1.lifecoach,
+span.lifecoach{
+  background-color: var(--LifeCoach);
+}
 .scenestealers:hover ~ .menuBackground,
 #nextBtn.scenestealers, #prevBtn.scenestealers,
 h1.scenestealers,
@@ -70,7 +79,6 @@ span.newyorkdrive {
 h1.rainbowhockey,
 span.rainbowhockey {
   background-color: var(--RainbowHockey);
-  // background-image: radial-gradient(0% 2%, #00BBFF 0%, #00FF62 35%, #FFE300 66%, #FF00FF 100%);
   background-image: linear-gradient(45deg, #FFE300 0%, #00FF62 32%, #00BBFF 60%, #FF00FF 100%);
 }
 

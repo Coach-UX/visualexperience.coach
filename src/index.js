@@ -1,9 +1,7 @@
 // packages
 import React from "react";
 import ReactDOM from "react-dom";
-import ScrollMagic from "scrollmagic";
 import { gsap } from "gsap";
-import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import ScrollToTop from './ScrollToTop';
 
@@ -11,17 +9,17 @@ import ScrollToTop from './ScrollToTop';
 import "../src/style.scss";
 
 // pages
+import MothersDay from "./pages/mothersday";
 import RexyRace from "./pages/rexyrace";
 import MBJ from "./pages/mbj";
 import Signature from "./pages/signature";
-import SceneStealers from "./pages/scenestealers";
 import Isetan from "./pages/isetan";
 import LifeCoach from "./pages/lifecoach";
+import SceneStealers from "./pages/scenestealers";
 import NewYorkDrive from "./pages/newyorkdrive";
 import RainbowHockey from "./pages/rainbowhockey";
 
 
-ScrollMagicPluginGsap(ScrollMagic, gsap);
 
 
 const App = () => (
@@ -29,7 +27,8 @@ const App = () => (
     <Router>
       <ScrollToTop />
 
-      <Route exact path="/" component={RexyRace} />
+      <Route exact path="/" component={MothersDay} />
+      <Route path="/rexyrace" component={RexyRace}/>
       <Route path="/mbj" component={MBJ}/>
       <Route path="/signature" component={Signature}/>
       <Route path="/isetan" component={Isetan}/>

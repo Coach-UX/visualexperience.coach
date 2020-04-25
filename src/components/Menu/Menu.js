@@ -26,13 +26,16 @@ export default class Menu extends React.Component {
         <ul className="menuItems">
           <p>Projects</p>
               <ul className="menuProject">
-                <li className="rexyrace">
-                  <MenuLink to="/" linktext="Rexy's Holiday Race" />
+                <li className="mothersday">
+                  <MenuLink to="/" linktext="Mother's Day AR" />
                 </li>
-                  <li className="mbj">
-                   <MenuLink to="/mbj" linktext="Coach x Michael B Jordan" />
-                 </li>
-                 <li className="signature">
+                <li className="rexyrace">
+                  <MenuLink to="/rexyrace" linktext="Rexy's Holiday Race" />
+                </li>
+                <li className="mbj">
+                 <MenuLink to="/mbj" linktext="Coach x Michael B Jordan" />
+                </li>
+                <li className="signature">
                   <MenuLink to="/signature" linktext="Art of Signature" />
                 </li>
                 <li className="isetan">
