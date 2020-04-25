@@ -2,11 +2,11 @@ import React from 'react';
 
 // components
 import ProjectLink from "../components/ProjectLink";
-import { CarouselSection, CarouselImage, CarouselVideo, CarouselSectionSlim } from "../components/Carousel/CarouselSection";
+import { CarouselImage, CarouselSectionSlim } from "../components/Carousel/CarouselSection";
 import ProjectWrapper from "../components/ProjectWrapper"
-import { TextSection, ImageSection, ImageSectionSlim, VideoSection, VideoSectionSlim } from '../components/Sections';
+import { TextSection, ImageSection, VideoSectionSlim, VideoSectionSlimExternal } from '../components/Sections';
 import { IntroSection } from "../components/Hero/Hero";
-import { ScrollingHeroLaptop, ScrollingHeroFlex } from "../components/Hero/ScrollingHero";
+import { ScrollingHeroFlex } from "../components/Hero/ScrollingHero";
 import { Footer, FooterSection, Results, Award, Credits } from "../components/Footer/Footer";
 
 
@@ -32,15 +32,12 @@ export default class LifeCoach extends React.Component {
         </IntroSection>
 
         <ScrollingHeroFlex
-          desktop="https://res.cloudinary.com/dfiwfoxwx/video/upload/v1587408462/Case%20Study/lifecoach/lc-tokyo-.mp4"
-          mobile="https://res.cloudinary.com/dfiwfoxwx/video/upload/v1587403252/Case%20Study/lifecoach/hero-mobile-video.mp4"
-          poster="img/lifecoach/hero-mobile-video.jpg"
-          adjustmentClass="adjustTop"
-          DesktopScreenTop="21.5%"
-          DesktopScreenMaskHeight="150vw"
-          MobileDeviceTop="15%"
-          MobileScreenTop="32%"
-          MobileScreenMaskHeight="940vw"
+          desktop="img/lifecoach/lifecoachny-desktop.mp4"
+          mobile="img/lifecoach/lifecoachny-mobile.mp4"
+          Desktop_ScreenTop="21.5%"
+          Desktop_MaskHeight="145vw"
+          Mobile_ScreenTop="32%"
+          Mobile_MaskHeight="785vw"
         />
 
         <ProjectLink href={externalLink} label={externalLinkLabel}/>
@@ -49,13 +46,11 @@ export default class LifeCoach extends React.Component {
         Held in SoHo, New York in June 2018, the week-long, immersive pop-up invited guests to explore four interactive spaces designed around the themes of creativity and self-expression.
         </TextSection>
 
-        <ImageSection src='screens.png' caption='Website Screens' folder={projectClass} />
-
-        <VideoSectionSlim
+        {/*<VideoSectionSlim
           src='programming.mp4'
           caption='Programming schedule'
           folder={projectClass}
-        />
+        />*/}
 
         <VideoSectionSlim
           src='phone.mp4'
@@ -69,9 +64,18 @@ export default class LifeCoach extends React.Component {
           folder={projectClass}
         />
 
+        <ImageSection src='screens.jpg' caption='LINE integration for Tokyo event' folder={projectClass} />
+
         <TextSection>
         Created in collaboration with set designer Simon Costin, the playfully surreal experience included a DIY graffiti room, tarot readings, fairground games, live performances and nightly DJs sets. The entire experience was conceived and executed as a way to surprise and delight guests.
         </TextSection>
+
+        <VideoSectionSlimExternal
+          src='https://res.cloudinary.com/dfiwfoxwx/video/upload/v1587756841/Case%20Study/lifecoach/TheProjects.mp4'
+          caption='Recap video'
+        />
+
+
 
         <CarouselSectionSlim caption='SoHo, NY Event Space'>
           <CarouselImage src="carousel1.jpg" folder={projectClass}/>

@@ -1,5 +1,5 @@
 import React from "react";
-import ScrollMagic from "scrollmagic";
+import { ScrollScene } from 'scrollscene'
 import {gsap, Power3, Power2} from "gsap";
 import DelayLink from 'react-delay-link';
 import styled from "styled-components";
@@ -35,7 +35,7 @@ const NextProject = styled.h1`
 
 // gsap animation that triggers when button is clicked
 function nextProjectTransition() {
-  var nextProjectAnim = gsap.timeline();
+  var nextProjectAnim = gsap.timeline({paused:true});
   nextProjectAnim.to("#nextProject", 0, {transition: "all 0s", ease:Power2.easeInOut}, 0)
                   .to("#nextProject", .2, {color: "rgba(0,0,0,0)", ease:Power2.easeInOut},0)
                   .to("#nextProject", .3, {padding: "19vh 0 77.8vh", ease:Power2.easeInOut});
@@ -53,13 +53,18 @@ else {
 export default class NextProjectButton extends React.Component {
   componentDidMount() {
     // make button only appear once user reaches the end of the page
-    var controller = new ScrollMagic.Controller();
-    var nextProject = new ScrollMagic.Scene({triggerElement: ".footer", triggerHook: nextProjectTriggerHook})
-    .setTween(gsap.to("#nextProject", 0.3, {
+    const trigger = document.querySelector('.footer')
+    const nextProjectTimeline = gsap.timeline({paused:true});
+    nextProjectTimeline.to("#nextProject", 0.3, {
       bottom: 0,
       ease:Power3.easeInOut
-    }))
-    .addTo(controller);
+    })
+    const nextProject = new ScrollScene({
+      triggerElement: trigger, triggerHook: nextProjectTriggerHook,
+      gsap: {
+        timeline: nextProjectTimeline,
+      },
+    })
  }
   render() {
     return (

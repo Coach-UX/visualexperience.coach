@@ -188,3 +188,23 @@ li {
    display: block;
  }
 }
+
+#AR #screenMask {
+  margin-top: -2.5vh;
+}
+#AR #device, #AR #screenMask {
+  @include landscape {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+}
+#AR #screenMask {
+  @include landscape {
+    height: 0;
+  }
+}
+#AR #screen {
+  @include portrait {
+    top: 3%;
+  }
+}

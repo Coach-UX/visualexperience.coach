@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from "styled-components";
 import media from "../../Mixins";
+import {FadeIn} from "../Animate";
+
 
 const HeroContainer = styled.div`
 position: relative;
@@ -28,9 +30,11 @@ export class IntroSection extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <HeroContainer>
+        <HeroContainer id="heroContainer">
           <IntroCopy id="introCopy">
-            {this.props.children}
+            <FadeIn>
+              {this.props.children}
+            </FadeIn>
           </IntroCopy>
         </HeroContainer>
       </React.Fragment>
@@ -39,70 +43,79 @@ export class IntroSection extends React.Component {
 };
 
 
-const Image = styled.img`
+const Hero = styled.div`
   grid-column: var(--gridSection-LG);
-  width: 100%;
-  padding-bottom: 150px;
   z-index: 1;
   position: relative;
+  width: 100%;
+  padding-bottom: 150px;
   ${media.sm`
       padding-bottom: 100px;
   `}
-`;
-const Video = styled.video`
-  grid-column: var(--gridSection-LG);
-  width: 100%;
-  padding-bottom: 150px;
-  z-index: 1;
-  position: relative;
-  ${media.sm`
-      padding-bottom: 100px;
-  `}
+  & img {
+    width:100%;
+  }
+  & video {
+    width:100%
+  }
+  & .videoSmall {
+    width: 60%;
+    object-fit: cover;
+    margin: 0 20%;
+    box-shadow: 0 70px 70px -50px rgba(0,0,0,.1);
+    ${media.portrait`
+      width: 80%;
+      margin: 0 10%;
+    `}
+    ${media.sm`
+      width: 90%;
+      margin: 0 5%;
+    `}
+  }
 `;
 export class HeroImage extends React.Component {
   render() {
     return (
+
       <React.Fragment>
-        <Image className="heroDesktop" src={"img/" + this.props.projectClass + "/hero.png"} />
-        <Image className="heroMobile" src={"img/" + this.props.projectClass + "/hero-mobile.png"} />
+          <Hero className="heroDesktop">
+            <FadeIn>
+              <img src={"img/" + this.props.projectClass + "/hero.png"} alt="hero image" />
+            </FadeIn>
+          </Hero>
+          <Hero className="heroMobile">
+            <FadeIn>
+              <img src={"img/" + this.props.projectClass + "/hero-mobile.png"} alt="hero image" />
+            </FadeIn>
+          </Hero>
       </React.Fragment>
-    );
-  }
-};
-export class HeroVideo extends React.Component {
-  render() {
-    return (
-      <React.Fragment>
-        <Video className="heroDesktop" src={"img/" + this.props.projectClass + "/hero.mov"} autoPlay muted playsInline loop />
-        <Video className="heroMobile" src={"img/" + this.props.projectClass + "/hero-mobile.mov"} autoPlay muted playsInline loop />
-      </React.Fragment>
+
     );
   }
 };
 
-const VideoSmall = styled.video`
-  grid-column: var(--gridSection-LG);
-  width: 60%;
-  z-index: 1;
-  position: relative;
-  object-fit: cover;
-  margin: 0 20% 150px 20%;
-  box-shadow: 0 70px 70px -50px rgba(0,0,0,.1);
-  ${media.portrait`
-    width: 80%;
-    margin: 0 10% 100px 10%;
-  `}
-  ${media.sm`
-    width: 90%;
-    margin: 0 5% 70px 5%
-  `}
-`;
 export class HeroVideoSmall extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <VideoSmall className="heroDesktop" src={"img/" + this.props.projectClass + "/hero.mp4"} autoPlay muted playsInline loop />
-        <VideoSmall className="heroMobile" src={"img/" + this.props.projectClass + "/hero.mp4"} autoPlay muted playsInline loop/>
+        <Hero>
+          <FadeIn>
+            <video className="videoSmall" src={"img/" + this.props.projectClass + "/hero.mp4"} autoPlay muted playsInline loop />
+          </FadeIn>
+        </Hero>
+      </React.Fragment>
+    );
+  }
+};
+export class HeroImageSmall extends React.Component {
+  render() {
+    return (
+      <React.Fragment>
+        <Hero>
+          <FadeIn>
+            <img className="videoSmall" src={"img/" + this.props.projectClass + "/hero.jpg"} />
+          </FadeIn>
+        </Hero>
       </React.Fragment>
     );
   }

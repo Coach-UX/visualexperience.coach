@@ -16,7 +16,7 @@ var projectName = "Coach x Michael B Jordan",
     externalLink = "#",
     externalLinkLabel="",
 
-    nextProjectName="Art of Signature",
+    nextProjectName='Art of Signature',
     nextProjectClass="signature",
     nextProjectLink="/signature";
 

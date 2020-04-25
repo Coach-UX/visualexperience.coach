@@ -6,7 +6,7 @@ import { CarouselSection, CarouselImage, CarouselVideo, CarouselSectionSlim } fr
 import ProjectWrapper from "../components/ProjectWrapper"
 import { TextSection, ImageSection, ImageSectionSlim, VideoSection, VideoSectionSlim } from '../components/Sections';
 import { IntroSection } from "../components/Hero/Hero";
-import { ScrollingHeroFlex } from "../components/Hero/ScrollingHero";
+import { ScrollingHeroiframe } from "../components/Hero/ScrollingHero";
 import { Footer, FooterSection, Results, Award, Credits } from "../components/Footer/Footer";
 
 
@@ -31,7 +31,7 @@ export default class Signature extends React.Component {
           Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus. Sed sollicitudin ipsum quis nunc sollicitudin ultrices. Donec euismod scelerisque ligula. Maecenas eu varius risus, eu aliquet arcu. Curabitur fermentum suscipit est, tincidunt mattis lorem luctus id. Donec eget massa a diam condi.
         </IntroSection>
 
-        <ScrollingHeroFlex
+        {/*<ScrollingHeroFlex
           desktop="https://res.cloudinary.com/dfiwfoxwx/video/upload/v1587334043/Case%20Study/hero-short-30.mp4"
           mobile="https://res.cloudinary.com/dfiwfoxwx/video/upload/v1587332132/Case%20Study/hero-mobile.mp4"
           DesktopScreenTop="5.5%"
@@ -39,7 +39,16 @@ export default class Signature extends React.Component {
           MobileDeviceTop="23%"
           MobileScreenTop="20%"
           MobileScreenMaskHeight="40vw"
-         />
+         />*/}
+
+          <ScrollingHeroiframe
+            src="https://bmarcus.synology.me/_projects/signature/"
+            Desktop_ScreenTop="-21%"
+            Desktop_MaskHeight="16vw"
+            Mobile_MaskHeight="35vh"
+            Mobile_ScreenTop="-20%"
+           />
+
 
 
         <ProjectLink href={externalLink} label={externalLinkLabel}/>
@@ -68,14 +77,12 @@ export default class Signature extends React.Component {
          <FooterSection title="Key Results">
            <Results p="Total Number of Impressions" b="232.4K" />
            <Results p="Total Number of Conversions" b="14.4K" />
-           <Results p="Tickets Reserved" b="100%" />
-           <Results p="Audience Demographics" b="25-34" />
          </FooterSection>
          <FooterSection title="Credits">
            <Credits left="Art Direction" right="Coach Creative Team" />
            <Credits left="Copywriting" right="Coach Creative Team" />
            <Credits left="Development" right="Coach Creative Team" />
-           <Credits left="Artwork" right="Tyler Spangler" />
+           <Credits left="Illustration" right="Tyler Spangler" />
            <Credits left="" right="Anna Sudit" />
            <Credits left="" right="Gianni Lee" />
            <Credits left="" right="Kendra Dandy" />

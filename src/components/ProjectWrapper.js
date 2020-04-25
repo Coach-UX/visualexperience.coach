@@ -1,6 +1,6 @@
 import React from 'react';
 import Styled from 'styled-components';
-import ScrollMagic from "scrollmagic";
+import { ScrollScene } from 'scrollscene'
 import {gsap, Linear} from "gsap";
 import media from "../Mixins";
 
@@ -35,10 +35,16 @@ const BackgroundColor = Styled.span`
 
 export default class ProjectWrapper extends React.Component {
   componentDidMount() {
-    var controller = new ScrollMagic.Controller();
-    var parallaxIntro = new ScrollMagic.Scene({duration: window.innerHeight})
-    .setTween(gsap.to("#backgroundColor", 1, { transform: "translateY(-20%)", ease: Linear.easeNone }))
-    .addTo(controller);
+    const trigger = document.querySelector('#backgroundColor')
+    const parallax = gsap.timeline({paused:true});
+    parallax.to("#backgroundColor", 1, { transform: "translateY(-20%)", ease: Linear.easeNone })
+    const parallaxIntro = new ScrollScene({
+      triggerElement: trigger, triggerHook: "0",
+      duration: window.innerHeight,
+      gsap: {
+        timeline: parallax,
+      },
+    })
   }
   render() {
   return (
