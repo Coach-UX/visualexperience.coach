@@ -80,12 +80,12 @@ export class HeroImage extends React.Component {
       <React.Fragment>
           <Hero className="heroDesktop">
             <FadeIn>
-              <img src={"img/" + this.props.projectClass + "/hero.png"} alt="hero image" />
+              <img src={"img/" + this.props.projectClass + "/hero.png"} alt="hero" />
             </FadeIn>
           </Hero>
           <Hero className="heroMobile">
             <FadeIn>
-              <img src={"img/" + this.props.projectClass + "/hero-mobile.png"} alt="hero image" />
+              <img src={"img/" + this.props.projectClass + "/hero-mobile.png"} alt="hero" />
             </FadeIn>
           </Hero>
       </React.Fragment>
@@ -113,7 +113,7 @@ export class HeroImageSmall extends React.Component {
       <React.Fragment>
         <Hero>
           <FadeIn>
-            <img className="videoSmall" src={"img/" + this.props.projectClass + "/hero.jpg"} />
+            <img className="videoSmall" src={"img/" + this.props.projectClass + "/hero.jpg"} alt="hero" />
           </FadeIn>
         </Hero>
       </React.Fragment>

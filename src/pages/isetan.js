@@ -1,11 +1,10 @@
 import React from 'react';
 
 // components
-import ProjectLink from "../components/ProjectLink";
-import { CarouselSection, CarouselSectionSlim, CarouselImage, CarouselVideo } from "../components/Carousel/CarouselSection";
+import {CarouselSectionSlim, CarouselImage } from "../components/Carousel/CarouselSection";
 import ProjectWrapper from "../components/ProjectWrapper"
-import { TextSection, ImageSection, ImageSectionSlim, VideoSection, VideoSectionSlim } from '../components/Sections';
-import { IntroSection, HeroVideoSmall, HeroImageSmall } from "../components/Hero/Hero";
+import { TextSection, ImageSection, VideoSectionSlim } from '../components/Sections';
+import { IntroSection, HeroImageSmall } from "../components/Hero/Hero";
 import { Footer, FooterSection, Results, Credits } from "../components/Footer/Footer";
 
 
@@ -13,8 +12,6 @@ import { Footer, FooterSection, Results, Credits } from "../components/Footer/Fo
 var projectName = 'Isetan "The Stage"',
     projectClass = "isetan",
     projectYear = "2019",
-    externalLink = "#",
-    externalLinkLabel="",
 
     nextProjectName="Life Coach",
     nextProjectClass="lifecoach",

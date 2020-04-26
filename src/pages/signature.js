@@ -2,12 +2,12 @@ import React from 'react';
 
 // components
 import ProjectLink from "../components/ProjectLink";
-import { CarouselSection, CarouselImage, CarouselVideo, CarouselSectionSlim } from "../components/Carousel/CarouselSection";
+import { CarouselImage, CarouselSectionSlim } from "../components/Carousel/CarouselSection";
 import ProjectWrapper from "../components/ProjectWrapper"
-import { TextSection, ImageSection, ImageSectionSlim, VideoSection, VideoSectionSlim } from '../components/Sections';
+import { TextSection, ImageSection } from '../components/Sections';
 import { IntroSection } from "../components/Hero/Hero";
 import { ScrollingHeroiframe } from "../components/Hero/ScrollingHero";
-import { Footer, FooterSection, Results, Award, Credits } from "../components/Footer/Footer";
+import { Footer, FooterSection, Results, Credits } from "../components/Footer/Footer";
 
 
 // project details

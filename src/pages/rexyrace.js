@@ -4,8 +4,8 @@ import React from 'react';
 import ProjectLink from "../components/ProjectLink";
 import { CarouselSection, CarouselSectionSlim, CarouselImage, CarouselVideo } from "../components/Carousel/CarouselSection";
 import ProjectWrapper from "../components/ProjectWrapper"
-import { TextSection, ImageSection, ImageSectionSlim, VideoSection, VideoSectionSlim } from '../components/Sections';
-import { IntroSection, HeroImage, HeroVideo } from "../components/Hero/Hero";
+import { TextSection, ImageSection, VideoSectionSlim } from '../components/Sections';
+import { IntroSection, HeroImage } from "../components/Hero/Hero";
 import { Footer, FooterSection, Results, Credits } from "../components/Footer/Footer";
 
 

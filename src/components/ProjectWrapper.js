@@ -2,7 +2,6 @@ import React from 'react';
 import Styled from 'styled-components';
 import { ScrollScene } from 'scrollscene'
 import {gsap, Linear} from "gsap";
-import media from "../mixins/mixins.js";
 
 import Menu from "../components/Menu/Menu";
 import Nav from "../components/Nav/Nav";

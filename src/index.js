@@ -1,13 +1,14 @@
 // packages
 import React, {useEffect} from "react";
 import ReactDOM from "react-dom";
-import { gsap } from "gsap";
 import { BrowserRouter as Router, Route, useLocation } from "react-router-dom";
 
 // css
 import "../src/style.scss";
 
 // pages
+import Home from "./pages/home";
+
 import MothersDay from "./pages/mothersday";
 import RexyRace from "./pages/rexyrace";
 import MBJ from "./pages/mbj";

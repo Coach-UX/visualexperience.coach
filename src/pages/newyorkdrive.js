@@ -2,9 +2,9 @@ import React from 'react';
 
 // components
 import ProjectLink from "../components/ProjectLink";
-import { CarouselSection, CarouselImage, CarouselVideo, CarouselSectionSlim } from "../components/Carousel/CarouselSection";
+import { CarouselImage, CarouselSectionSlim } from "../components/Carousel/CarouselSection";
 import ProjectWrapper from "../components/ProjectWrapper"
-import { TextSection, ImageSection, ImageSectionSlim, VideoSection, VideoSectionSlim } from '../components/Sections';
+import { TextSection, ImageSection, ImageSectionSlim, VideoSectionSlim } from '../components/Sections';
 import { IntroSection, HeroImage } from "../components/Hero/Hero";
 import { Footer, FooterSection, Results, Credits } from "../components/Footer/Footer";
 

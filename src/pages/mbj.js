@@ -1,11 +1,10 @@
 import React from 'react';
 
 // components
-import ProjectLink from "../components/ProjectLink";
-import { CarouselSection, CarouselSectionSlim, CarouselImage, CarouselVideo } from "../components/Carousel/CarouselSection";
+import {CarouselSectionSlim, CarouselImage } from "../components/Carousel/CarouselSection";
 import ProjectWrapper from "../components/ProjectWrapper"
-import { TextSection, ImageSection, ImageSectionSlim, VideoSection, VideoSectionSlim } from '../components/Sections';
-import { IntroSection, HeroImage, HeroVideoSmall } from "../components/Hero/Hero";
+import { TextSection, ImageSection, VideoSectionSlim } from '../components/Sections';
+import { IntroSection, HeroVideoSmall } from "../components/Hero/Hero";
 import { Footer, FooterSection, Results, Credits } from "../components/Footer/Footer";
 
 
@@ -13,8 +12,6 @@ import { Footer, FooterSection, Results, Credits } from "../components/Footer/Fo
 var projectName = "Coach x Michael B Jordan",
     projectClass = "mbj",
     projectYear = "2019",
-    externalLink = "#",
-    externalLinkLabel="",
 
     nextProjectName='Art of Signature',
     nextProjectClass="signature",
@@ -31,8 +28,7 @@ export default class RexyRace extends React.Component {
       </IntroSection>
 
       <HeroVideoSmall projectClass={projectClass} />
-      {/*<ProjectLink href={externalLink} label={externalLinkLabel}/>
-*/}
+
       <TextSection>
         With a collection rooted so much in utility, it made sense for us to position product as a core component of this experience. Students triggered the experience to start by wearing a key piece of the collection and matching a unique pose. Crafted this contextual contact between Customer and Product resonated with the audience as an authentic way to experience new product ranges.
       </TextSection>
