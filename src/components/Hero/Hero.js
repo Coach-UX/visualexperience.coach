@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import media from "../../mixins/mixins.js";
-import {FadeIn} from "../Animate";
+import {Reveal} from "../Animate";
 
 
 const HeroContainer = styled.div`
@@ -17,7 +17,7 @@ ${media.portrait`
     padding: 30% 0 30%;
   `}
 `;
-const IntroCopy = styled.h1`
+const IntroCopy = styled.div`
   position: relative;
   width: 100%;
   padding: 0;
@@ -32,9 +32,9 @@ export class IntroSection extends React.Component {
       <React.Fragment>
         <HeroContainer id="heroContainer">
           <IntroCopy id="introCopy">
-            <FadeIn>
-              {this.props.children}
-            </FadeIn>
+            <Reveal>
+              <h1>{this.props.children}</h1>
+            </Reveal>
           </IntroCopy>
         </HeroContainer>
       </React.Fragment>
@@ -79,14 +79,14 @@ export class HeroImage extends React.Component {
 
       <React.Fragment>
           <Hero className="heroDesktop">
-            <FadeIn>
+            <Reveal>
               <img src={"img/" + this.props.projectClass + "/hero.png"} alt="hero" />
-            </FadeIn>
+            </Reveal>
           </Hero>
           <Hero className="heroMobile">
-            <FadeIn>
+            <Reveal>
               <img src={"img/" + this.props.projectClass + "/hero-mobile.png"} alt="hero" />
-            </FadeIn>
+            </Reveal>
           </Hero>
       </React.Fragment>
 
@@ -99,9 +99,9 @@ export class HeroVideoSmall extends React.Component {
     return (
       <React.Fragment>
         <Hero>
-          <FadeIn>
+          <Reveal>
             <video className="videoSmall" src={"img/" + this.props.projectClass + "/hero.mp4"} autoPlay muted playsInline loop />
-          </FadeIn>
+          </Reveal>
         </Hero>
       </React.Fragment>
     );
@@ -112,9 +112,9 @@ export class HeroImageSmall extends React.Component {
     return (
       <React.Fragment>
         <Hero>
-          <FadeIn>
+          <Reveal>
             <img className="videoSmall" src={"img/" + this.props.projectClass + "/hero.jpg"} alt="hero" />
-          </FadeIn>
+          </Reveal>
         </Hero>
       </React.Fragment>
     );

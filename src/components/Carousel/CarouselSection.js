@@ -3,6 +3,8 @@ import Flickity from "react-flickity-component";
 import styled from 'styled-components';
 import {Caption} from '../../components/Sections';
 import media from '../../mixins/mixins.js';
+import {Reveal} from "../Animate.js";
+
 
 // css
 import "./Carousel.scss";
@@ -40,13 +42,15 @@ class CarouselSection extends React.Component {
       <div className="carouselSection">
       <div className={this.props.color} id="prevBtn" />
       <div className={this.props.color} id="nextBtn" />
-        <Flickity
-          className={"carousel"}
-          elementType={"div"}
-          options={flickityOptions}
-        >
-        {this.props.children}
-        </Flickity>
+        <Reveal>
+          <Flickity
+            className={"carousel"}
+            elementType={"div"}
+            options={flickityOptions}
+          >
+          {this.props.children}
+          </Flickity>
+        </Reveal>
         <CarouselCaption> {this.props.caption} </CarouselCaption>
       </div>
     );
@@ -56,13 +60,15 @@ class CarouselSectionSlim extends React.Component {
   render() {
     return (
       <div className="carouselSectionSlim">
-        <Flickity
-          className={"carousel"}
-          elementType={"div"}
-          options={flickityOptions}
-        >
-        {this.props.children}
-        </Flickity>
+        <Reveal>
+          <Flickity
+            className={"carousel"}
+            elementType={"div"}
+            options={flickityOptions}
+          >
+          {this.props.children}
+          </Flickity>
+        </Reveal>
         <CarouselCaption> {this.props.caption} </CarouselCaption>
       </div>
     );

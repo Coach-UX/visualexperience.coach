@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from "styled-components";
 import media from "../mixins/mixins.js";
+import {Reveal} from "./Animate.js";
+
 
 /*
 ___ ____ _  _ ___
@@ -9,7 +11,7 @@ ___ ____ _  _ ___
 */
 
 // regular text section
-export const TextSection = styled.p`
+const Text = styled.div`
   grid-column: var(--gridSection-SM);
   padding-bottom: var(--padding);
 `;
@@ -24,6 +26,20 @@ export const Caption = styled.p`
   `}
 `;
 
+export class TextSection extends React.Component {
+  render() {
+    return (
+      <React.Fragment>
+        <Text>
+          <Reveal>
+            <p>{this.props.children}</p>
+          </Reveal>
+        </Text>
+      </React.Fragment>
+    );
+  }
+};
+
 
 /*
 _ _  _ ____ ____ ____ ____
@@ -31,10 +47,13 @@ _ _  _ ____ ____ ____ ____
 | |  | |  | |__] |___ ___]
 */
 // Regular Image Sections
-const Image = styled.img`
+const Image = styled.div`
   grid-column: var(--gridSection-LG);
   width: 100%;
   padding-bottom: 10px;
+  & img {
+    width: 100%;
+  }
   ${media.sm`
     padding-bottom: 0px;
   `}
@@ -46,7 +65,11 @@ export class ImageSection extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Image src={"img/" + this.props.folder + "/" + this.props.src} />
+        <Image>
+          <Reveal>
+            <img src={"img/" + this.props.folder + "/" + this.props.src} />
+          </Reveal>
+        </Image>
         <Caption> {this.props.caption} </Caption>
       </React.Fragment>
     );
@@ -56,7 +79,11 @@ export class ImageSectionSlim extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <ImageSlim src={"img/" + this.props.folder + "/" + this.props.src} />
+      <ImageSlim>
+        <Reveal>
+          <img src={"img/" + this.props.folder + "/" + this.props.src} />
+        </Reveal>
+      </ImageSlim>
         <Caption> {this.props.caption} </Caption>
       </React.Fragment>
     );
@@ -70,13 +97,17 @@ _  _ _ ___  ____ ____
 |  | | |  \ |___ |  |
  \/  | |__/ |___ |__|
 */
-const Video = styled.video`
+const Video = styled.div`
   grid-column: var(--gridSection-LG);
   width: 100%;
   padding-bottom: 10px;
   ${media.sm`
     padding-bottom: 0px;
   `}
+  & video {
+    width: 100%;
+  }
+
 `;
 const VideoSlim = styled(Video)`
   grid-column: var(--gridSection-MD);
@@ -86,7 +117,11 @@ export class VideoSection extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Video src={"img/" + this.props.folder + "/" + this.props.src} autoPlay muted playsInline loop />
+      <Video>
+        <Reveal>
+          <video src={"img/" + this.props.folder + "/" + this.props.src} autoPlay muted playsInline loop />
+        </Reveal>
+      </Video>
         <Caption> {this.props.caption} </Caption>
       </React.Fragment>
     );
@@ -96,7 +131,11 @@ export class VideoSectionSlim extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <VideoSlim src={"img/" + this.props.folder + "/" + this.props.src} autoPlay muted playsInline loop />
+        <VideoSlim>
+          <Reveal>
+            <video src={"img/" + this.props.folder + "/" + this.props.src} autoPlay muted playsInline loop />
+          </Reveal>
+        </VideoSlim>
         <Caption> {this.props.caption} </Caption>
       </React.Fragment>
     );
@@ -107,7 +146,11 @@ export class VideoSectionSlimExternal extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <VideoSlim src={this.props.src} autoPlay muted playsInline loop />
+      <VideoSlim>
+        <Reveal>
+          <video src={this.props.src} autoPlay muted playsInline loop />
+        </Reveal>
+      </VideoSlim>
         <Caption> {this.props.caption} </Caption>
       </React.Fragment>
     );

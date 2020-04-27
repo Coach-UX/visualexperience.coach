@@ -1,13 +1,13 @@
 import React from "react";
-import {FadeIn} from "./Animate";
+import {Reveal} from "./Animate";
 
 export default class ProjectLink extends React.Component {
   render() {
     return (
       <a href={this.props.href}>
-        <FadeIn>
+        <Reveal>
           <span>{this.props.label}</span>
-        </FadeIn>
+        </Reveal>
       </a>
     );
   }

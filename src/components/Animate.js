@@ -1,12 +1,66 @@
 import React from "react";
 import {Animated} from "react-animated-css";
+import { Fade } from 'react-reveal';
+import ScrollAnimation from 'react-animate-on-scroll';
+
 
 export class FadeIn extends React.Component {
     render() {
         return(
-          <Animated animationIn="fadeIn" animationInDuration={1000} isVisible={true}>
+          <Animated animationIn="fadeIn" animationInDuration={700} isVisible={true}>
             {this.props.children}
           </Animated>
+        );
+    }
+}
+
+
+{/*export class Reveal extends React.Component {
+    render() {
+        return(
+          <ScrollAnimation animateIn="fadeIn" duration={0.5}>
+            {this.props.children}
+          </ScrollAnimation>
+        );
+    }
+}
+
+export class RevealNav extends React.Component {
+    render() {
+        return(
+          <ScrollAnimation animateIn="fadeIn" duration={0.5} offset={0}>
+            {this.props.children}
+          </ScrollAnimation>
+        );
+    }
+}*/}
+
+export class Reveal extends React.Component {
+    render() {
+        return(
+          <Fade duration={700}>
+            {this.props.children}
+          </Fade>
+        );
+    }
+}
+
+export class RevealCascade extends React.Component {
+    render() {
+        return(
+          <Fade duration={700} cascade>
+            {this.props.children}
+          </Fade>
+        );
+    }
+}
+
+export class RevealNav extends React.Component {
+    render() {
+        return(
+          <Fade duration={700}>
+            {this.props.children}
+          </Fade>
         );
     }
 }

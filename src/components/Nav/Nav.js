@@ -1,5 +1,5 @@
 import React from "react";
-import {FadeIn} from "../Animate";
+import {RevealNav, FadeIn} from "../Animate";
 
 // css
 import "./Nav.scss";
@@ -15,16 +15,21 @@ export default class Nav extends React.Component {
       <div id="navGrid">
         <div id="nav">
           <div className="navItems">
-            <FadeIn>
-              <h1 className="title">{projectName}</h1>
-              <h1 className="year">{projectYear}</h1>
-            </FadeIn>
+              <h1 className="title">
+                <RevealNav>
+                  {projectName}
+                </RevealNav>
+              </h1>
+
+              <h1 className="year">
+                <RevealNav>
+                  {projectYear}
+                </RevealNav>
+              </h1>
             <div className="menuBtn">
-              <FadeIn>
-                <input type="checkbox" />
+            <FadeIn>  <input type="checkbox" />
                 <span />
-                <span />
-              </FadeIn>
+                <span /></FadeIn>
             </div>
           </div>
         </div>
