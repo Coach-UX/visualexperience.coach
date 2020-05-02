@@ -13,7 +13,7 @@ import { Footer, FooterSection, Results, Credits } from "../components/Footer/Fo
 var projectName = "Rainbow Hockey",
     projectClass = "rainbowhockey",
     projectYear = "2017",
-    externalLink = "#",
+    externalLink = "https://the-arcade-42db2.web.app/hockey.html",
     externalLinkLabel="Launch the Game",
 
     nextProjectName="Mother's Day AR",
@@ -68,22 +68,27 @@ export default class RainbowHockey extends React.Component {
       />
 
       <TextSection>
-        Alongside the mobile experience, physical arcade machines were installed at Coach stores in Omotesando, Ginza and Shinjuku as a way to bridge the customer experence from online to offline, ultimately driving traffic to stores.
+        Alongside the mobile experience, physical arcade machines were installed at Coach stores in Omotesando, Ginza and Shinjuku as a way to bridge the customer experience from online to offline, ultimately driving traffic to stores.
       </TextSection>
 
-      <CarouselSectionSlim caption='In-Store Experience'>
+      <CarouselSectionSlim caption='In-Store experience'>
         <CarouselImage src="carousel-1.jpg" folder="newyorkdrive" />
         <CarouselImage src="carousel-2.jpg" folder="newyorkdrive" />
         <CarouselImage src="carousel-3.jpg" folder="newyorkdrive" />
         <CarouselImage src="carousel-4.jpg" folder="newyorkdrive" />
-        <CarouselImage src="carousel-5.jpg" folder="newyorkdrive" />
       </CarouselSectionSlim>
 
       <TextSection>
-        Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at.
+        In North America, we partnered with Snapchat to create custom Snapcode pins which customers could scan to unlock the game in their Snapchat app.
       </TextSection>
 
-      <ImageSectionSlim src='snapchat.png' caption='Custom Snapchat Pins'  folder="newyorkdrive" />
+      <CarouselSectionSlim caption='Custom Snapchat pins'>
+        <CarouselImage src="snapchat.png" folder="newyorkdrive" />
+        <CarouselImage src="snapchat2.jpg" folder="newyorkdrive" />
+        <CarouselImage src="snapchat3.jpg" folder="newyorkdrive" />
+        <CarouselImage src="snapchat4.jpg" folder="newyorkdrive" />
+      </CarouselSectionSlim>
+
 
       <Footer>
         <FooterSection title="Key Results">

@@ -3,12 +3,11 @@ import React, {useEffect} from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, useLocation } from "react-router-dom";
 
+
 // css
 import "../src/style.scss";
 
 // pages
-import Home from "./pages/home";
-
 import MothersDay from "./pages/mothersday";
 import RexyRace from "./pages/rexyrace";
 import MBJ from "./pages/mbj";
@@ -34,8 +33,7 @@ const App = () => (
   <React.Fragment>
     <Router>
       <ScrollToTop />
-
-      <Route exact path="/mothersday" component={MothersDay} />
+      <Route exact path="/" component={MothersDay} />
       <Route path="/rexyrace" component={RexyRace}/>
       <Route path="/mbj" component={MBJ}/>
       <Route path="/signature" component={Signature}/>

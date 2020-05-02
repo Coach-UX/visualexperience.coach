@@ -2,7 +2,7 @@ import React from 'react';
 
 // components
 import ProjectLink from "../components/ProjectLink";
-import { CarouselImage, CarouselSectionSlim } from "../components/Carousel/CarouselSection";
+import { CarouselImage, CarouselSectionSlim, CarouselSection } from "../components/Carousel/CarouselSection";
 import ProjectWrapper from "../components/ProjectWrapper"
 import { TextSection, ImageSection } from '../components/Sections';
 import { IntroSection } from "../components/Hero/Hero";
@@ -14,7 +14,7 @@ import { Footer, FooterSection, Results, Credits } from "../components/Footer/Fo
 var projectName = "Art of Signature",
     projectClass = "signature",
     projectYear = "2019",
-    externalLink = "#",
+    externalLink = "https://art-of-signature.web.app",
     externalLinkLabel="Launch the Site",
 
     nextProjectName='Isetan "The Stage"',
@@ -48,14 +48,10 @@ export default class Signature extends React.Component {
         <ProjectLink href={externalLink} label={externalLinkLabel}/>
 
         <TextSection>
-        Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla iaculis vitae. Donec sagittis faucibus lacus eget blandi.
+          The artwork was created by a mix of talented artists from around the globe– each chosen for their playful, optimistic attitude. The artists were tasked with bringing a playful contrast to our iconic signature pattern by infusing it with their own personal style and perspective.
         </TextSection>
 
         <ImageSection src='artwork.png' caption='Artwork' folder={projectClass} />
-
-        <TextSection>
-        Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla iaculis vitae. Donec sagittis faucibus lacus eget blandi.
-        </TextSection>
 
         <CarouselSectionSlim caption='Artwork'>
           <CarouselImage src="bg-tyler.jpg" folder={projectClass}/>
@@ -64,13 +60,22 @@ export default class Signature extends React.Component {
           <CarouselImage src="bg-kendra.jpg" folder={projectClass}/>
           <CarouselImage src="bg-culver.jpg" folder={projectClass}/>
           <CarouselImage src="bg-ooo.jpg" folder={projectClass}/>
-
         </CarouselSectionSlim>
+
+        <TextSection>
+          The pop-up at Hudson Yards allowed customers to meet the artists, play with customization and shop the collection.
+        </TextSection>
+
+        <CarouselSectionSlim caption='Hudson Yards pop-up space'>
+          <CarouselImage src="carousel1.jpg" folder={projectClass}/>
+          <CarouselImage src="carousel2.jpg" folder={projectClass}/>
+          <CarouselImage src="carousel3.jpg" folder={projectClass}/>
+        </CarouselSectionSlim>
+
 
         <Footer>
          <FooterSection title="Key Results">
-           <Results p="Total Number of Impressions" b="232.4K" />
-           <Results p="Total Number of Conversions" b="14.4K" />
+           <Results p="Total Number of Impressions" b="000" />
          </FooterSection>
          <FooterSection title="Credits">
            <Credits left="Art Direction" right="Coach Creative Team" />

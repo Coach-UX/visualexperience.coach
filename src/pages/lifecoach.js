@@ -14,7 +14,7 @@ import { Footer, FooterSection, Results, Award, Credits } from "../components/Fo
 var projectName = "Life Coach",
     projectClass = "lifecoach",
     projectYear = "2018",
-    externalLink = "#",
+    externalLink = "https://life-coach-7584c.web.app",
     externalLinkLabel="Launch the Site",
 
     nextProjectName="Scene Stealers",
@@ -46,7 +46,7 @@ export default class LifeCoach extends React.Component {
         <ProjectLink href={externalLink} label={externalLinkLabel}/>
 
         <TextSection>
-        Held in SoHo, New York in June 2018, the week-long, immersive pop-up invited guests to explore four interactive spaces designed around the themes of creativity and self-expression.
+          To support the both the New York and Tokyo activations, we designed and developed the website <u>startyourlife.coach</u> which served as a way to drive RSVP's and offered guests a hint of what to expect at the event.
         </TextSection>
 
         {/*<VideoSectionSlim
@@ -70,21 +70,24 @@ export default class LifeCoach extends React.Component {
         <ImageSection src='screens.jpg' caption='LINE integration for Tokyo event' folder={projectClass} />
 
         <TextSection>
-        Created in collaboration with set designer Simon Costin, the playfully surreal experience included a DIY graffiti room, tarot readings, fairground games, live performances and nightly DJs sets. The entire experience was conceived and executed as a way to surprise and delight guests.
+        The week-long, immersive pop-up invited guests to explore four interactive spaces designed around the themes of creativity and self-expression. Created in collaboration with set designer Simon Costin, the playfully surreal experience included a DIY graffiti room, tarot readings, fairground games, live performances and nightly DJs sets. The entire experience was conceived and executed as a way to surprise and delight guests.
         </TextSection>
 
         <VideoSectionSlimExternal
           src='https://res.cloudinary.com/dfiwfoxwx/video/upload/v1587756841/Case%20Study/lifecoach/TheProjects.mp4'
-          caption='Recap video'
+          caption='SoHo, NY recap video'
         />
 
 
 
-        <CarouselSectionSlim caption='SoHo, NY Event Space'>
+        <CarouselSectionSlim caption='SoHo, NY rooms'>
+          <CarouselImage src="carousel0.jpg" folder={projectClass}/>
           <CarouselImage src="carousel1.jpg" folder={projectClass}/>
+          <CarouselImage src="carousel5.jpg" folder={projectClass}/>
           <CarouselImage src="carousel2.jpg" folder={projectClass}/>
           <CarouselImage src="carousel3.jpg" folder={projectClass}/>
           <CarouselImage src="carousel4.jpg" folder={projectClass}/>
+          <CarouselImage src="carousel6.jpg" folder={projectClass}/>
         </CarouselSectionSlim>
 
         <Footer>

@@ -39,20 +39,20 @@ const flickityOptions = {
 class CarouselSection extends React.Component {
   render() {
     return (
-      <div className="carouselSection">
-      <div className={this.props.color} id="prevBtn" />
-      <div className={this.props.color} id="nextBtn" />
-        <Reveal>
+      <Reveal>
+        <div className="carouselSection">
+          <div className={this.props.color} id="prevBtn" />
+          <div className={this.props.color} id="nextBtn" />
           <Flickity
             className={"carousel"}
             elementType={"div"}
             options={flickityOptions}
           >
-          {this.props.children}
+            {this.props.children}
           </Flickity>
-        </Reveal>
-        <CarouselCaption> {this.props.caption} </CarouselCaption>
-      </div>
+          <CarouselCaption> {this.props.caption} </CarouselCaption>
+        </div>
+      </Reveal>
     );
   }
 }

@@ -13,7 +13,7 @@ import { Footer, FooterSection, Results, Credits } from "../components/Footer/Fo
 var projectName = "New York Drive",
     projectClass = "newyorkdrive",
     projectYear = "2017",
-    externalLink = "#",
+    externalLink = "https://the-arcade-42db2.web.app/drive.html",
     externalLinkLabel="Launch the Game",
 
     nextProjectName="Rainbow Hockey",
@@ -60,32 +60,36 @@ export default class NewYorkDrive extends React.Component {
       />
 
       <TextSection>
-        To bring the ganes to life, we created bespoke artwork to make the games look uniquely “Coach”– incorporating iconic New York City landmarks with some of our brand codes.
+        To bring the game to life, we created bespoke artwork to make the games look uniquely “Coach”– incorporating iconic New York City landmarks with some of our brand codes.
       </TextSection>
 
-      <ImageSection src='buildings.png' caption='Building Artwork' folder={projectClass}/>
+      <ImageSection src='buildings.png' caption='Building illustrations' folder={projectClass}/>
 
-      <ImageSection src='artwork.png' caption='Neon Signs' folder={projectClass}/>
+      <ImageSection src='artwork.png' caption='Neon sign illustrations' folder={projectClass}/>
 
-      <ImageSectionSlim src='car.png' caption='Car Artwork' folder={projectClass}/>
+      <ImageSectionSlim src='car.png' caption='Car illustration' folder={projectClass}/>
 
       <TextSection>
-        Alongside the mobile experience, physical arcade machines were installed at Coach stores in Omotesando, Ginza and Shinjuku as a way to bridge the customer experence from online to offline, ultimately driving traffic to stores.
+        Alongside the mobile experience, physical arcade machines were installed at Coach stores in Omotesando, Ginza and Shinjuku as a way to bridge the customer experience from online to offline, ultimately driving traffic to stores.
       </TextSection>
 
-      <CarouselSectionSlim caption='In-Store Experience'>
+      <CarouselSectionSlim caption='In-Store experience'>
         <CarouselImage src="carousel-1.jpg" folder={projectClass} />
         <CarouselImage src="carousel-2.jpg" folder={projectClass} />
         <CarouselImage src="carousel-3.jpg" folder={projectClass} />
         <CarouselImage src="carousel-4.jpg" folder={projectClass} />
-        <CarouselImage src="carousel-5.jpg" folder={projectClass} />
       </CarouselSectionSlim>
 
       <TextSection>
-        Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at.
+        In North America, we partnered with Snapchat to create custom Snapcode pins which customers could scan to unlock the game in their Snapchat app.
       </TextSection>
 
-      <ImageSectionSlim src='snapchat.png' caption='Custom Snapchat Pins'  folder={projectClass} />
+      <CarouselSectionSlim caption='Custom Snapchat pins'>
+        <CarouselImage src="snapchat.png" folder={projectClass} />
+        <CarouselImage src="snapchat2.jpg" folder={projectClass} />
+        <CarouselImage src="snapchat3.jpg" folder={projectClass} />
+        <CarouselImage src="snapchat4.jpg" folder={projectClass} />
+      </CarouselSectionSlim>
 
 
       <Footer>

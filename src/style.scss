@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,500");
 @import url('https://fonts.googleapis.com/css?family=Barlow+Condensed:800&display=swap');
+@import url("https://use.typekit.net/ays2qyv.css");
 @import 'mixins/mixins.scss';
 /*
 ___  ____ ____  _ ____ ____ ___    ____ ____ _    ____ ____ ____
@@ -8,77 +9,78 @@ ___  ____ ____  _ ____ ____ ___    ____ ____ _    ____ ____ ____
 */
 :root {
 /* 2020 */
-  --MothersDay: #DB5973;
+  --mothersday: #DB5973;
 /* 2019 */
-  --RexyRace: #9BC4B6;
-  --MBJ: #E05927;
-  --Signature: #CDA479;
+  --rexyrace: #9BC4B6;
+  --mbj: #EA872C;
+  --signature: #CDA479;
 /* 2018 */
-  --LifeCoach: #FEBD28;
-  --SceneStealers: #6291A3;
-  --Isetan: #F0AFA7;
+  --lifecoach: #FEBD28;
+  --scenestealers: #6291A3;
+  --isetan: #F0AFA7;
 /* 2017 */
-  --NewYorkDrive: #FF00FF;
-  --RainbowHockey: #00FF62;
+  --newyorkdrive: #FF00FF;
+  --rainbowhockey: #F5E500;
 }
 /* 2020 */
 .mothersday:hover ~ .menuBackground,
 #nextBtn.mothersday, #prevBtn.mothersday,
 h1.mothersday,
 span.mothersday{
-  background-color: var(--MothersDay);
+  background-color: var(--mothersday);
 }
 /* 2019 */
+.rexyrace::selection,
 .rexyrace:hover ~ .menuBackground,
 #nextBtn.rexyrace, #prevBtn.rexyrace,
 h1.rexyrace,
 span.rexyrace {
-  background-color: var(--RexyRace);
+  background-color: var(--rexyrace);
 }
 .mbj:hover ~ .menuBackground,
 #nextBtn.mbj, #prevBtn.mbj,
 h1.mbj,
 span.mbj {
-  background-color: var(--MBJ);
+  background-color: var(--mbj);
 }
 .signature:hover ~ .menuBackground,
 #nextBtn.signature, #prevBtn.signature,
 h1.signature,
 span.signature {
-  background-color: var(--Signature);
+  background-color: var(--signature);
 }
 .isetan:hover ~ .menuBackground,
 #nextBtn.isetan, #prevBtn.isetan,
 h1.isetan,
 span.isetan {
-  background-color: var(--Isetan);
+  background-color: var(--isetan);
 }
 /* 2018 */
 .lifecoach:hover ~ .menuBackground,
 #nextBtn.lifecoach, #prevBtn.lifecoach,
 h1.lifecoach,
 span.lifecoach{
-  background-color: var(--LifeCoach);
+  background-color: var(--lifecoach);
 }
 .scenestealers:hover ~ .menuBackground,
 #nextBtn.scenestealers, #prevBtn.scenestealers,
 h1.scenestealers,
 span.scenestealers {
-  background-color: var(--SceneStealers);
+  background-color: var(--scenestealers);
 }
 /* 2017 */
 .newyorkdrive:hover ~ .menuBackground,
 #nextBtn.newyorkdrive, #prevBtn.newyorkdrive,
 h1.newyorkdrive,
 span.newyorkdrive {
-  background-color: var(--NewYorkDrive);
+  background-color: var(--newyorkdrive);
   background-image: linear-gradient(0deg, #7069FF 0%, #FF00FF 100%);
 }
 .rainbowhockey:hover ~ .menuBackground,
 #nextBtn.rainbowhockey, #prevBtn.rainbowhockey,
 h1.rainbowhockey,
 span.rainbowhockey {
-  background-color: var(--RainbowHockey);
+  background-color: var(--rainbowhockey);
   background-image: linear-gradient(45deg, #FFE300 0%, #00FF62 32%, #00BBFF 60%, #FF00FF 100%);
 }
 
@@ -90,8 +92,13 @@ ____ _    ____ ___  ____ _
 | __ |    |  | |__] |__| |
 |__] |___ |__| |__] |  | |___
 */
+
 *, html, body {
   margin: 0;
+  overscroll-behavior: none;
+}
+body {
+  cursor: auto !important;
 }
 h1, p, a, li {
   font-family: "Cormorant Garamond", serif;
@@ -206,5 +213,62 @@ li {
 #AR #screen {
   @include portrait {
     top: 3%;
+  }
+}
+
+
+#home #backgroundColor {
+  display: none;
+}
+#home #introCopy {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+// #home {
+//   position: fixed;
+// }
+ #project {
+  z-index: 2;
+}
+#homeWrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  transform: translate(-50%,-50%);
+  z-index: 2;
+}
+
+
+#cursor-outline {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(5);
+    transition: opacity 0.15s ease-in-out 0s, transform 0.15s ease-in-out 0s;
+    width: 8px;
+    height: 8px;
+    background-color: rgba(0, 0, 0, 1) !important;
+    mix-blend-mode: difference;
+}
+
+canvas {
+  background-color: white;
+  overflow: hidden;
+  position: fixed;
+}
+#fixed {
+  position: fixed;
+}
+#scroll {
+  overflow-y: scroll;
+  max-height: 100vh;
+  .footer {
+    margin-bottom: 5%;
+  }
+}
+
+.mobileOnly {
+  display: none;
+  @include portrait {
+    display: block;
   }
 }

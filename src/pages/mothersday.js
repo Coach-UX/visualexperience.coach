@@ -13,7 +13,7 @@ import { Footer, FooterSection, Results, Credits } from "../components/Footer/Fo
 var projectName = "Mother's Day AR",
     projectClass = "mothersday",
     projectYear = "2020",
-    externalLink = "#",
+    externalLink = "https://instagram.com/a/r/?effect_id=1483726945140337&ch=ZmNlY2MyZjE5MGZmN2NlMjkyYmU1MWRkYzY2N2Q3YWU%3D",
     externalLinkLabel="Try the effect",
 
     nextProjectName="Rexy's Holiday Race",
@@ -60,8 +60,7 @@ export default class Signature extends React.Component {
 
         <Footer>
          <FooterSection title="Key Results">
-           <Results p="Total Number of Impressions" b="232.4K" />
-           <Results p="Total Number of Conversions" b="14.4K" />
+           <Results p="Total Number of Impressions" b="000" />
          </FooterSection>
          <FooterSection title="Credits">
            <Credits left="Art Direction" right="Coach Creative Team" />

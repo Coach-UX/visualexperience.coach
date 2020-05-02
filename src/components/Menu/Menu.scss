@@ -10,7 +10,7 @@
   z-index: 3;
   overflow-x: hidden;
   overflow-y: auto;
-  pointer-events: none;
+  // pointer-events: none;
   @include portrait {
     width: 85%;
   }
@@ -21,7 +21,10 @@
 .menuItems {
   display: grid;
   padding: 25vh 0 0 6.6vw;
-  pointer-events: none;
+  // pointer-events: none;
+  @include portrait {
+    padding: 22vh 0 0 6.6vw;
+  }
   & p {
     position: absolute;
     left: 6.5vw;
@@ -30,7 +33,7 @@
     width: 100%;
     @include portrait {
       font-size: 24px;
-      margin-top: -60px;
+      margin-top: -50px;
     }
     @include mobile {
       font-size: 18px;
@@ -46,12 +49,16 @@
   display: block;
   width:5.5vw;
   @include portrait {
-
+    // left: 63vw;
+    top:92px;
+    width: 15vw;
+    left: 42.5vw;
+    margin-left: -7.5vw;
   }
   @include mobile {
-    left: 58vw;
     top:51px;
     width: 20vw;
+    margin-left: -10vw;
   }
 }
   &:hover > li {

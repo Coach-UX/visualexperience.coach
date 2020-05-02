@@ -30,14 +30,13 @@ export default class SceneStealers extends React.Component {
     <ProjectWrapper projectName={projectName} projectYear={projectYear} projectClass={projectClass} nextProjectLink={nextProjectLink} nextProjectName={nextProjectName} nextProjectClass={nextProjectClass} >
 
       <IntroSection>
-        To support the 2019 Holiday campaign we partnered with the Coach Japan team to create an entertainment first experience. Following on from the narrative of the campaign we opted for an immersive game to be played via Social media channels.
+        Building off of the success from the year before, we partnered with the Coach Japan team to create another social-first game to support the 2018 Holiday campaign. Following on from the narrative of the campaign, Scene Stealers featured the whole cast of Party Animals as well as our brand ambassadors Selena Gomez and Kiko Mizuhara.
       </IntroSection>
 
       <HeroImage projectClass={projectClass} />
-      <ProjectLink href={externalLink} label={externalLinkLabel}  />
 
       <TextSection>
-      Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla iaculis vitae. Donec sagittis faucibus lacus eget blandi.
+        The game consisted of 3 levels, each building up in difficulty. In a "Where's Waldo?" fashion, the goal was to find the animals hidden within Coach-inspired collages before time ran out.
       </TextSection>
 
       <VideoSection
@@ -47,32 +46,47 @@ export default class SceneStealers extends React.Component {
       />
 
       <TextSection>
-      Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla iaculis vitae. Donec sagittis faucibus lacus eget blandi.
+          Leveraging the CGI animations created for the campaign videos, we were able to show each of the Party Animal's personalities at various points throughout the game.
       </TextSection>
+
 
       <ImageSectionSlim
         src='meetthecast.png'
-        caption="Meet the Cast"
+        caption='"Meet the Cast"'
+        folder={projectClass}
+      />
+
+      <VideoSectionSlim
+        src='animals.mp4'
+        caption='"Party Animals" animations'
+        folder={projectClass}
+      />
+
+      <VideoSectionSlim
+        src='celeb.mp4'
+        caption='Selena Gomez and Kiko Mizuhara'
         folder={projectClass}
       />
 
       <TextSection>
-      Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla iaculis vitae. Donec sagittis faucibus lacus eget blandi.
+        We created three elaborate scenes to hide the animals in, highlighting key themes and elements from the Holiday campaign.
       </TextSection>
 
-      <CarouselSection color={projectClass} caption='Level Artwork'>
+      <CarouselSection color={projectClass} caption='Level artwork'>
         <CarouselVideo src="carousel-1.mp4" folder={projectClass}/>
         <CarouselVideo src="carousel-2.mp4" folder={projectClass}/>
         <CarouselVideo src="carousel-3.mp4" folder={projectClass}/>
       </CarouselSection>
 
+
+
       <TextSection>
-      Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla iaculis vitae. Donec sagittis faucibus lacus eget blandi.
+        At the end of each level, we featured curated product assortments based on the characters found in the game. By successfully completing all three levels, the user unlocked a special in-store promotion and could enter to win prizes via LINE app.
       </TextSection>
 
       <VideoSectionSlim
         src='results.mp4'
-        caption='Results'
+        caption='Results page'
         folder={projectClass}
       />
 

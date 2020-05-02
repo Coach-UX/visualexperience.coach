@@ -5,42 +5,41 @@ import {Reveal} from "../Animate";
 
 
 const HeroContainer = styled.div`
-position: relative;
-width: 100%;
-grid-column: var(--gridSection-MD);
-top: 0%;
-padding: 20% 0;
-${media.portrait`
-  padding: 30% 0 30%;
-`}
-  ${media.sm`
-    padding: 30% 0 30%;
-  `}
-`;
-const IntroCopy = styled.div`
   position: relative;
   width: 100%;
-  padding: 0;
-  text-align: left;
-  ${media.sm`
+  grid-column: var(--gridSection-MD);
+  top: 0%;
+  padding: 20% 0;
+    ${media.portrait`
+      padding: 30% 0 30%;
+    `}
+  & #introCopy {
+    position: relative;
     width: 100%;
-  `}
+    padding: 0;
+    text-align: left;
+      ${media.sm`
+        width: 100%;
+      `}
+  }
 `;
 export class IntroSection extends React.Component {
   render() {
     return (
       <React.Fragment>
         <HeroContainer id="heroContainer">
-          <IntroCopy id="introCopy">
+          <div id="introCopy">
             <Reveal>
               <h1>{this.props.children}</h1>
             </Reveal>
-          </IntroCopy>
+          </div>
         </HeroContainer>
       </React.Fragment>
     );
   }
 };
+
+
 
 
 const Hero = styled.div`
@@ -58,64 +57,68 @@ const Hero = styled.div`
   & video {
     width:100%
   }
-  & .videoSmall {
-    width: 60%;
-    object-fit: cover;
-    margin: 0 20%;
-    box-shadow: 0 70px 70px -50px rgba(0,0,0,.1);
-    ${media.portrait`
-      width: 80%;
-      margin: 0 10%;
-    `}
-    ${media.sm`
-      width: 90%;
-      margin: 0 5%;
-    `}
-  }
 `;
 export class HeroImage extends React.Component {
   render() {
     return (
-
       <React.Fragment>
-          <Hero className="heroDesktop">
-            <Reveal>
-              <img src={"img/" + this.props.projectClass + "/hero.png"} alt="hero" />
-            </Reveal>
-          </Hero>
-          <Hero className="heroMobile">
-            <Reveal>
-              <img src={"img/" + this.props.projectClass + "/hero-mobile.png"} alt="hero" />
-            </Reveal>
-          </Hero>
-      </React.Fragment>
-
-    );
-  }
-};
-
-export class HeroVideoSmall extends React.Component {
-  render() {
-    return (
-      <React.Fragment>
-        <Hero>
+        <Hero className="heroDesktop">
           <Reveal>
-            <video className="videoSmall" src={"img/" + this.props.projectClass + "/hero.mp4"} autoPlay muted playsInline loop />
+            <img src={"img/" + this.props.projectClass + "/hero.png"} alt="hero" />
+          </Reveal>
+        </Hero>
+        <Hero className="heroMobile">
+          <Reveal>
+            <img src={"img/" + this.props.projectClass + "/hero-mobile.png"} alt="hero" />
           </Reveal>
         </Hero>
       </React.Fragment>
     );
   }
 };
-export class HeroImageSmall extends React.Component {
+
+
+
+
+const HeroSlim = styled(Hero)`
+  & video, img {
+    width: 60%;
+    height: 60vh;
+    object-fit: cover;
+    margin: 0 20%;
+    box-shadow: 0 50px 50px -50px rgba(0,0,0,.1);
+    ${media.portrait`
+      width: 80%;
+      height: 50vh;
+      margin: 0 10%;
+    `}
+    ${media.sm`
+      height: 40vh;
+    `}
+  }
+`;
+export class HeroVideoSlim extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Hero>
+        <HeroSlim>
           <Reveal>
-            <img className="videoSmall" src={"img/" + this.props.projectClass + "/hero.jpg"} alt="hero" />
+            <video src={"img/" + this.props.projectClass + "/hero.mp4"} autoPlay muted playsInline loop />
           </Reveal>
-        </Hero>
+        </HeroSlim>
+      </React.Fragment>
+    );
+  }
+};
+export class HeroImageSlim extends React.Component {
+  render() {
+    return (
+      <React.Fragment>
+        <HeroSlim>
+          <Reveal>
+            <img src={"img/" + this.props.projectClass + "/hero.jpg"} alt="hero" />
+          </Reveal>
+        </HeroSlim>
       </React.Fragment>
     );
   }

@@ -13,7 +13,7 @@ import { Footer, FooterSection, Results, Credits } from "../components/Footer/Fo
 var projectName = "Rexy's Holiday Race",
     projectClass = "rexyrace",
     projectYear = "2019",
-    externalLink = "#",
+    externalLink = "https://coach-archive.web.app",
     externalLinkLabel="Launch the Game",
 
     nextProjectName="Coach x Michael B Jordan",
@@ -58,7 +58,7 @@ export default class RexyRace extends React.Component {
         In total we created four scenes, all made from a mixture of elements from Tokyo and New York City.
       </TextSection>
 
-      <CarouselSection color={projectClass} caption='Stage Artwork'>
+      <CarouselSection color={projectClass} caption='Stage artwork'>
         <CarouselImage src="stage1.png" folder={projectClass}/>
         <CarouselImage src="stage2.png" folder={projectClass}/>
         <CarouselImage src="stage3.png" folder={projectClass}/>
@@ -68,12 +68,12 @@ export default class RexyRace extends React.Component {
         Throughout the game we introduced Collectibles. These included bespoke drawings from the Horse & Carriage collection along with other everyday objects (found within the scenes).
       </TextSection>
 
-      <ImageSection src='collectibles.png' caption='Game Collectibles' folder={projectClass}/>
+      <ImageSection src='collectibles.png' caption='In-game collectibles' folder={projectClass}/>
 
       {/*<VideoSectionSlim src='bags.mp4' caption='Game Collectibles' folder={projectClass}/>*/}
 
       <TextSection>
-      Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla iaculis vitae. Donec sagittis faucibus lacus eget blandi.
+        Throughout it's limited run online, the game was recieved very well by our younger, social media savvy target audience.
       </TextSection>
 
       <CarouselSectionSlim color={projectClass} caption='Social response'>

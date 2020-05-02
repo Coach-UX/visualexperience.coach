@@ -4,7 +4,7 @@ import React from 'react';
 import {CarouselSectionSlim, CarouselImage } from "../components/Carousel/CarouselSection";
 import ProjectWrapper from "../components/ProjectWrapper"
 import { TextSection, ImageSection, VideoSectionSlim } from '../components/Sections';
-import { IntroSection, HeroImageSmall } from "../components/Hero/Hero";
+import { IntroSection, HeroVideoSlim, HeroImageSlim } from "../components/Hero/Hero";
 import { Footer, FooterSection, Results, Credits } from "../components/Footer/Footer";
 
 
@@ -15,7 +15,7 @@ var projectName = 'Isetan "The Stage"',
 
     nextProjectName="Life Coach",
     nextProjectClass="lifecoach",
-    nextProjectLink="/lifecoach";
+    nextProjectLink="/" + nextProjectClass;
 
 
 export default class Isetan extends React.Component {
@@ -30,7 +30,7 @@ export default class Isetan extends React.Component {
         This year Coach took over The Stage for the second year in a row. Customization was the focus for the pop-up with one-off embellishments being specifically created for the event. The design and experience challenge was to find a narrative that built on top of the existing Coach Create offering within the retail fleet and resonated with this luxury customer.
       </IntroSection>
 
-      <HeroImageSmall projectClass={projectClass} />
+      <HeroVideoSlim projectClass={projectClass} />
 
       <TextSection>
         We knew from previous experiences that surprising the Isetan customer with a level of customization that they couldn’t experience from the Coach brand elsewhere would resonate with them– so we decided to push the boundaries by extending the traditional customization ceremony by leveraging Radio Frequency Identification (RFID).
@@ -71,7 +71,7 @@ export default class Isetan extends React.Component {
 
       <Footer>
        <FooterSection title="Key Results">
-         <Results p="Number of Signatures" b=" 211.5K" />
+         <Results p="Number of Signatures" b="000" />
        </FooterSection>
        <FooterSection title="Credits">
          <Credits left="Art Direction" right="Coach Creative Team" />

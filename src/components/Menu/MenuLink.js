@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 import DelayLink from 'react-delay-link';
 import {gsap, Power2} from "gsap";
 import $ from 'jquery';
-import {RevealCascade} from "../Animate";
+import {Reveal} from "../Animate";
 
 
 function menuTransition() {
@@ -32,18 +32,18 @@ function menuTransition_gradient() {
 class MenuLink_ extends Component {
     render() {
         if(this.props.history.location.pathname === this.props.to){
-            return <span><RevealCascade>{this.props.linktext}</RevealCascade></span>
+            return <span><Reveal>{this.props.linktext}</Reveal></span>
         }
-        return <DelayLink delay={300} clickAction={menuTransition} to={this.props.to}><RevealCascade>{this.props.linktext}</RevealCascade></DelayLink>
+        return <DelayLink delay={300} clickAction={menuTransition} to={this.props.to}><Reveal>{this.props.linktext}</Reveal></DelayLink>
     }
 }
 
 class MenuLink_Gradient extends Component {
   render() {
       if(this.props.history.location.pathname === this.props.to){
-          return <span><RevealCascade>{this.props.linktext}</RevealCascade></span>
+          return <span><Reveal>{this.props.linktext}</Reveal></span>
       }
-      return <DelayLink delay={300} clickAction={menuTransition_gradient} to={this.props.to}><RevealCascade>{this.props.linktext}</RevealCascade></DelayLink>
+      return <DelayLink delay={300} clickAction={menuTransition_gradient} to={this.props.to}><Reveal>{this.props.linktext}</Reveal></DelayLink>
   }
 }
 
