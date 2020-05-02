@@ -23,26 +23,20 @@ var projectName = "Art of Signature",
 
 
 export default class Signature extends React.Component {
+  componentDidMount() {
+    document.title = "Coach Digital | " + projectName;
+  }
   render() {
     return (
       <ProjectWrapper projectName={projectName} projectYear={projectYear} projectClass={projectClass} nextProjectLink={nextProjectLink} nextProjectName={nextProjectName} nextProjectClass={nextProjectClass} className="heroLaptop" >
 
         <IntroSection>
-          Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus. Sed sollicitudin ipsum quis nunc sollicitudin ultrices. Donec euismod scelerisque ligula. Maecenas eu varius risus, eu aliquet arcu. Curabitur fermentum suscipit est, tincidunt mattis lorem luctus id. Donec eget massa a diam condi.
+          To help promote the "Art of Signature" Pop-up at Hudson Yards, we were tasked with creating something that could bring life to the website and accentuate the amazing artwork that the event was centered around. Using a rigid body physics engine, we created a moment of play within the site that allowed users to engage with the artwork in a simple yet satisfying and unexpected way.
         </IntroSection>
 
-        {/*<ScrollingHeroFlex
-          desktop="https://res.cloudinary.com/dfiwfoxwx/video/upload/v1587334043/Case%20Study/hero-short-30.mp4"
-          mobile="https://res.cloudinary.com/dfiwfoxwx/video/upload/v1587332132/Case%20Study/hero-mobile.mp4"
-          DesktopScreenTop="5.5%"
-          DesktopScreenMaskHeight="10vw"
-          MobileDeviceTop="23%"
-          MobileScreenTop="20%"
-          MobileScreenMaskHeight="40vw"
-         />*/}
 
           <ScrollingHeroiframe
-            src="https://bmarcus.synology.me/_projects/signature/"
+            src="https://art-of-signature.web.app"
             Desktop_ScreenTop="-21%"
             Desktop_MaskHeight="16vw"
             Mobile_MaskHeight="35vh"

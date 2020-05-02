@@ -21,34 +21,33 @@ var projectName = "Rainbow Hockey",
     nextProjectLink="/";
 
 export default class RainbowHockey extends React.Component {
+  componentDidMount() {
+    document.title = "Coach Digital | " + projectName;
+  }
   render() {
   return (
     <ProjectWrapper projectName={projectName} projectYear={projectYear} projectClass={projectClass} nextProjectLink={nextProjectLink} nextProjectName={nextProjectName} nextProjectClass={nextProjectClass} >
 
       <IntroSection>
-        To support the 2017 Holiday campaign we partnered with the Coach Japan team to create an entertainment first experience. “The Arcade” featured two distinct games for users to play and enjoy either in-store or on their mobile devices.
+        To support the 2017 Holiday campaign, we partnered with the Coach Japan team to create custom arcade games– a first for Coach. “The Arcade” featured two distinct games for users to play and enjoy either in-store or on their mobile devices.
       </IntroSection>
 
       <HeroImage projectClass={projectClass} />
-      <ProjectLink href={externalLink} label={externalLinkLabel}  />
+      <ProjectLink className="mobileOnly" href={externalLink} label={externalLinkLabel}  />
 
       <TextSection>
-        New York Drive and Rainbow Hockey took the campaign and brought it to life in an fun, unxpected way. Brand motifs, neon and 80’s inspired graphics were used to reimagine some of the classic arcade games of the era.
+        "The Arcade" took the Holiday campaign and brought it to life in an fun, unxpected way. Brand motifs, neon and 80’s inspired graphics were used to reimagine some of the classic arcade games of the era. The objective was to drive brand awareness and engangement, highlighting Coach as a gift-giving desitination for the holidays.
       </TextSection>
 
-      <ImageSectionSlim src='logo.jpg' caption='"Rainbow Hockey" Logo' folder={projectClass} />
+      <ImageSectionSlim src='logo.jpg' caption='"Rainbow Hockey" logo' folder={projectClass} />
 
       <TextSection>
-        Vestibulum nec erat ut mi sollicitudin porttitor id sit amet risus. Nam tempus vel odio vitae aliquam. In imperdiet eros id lacus vestibulum ves.
+        "Rainbow Hockey" is a modern, colorful take on the classic arcade game <i>Pong</i>. The goal is to score goals and collect prizes to defeat your opponent.
       </TextSection>
 
-      <ImageSection src='screens.png' caption='Gameplay Screens' folder={projectClass} />
+      <ImageSection src='screens.png' caption='Gameplay screens' folder={projectClass} />
 
-      <TextSection>
-        Vestibulum nec erat ut mi sollicitudin porttitor id sit amet risus. Nam tempus vel odio vitae aliquam. In imperdiet eros id lacus vestibulum ves.
-      </TextSection>
-
-      <ImageSectionSlim src='detail.jpg' caption='Artwork detail' folder={projectClass} />
+      <ImageSectionSlim src='detail.jpg' caption='Illustration detail' folder={projectClass} />
 
       <VideoSectionSlim
         src='RH-RallyModule.mp4'

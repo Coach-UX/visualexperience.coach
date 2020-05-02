@@ -23,6 +23,9 @@ var projectName = "Mother's Day AR",
 
 
 export default class Signature extends React.Component {
+  componentDidMount() {
+    document.title = "Coach Digital | " + projectName;
+  }
   render() {
     return (
       <ProjectWrapper projectName={projectName} projectYear={projectYear} projectClass={projectClass} nextProjectLink={nextProjectLink} nextProjectName={nextProjectName} nextProjectClass={nextProjectClass} className="heroLaptop" >

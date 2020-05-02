@@ -23,6 +23,9 @@ var projectName = "Life Coach",
 
 
 export default class LifeCoach extends React.Component {
+  componentDidMount() {
+    document.title = "Coach Digital | " + projectName;
+  }
   render() {
     return (
       <ProjectWrapper projectName={projectName} projectYear={projectYear} projectClass={projectClass} nextProjectLink={nextProjectLink} nextProjectName={nextProjectName} nextProjectClass={nextProjectClass} className="heroLaptop" >

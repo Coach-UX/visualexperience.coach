@@ -19,6 +19,9 @@ var projectName = 'Isetan "The Stage"',
 
 
 export default class Isetan extends React.Component {
+  componentDidMount() {
+    document.title = "Coach Digital | " + projectName;
+  }
   render() {
   return (
     <ProjectWrapper projectName={projectName} projectYear={projectYear} projectClass={projectClass} nextProjectLink={nextProjectLink} nextProjectName={nextProjectName} nextProjectClass={nextProjectClass} >
