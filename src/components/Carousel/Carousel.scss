@@ -29,11 +29,13 @@ https://flickity.metafizzy.co
   cursor: move;
   cursor: -webkit-grab;
   cursor: grab;
+  cursor: url("/img/global/carousel2.svg") 38 38, auto;
 }
 
 .flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
   cursor: -webkit-grabbing;
   cursor: grabbing;
+    cursor: url("/img/global/carousel.svg") 25 25, auto;
 }
 
 /* ---- flickity-button ---- */
@@ -234,7 +236,6 @@ ____ _  _ ____ ___ ____ _  _
 #nextBtn {
   right: 0%;
 }
-
 .carouselSectionSlim {
   #prevBtn, #nextBtn, .flickity-prev-next-button {
     display: none;
@@ -264,4 +265,9 @@ ____ _  _ ____ ___ ____ _  _
 
     }
   }
+}
+
+
+#prevBtn, #nextBtn, .flickity-prev-next-button {
+  display: none;
 }
