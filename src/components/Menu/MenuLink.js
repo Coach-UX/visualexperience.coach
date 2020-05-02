@@ -12,6 +12,7 @@ function menuTransition() {
     menuBtnAnim.to("#menu", .3, {width: "100%", ease: Power2.easeIn})
                .to("#menu", 0, {backgroundColor: "" + theColorIs + ""}, 0)
                .to("li", 0, {pointerEvents: "none", opacity: ".3"}, 0)
+               .to("#progressBar", .1, {opacity: 0, ease:Power2.easeInOut},0)
                .to(".menuItems", .3, {autoAlpha: 0, ease: Power2.easeInOut}, 0);
     menuBtnAnim.play();
     $('input[type="checkbox"]').prop('checked', false);
@@ -22,6 +23,7 @@ function menuTransition_gradient() {
     menuBtnAnim.to("#menu", .3, {width: "100%", ease: Power2.easeIn})
                .to("#menu", 0, {backgroundImage: "" + theColorIs + ""}, 0)
                .to("li", 0, {pointerEvents: "none", opacity: ".3"}, 0)
+               .to("#progressBar", .1, {opacity: 0, ease:Power2.easeInOut},0)
                .to(".menuItems", .3, {autoAlpha: 0, ease: Power2.easeInOut}, 0);
     menuBtnAnim.play();
     $('input[type="checkbox"]').prop('checked', false);

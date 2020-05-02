@@ -38,6 +38,7 @@ function nextProjectTransition() {
   var nextProjectAnim = gsap.timeline({paused:true});
   nextProjectAnim.to("#nextProject", 0, {transition: "all 0s", ease:Power2.easeInOut}, 0)
                   .to("#nextProject", .2, {color: "rgba(0,0,0,0)", ease:Power2.easeInOut},0)
+                  .to("#progressBar", .2, {opacity: 0, ease:Power3.easeInOut},0)
                   .to("#nextProject", .3, {padding: "19vh 0 77.8vh", ease:Power2.easeInOut});
   nextProjectAnim.play();
 }
@@ -70,6 +71,7 @@ export default class NextProjectButton extends React.Component {
     return (
         <DelayLink id="nextProjectBtn" to={this.props.nextProjectLink} delay={500} clickAction={nextProjectTransition} replace={false}>
           <NextProject id="nextProject" className={this.props.nextProjectColor}>
+          <p id="nextProjectLabel"> Next Project</p>
           {this.props.nextProjectName}
           </NextProject>
        </DelayLink>

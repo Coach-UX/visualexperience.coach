@@ -6,6 +6,7 @@ import {gsap, Linear} from "gsap";
 import Menu from "../components/Menu/Menu";
 import Nav from "../components/Nav/Nav";
 import NextProjectButton from "../components/NextProjectButton";
+import ProgressBar from "react-scroll-progress-bar";
 
 const Grid = Styled.div`
   display: grid;
@@ -32,6 +33,8 @@ const BackgroundColor = Styled.span`
 
 `;
 
+
+
 export default class ProjectWrapper extends React.Component {
   componentDidMount() {
     const trigger = document.querySelector('#backgroundColor')
@@ -44,19 +47,41 @@ export default class ProjectWrapper extends React.Component {
         timeline: parallax,
       },
     })
+    {/*const section = document.querySelector("#grid")
+    let currentPixel = window.pageYOffset
+
+    const looper = function () {
+      const newPixel = window.pageYOffset
+      const diff = newPixel - currentPixel
+      const speed = diff * .005
+
+      section.style.transform = "skewY(" + speed + "deg)"
+
+      currentPixel = newPixel
+
+      requestAnimationFrame(looper)
+    }
+    looper()*/}
+
   }
   render() {
   return (
     <React.Fragment>
+    <section className={this.props.projectClass}>
+    <div id="progressBar">
+      <ProgressBar bgcolor={"var(--" + this.props.projectClass + ")"}/>
+    </div>
       <Menu />
       <Nav projectName={this.props.projectName} projectYear={this.props.projectYear} />
+      <BackgroundColor id="backgroundColor" className={this.props.projectClass} />
+
       <Grid id="grid">
-        <BackgroundColor id="backgroundColor" className={this.props.projectClass} />
 
         {this.props.children}
 
       </Grid>
       <NextProjectButton nextProjectLink={this.props.nextProjectLink} nextProjectName={this.props.nextProjectName}  nextProjectColor={this.props.nextProjectClass}/>
+    </section>
     </React.Fragment>
   );
   }
