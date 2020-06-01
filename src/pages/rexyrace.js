@@ -16,7 +16,7 @@ var projectName = "Rexy's Holiday Race",
     externalLink = "https://coach-archive.web.app",
     externalLinkLabel="Launch the Game",
 
-    nextProjectName="Coach x Michael B Jordan",
+    nextProjectName="Coach x MBJ",
     nextProjectClass="mbj",
     nextProjectLink="/mbj";
 

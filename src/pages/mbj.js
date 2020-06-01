@@ -9,7 +9,7 @@ import { Footer, FooterSection, Results, Credits } from "../components/Footer/Fo
 
 
 // project details
-var projectName = "Coach x Michael B Jordan",
+var projectName = "Coach x MBJ",
     projectClass = "mbj",
     projectYear = "2019",
 
