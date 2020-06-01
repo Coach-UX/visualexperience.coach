@@ -6,7 +6,7 @@ import {gsap, Linear} from "gsap";
 
 import Menu from "../components/Menu/Menu";
 import Nav from "../components/Nav/Nav";
-import NextProjectButton from "../components/NextProjectButton2";
+import NextProjectButton from "../components/NextProjectButton";
 import ProgressBar from "react-scroll-progress-bar";
 
 const Grid = Styled.div`

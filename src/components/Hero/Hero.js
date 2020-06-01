@@ -11,7 +11,7 @@ const HeroContainer = styled.div`
   top: 0%;
   padding: 20% 0;
     ${media.portrait`
-      padding: 30% 0 30%;
+      padding: 20% 0 30%;
     `}
   & #introCopy {
     position: relative;
