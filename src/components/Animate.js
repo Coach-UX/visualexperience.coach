@@ -7,9 +7,9 @@ import ScrollAnimation from 'react-animate-on-scroll';
 export class FadeIn extends React.Component {
     render() {
         return(
-          <Animated animationIn="fadeIn" animationInDuration={700} isVisible={true}>
+          <div className="fadeIn">
             {this.props.children}
-          </Animated>
+          </div>
         );
     }
 }

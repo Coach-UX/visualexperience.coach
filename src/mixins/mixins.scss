@@ -3,6 +3,11 @@
     @content;
   }
 }
+@mixin notMobile {
+  @media screen and (min-width: 481px) {
+    @content;
+  }
+}
 @mixin portrait {
   @media (orientation: portrait) {
     @content;

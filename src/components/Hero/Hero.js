@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import media from "../../mixins/mixins.js";
-import {Reveal} from "../Animate";
+import {Reveal, FadeIn} from "../Animate";
 
 
 const HeroContainer = styled.div`
@@ -29,9 +29,9 @@ export class IntroSection extends React.Component {
       <React.Fragment>
         <HeroContainer id="heroContainer">
           <div id="introCopy">
-            <Reveal>
+            <FadeIn>
               <h1>{this.props.children}</h1>
-            </Reveal>
+            </FadeIn>
           </div>
         </HeroContainer>
       </React.Fragment>
@@ -63,14 +63,14 @@ export class HeroImage extends React.Component {
     return (
       <React.Fragment>
         <Hero className="heroDesktop">
-          <Reveal>
+          <FadeIn>
             <img src={"img/" + this.props.projectClass + "/hero.png"} alt="hero" />
-          </Reveal>
+          </FadeIn>
         </Hero>
         <Hero className="heroMobile">
-          <Reveal>
+          <FadeIn>
             <img src={"img/" + this.props.projectClass + "/hero-mobile.png"} alt="hero" />
-          </Reveal>
+          </FadeIn>
         </Hero>
       </React.Fragment>
     );
@@ -102,9 +102,9 @@ export class HeroVideoSlim extends React.Component {
     return (
       <React.Fragment>
         <HeroSlim>
-          <Reveal>
+          <FadeIn>
             <video src={"img/" + this.props.projectClass + "/hero.mp4"} autoPlay muted playsInline loop />
-          </Reveal>
+          </FadeIn>
         </HeroSlim>
       </React.Fragment>
     );
@@ -115,9 +115,9 @@ export class HeroImageSlim extends React.Component {
     return (
       <React.Fragment>
         <HeroSlim>
-          <Reveal>
+          <FadeIn>
             <img src={"img/" + this.props.projectClass + "/hero.jpg"} alt="hero" />
-          </Reveal>
+          </FadeIn>
         </HeroSlim>
       </React.Fragment>
     );

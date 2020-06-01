@@ -4,6 +4,7 @@ import { ScrollScene } from 'scrollscene'
 import {gsap, Power2} from "gsap";
 import media from "../../mixins/mixins.js";
 import {FadeIn} from "../Animate";
+import $ from "jquery";
 
 
 // Parent Components
@@ -13,9 +14,6 @@ const Wrapper = styled.div`
   padding-bottom: 150px;
   z-index: 1;
   position: relative;
-  ${media.portrait`
-    padding-bottom: 100px;
- `}
   ${media.sm`
     padding-bottom: 100px;
   `}
@@ -44,20 +42,30 @@ const Trigger = styled.div`
      margin-top: -2vh;
      height: 50vh;
    `}
+   ${media.sm`
+     margin-top: -2vh;
+     height: 50vh;
+   `}
  `;
 export class ScrollingHeroWrapper extends React.Component {
   componentDidMount() {
+    // portrait
+    if (window.innerWidth < window.innerHeight) {
+      var scale = this.props.Desktop_Scale;
+      var screenTop = this.props.Portrait_ScreenTop;
+      var maskHeight = this.props.Portrait_MaskHeight
+    }
+    // mobile
+    if ($(window).width() < 480) {
+      var scale = this.props.Mobile_Scale;
+      var screenTop = this.props.Mobile_ScreenTop;
+      var maskHeight = this.props.Mobile_MaskHeight
+    }
     // desktop
     if (window.innerWidth > window.innerHeight) {
       var scale = this.props.Desktop_Scale;
       var screenTop = this.props.Desktop_ScreenTop;
       var maskHeight = this.props.Desktop_MaskHeight
-    }
-    // mobile
-    else {
-      var scale = this.props.Mobile_Scale;
-      var screenTop = this.props.Mobile_ScreenTop;
-      var maskHeight = this.props.Mobile_MaskHeight
     }
     // gsap timeline
     const trigger = document.querySelector('#trigger')
@@ -100,11 +108,11 @@ const ScreenLaptop = styled.video`
   position: absolute;
   width: 46%;
   z-index: 0;
-  top: 2.5%;
+  top: 1.9vw;
   opacity: 1;
   left: 50%;
   margin-left: -23%;
-    ${media.portrait`
+    ${media.sm`
      width: 70%;
      top: 1.5%;
      margin-left: -35%;
@@ -121,7 +129,7 @@ const ScreenPhone = styled.video`
     &.adjustTop {
       top: 2.5%;
     }
-    ${media.portrait`
+    ${media.sm`
       width: 32%;
       top: 5%;
       margin-left: -15.9%;
@@ -168,7 +176,7 @@ export class ScrollingHeroLaptop extends React.Component {
 }
 
 
-// Laptop on desktop, phone on mobile
+// Laptop on desktop – phone on mobile
 export class ScrollingHeroFlex extends React.Component {
   render() {
     return (
@@ -176,6 +184,8 @@ export class ScrollingHeroFlex extends React.Component {
         Desktop_Scale="2.19"
         Desktop_ScreenTop={this.props.Desktop_ScreenTop}
         Desktop_MaskHeight={this.props.Desktop_MaskHeight}
+        Portrait_ScreenTop={this.props.Portrait_ScreenTop}
+        Portrait_MaskHeight={this.props.Portrait_MaskHeight}
         Mobile_Scale="3.2"
         Mobile_ScreenTop={this.props.Mobile_ScreenTop}
         Mobile_MaskHeight={this.props.Mobile_MaskHeight}
@@ -204,34 +214,43 @@ const Iframe = styled.iframe`
   left: .1%;
   transform: scale(.48);
   z-index: 0;
-  top: -21%;
+  top: -24%;
   opacity: 1;
   border: unset;
-    ${media.portrait`
-      height: 100vh;
-      transform: scale(.32);
-      top: -23%;
-    `}
-    ${media.sm`
-       height: 90vh;
-       transform: scale(.32);
-       top: -26%;
-    `}
+  ${media.portrait`
+    height: 55vh;
+    transform: scale(0.46);
+    top: -19%;
+  `}
+  ${media.sm`
+     height: 90vh;
+     transform: scale(.32);
+     top: -30%;
+  `}
 `;
+
 export class ScrollingHeroWrapperiframe extends React.Component {
   componentDidMount() {
+    // portrait
+    if (window.innerWidth < window.innerHeight) {
+      var scale = this.props.Desktop_Scale;
+      var screenTop = this.props.Portrait_ScreenTop;
+      var maskHeight = this.props.Portrait_MaskHeight
+    }
+    // mobile
+    if ($(window).width() < 480) {
+      var scale = this.props.Mobile_Scale;
+      var screenTop = this.props.Mobile_ScreenTop;
+      var maskHeight = this.props.Mobile_MaskHeight
+    }
     // desktop
     if (window.innerWidth > window.innerHeight) {
       var scale = this.props.Desktop_Scale;
       var screenTop = this.props.Desktop_ScreenTop;
       var maskHeight = this.props.Desktop_MaskHeight
     }
-    // mobile
-    else {
-      var scale = this.props.Mobile_Scale;
-      var screenTop = this.props.Mobile_ScreenTop;
-      var maskHeight = this.props.Mobile_MaskHeight
-    }
+
+
      const trigger = document.querySelector('#trigger')
      const tl2 = gsap.timeline({paused:true});
      tl2.to("#screen", 0.3, {scale: "1", top: screenTop, ease:Power2.easeInOut }, 0)
@@ -272,6 +291,8 @@ export class ScrollingHeroiframe extends React.Component {
         Desktop_Scale="2.19"
         Desktop_ScreenTop={this.props.Desktop_ScreenTop}
         Desktop_MaskHeight={this.props.Desktop_MaskHeight}
+        Portrait_ScreenTop={this.props.Portrait_ScreenTop}
+        Portrait_MaskHeight={this.props.Portrait_MaskHeight}
         Mobile_Scale="3.2"
         Mobile_ScreenTop={this.props.Mobile_ScreenTop}
         Mobile_MaskHeight={this.props.Mobile_MaskHeight}

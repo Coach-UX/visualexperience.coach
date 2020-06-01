@@ -1,11 +1,12 @@
 import React from 'react';
 import Styled from 'styled-components';
 import { ScrollScene } from 'scrollscene'
+import media from "../mixins/mixins.js";
 import {gsap, Linear} from "gsap";
 
 import Menu from "../components/Menu/Menu";
 import Nav from "../components/Nav/Nav";
-import NextProjectButton from "../components/NextProjectButton";
+import NextProjectButton from "../components/NextProjectButton2";
 import ProgressBar from "react-scroll-progress-bar";
 
 const Grid = Styled.div`
@@ -13,6 +14,10 @@ const Grid = Styled.div`
   grid-template-columns: repeat(15, 1fr);
   grid-gap: 10px;
   overflow-x: hidden;
+  padding-bottom: 39vh;
+    ${media.portrait`
+      padding-bottom: 14vh;
+    `}
   & a {
     grid-column: 7 / 10;
     padding-bottom: var(--padding);
@@ -30,7 +35,17 @@ const BackgroundColor = Styled.span`
   &.mbj {
     height: 120%;
   }
-
+`;
+const NextProjectTrigger = Styled.span`
+    width: 100%;
+    height: 1vh;
+    grid-column: var(--gridSection-SM);
+    visibility: hidden;
+    bottom: 0;
+    left: 0;
+    ${media.portrait`
+      transform: translateY(-10vh);
+    `}
 `;
 
 
@@ -69,7 +84,7 @@ export default class ProjectWrapper extends React.Component {
     <React.Fragment>
     <section className={this.props.projectClass}>
     <div id="progressBar">
-      <ProgressBar bgcolor={"var(--" + this.props.projectClass + ")"}/>
+      <ProgressBar bgcolor={"var(--" + this.props.projectClass + ")"} height=".5vh"/>
     </div>
       <Menu />
       <Nav projectName={this.props.projectName} projectYear={this.props.projectYear} />
@@ -79,6 +94,7 @@ export default class ProjectWrapper extends React.Component {
 
         {this.props.children}
 
+        <NextProjectTrigger id="nextProjectTrigger" />
       </Grid>
       <NextProjectButton nextProjectLink={this.props.nextProjectLink} nextProjectName={this.props.nextProjectName}  nextProjectColor={this.props.nextProjectClass}/>
     </section>

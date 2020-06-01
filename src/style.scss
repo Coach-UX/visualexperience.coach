@@ -24,60 +24,59 @@ ___  ____ ____  _ ____ ____ ___    ____ ____ _    ____ ____ ____
 }
 /* 2020 */
 .mothersday:hover ~ .menuBackground,
-#nextBtn.mothersday, #prevBtn.mothersday,
+#nextProject.mothersday,
 h1.mothersday,
 span.mothersday{
   background-color: var(--mothersday);
 }
 /* 2019 */
-.rexyrace::selection,
 .rexyrace:hover ~ .menuBackground,
-#nextBtn.rexyrace, #prevBtn.rexyrace,
+#nextProject.rexyrace,
 h1.rexyrace,
 span.rexyrace {
   background-color: var(--rexyrace);
 }
 .mbj:hover ~ .menuBackground,
-#nextBtn.mbj, #prevBtn.mbj,
+#nextProject.mbj,
 h1.mbj,
 span.mbj {
   background-color: var(--mbj);
 }
 .signature:hover ~ .menuBackground,
-#nextBtn.signature, #prevBtn.signature,
+#nextProject.signature,
 h1.signature,
 span.signature {
   background-color: var(--signature);
 }
 .isetan:hover ~ .menuBackground,
-#nextBtn.isetan, #prevBtn.isetan,
+#nextProject.isetan,
 h1.isetan,
 span.isetan {
   background-color: var(--isetan);
 }
 /* 2018 */
 .lifecoach:hover ~ .menuBackground,
-#nextBtn.lifecoach, #prevBtn.lifecoach,
+#nextProject.lifecoach,
 h1.lifecoach,
 span.lifecoach{
   background-color: var(--lifecoach);
 }
 .scenestealers:hover ~ .menuBackground,
-#nextBtn.scenestealers, #prevBtn.scenestealers,
+#nextProject.scenestealers,
 h1.scenestealers,
 span.scenestealers {
   background-color: var(--scenestealers);
 }
 /* 2017 */
 .newyorkdrive:hover ~ .menuBackground,
-#nextBtn.newyorkdrive, #prevBtn.newyorkdrive,
+#nextProject.newyorkdrive,
 h1.newyorkdrive,
 span.newyorkdrive {
   background-color: var(--newyorkdrive);
   background-image: linear-gradient(0deg, #7069FF 0%, #FF00FF 100%);
 }
 .rainbowhockey:hover ~ .menuBackground,
-#nextBtn.rainbowhockey, #prevBtn.rainbowhockey,
+#nextProject.rainbowhockey,
 h1.rainbowhockey,
 span.rainbowhockey {
   background-color: var(--rainbowhockey);
@@ -140,7 +139,7 @@ a {
   }
 }
 li {
-    font-size: 3vw;
+    font-size: 3.3vw;
     line-height: 4vw;
     width: 50vw;
     text-align: left;
@@ -177,46 +176,67 @@ li {
 
 
 
+
+// mobile/desktop only
 .heroDesktop, .screenDesktop {
    display: block;
-   @include portrait {
-     display: none;
-   }
    @include mobile {
      display: none;
    }
  }
 .heroMobile, .screenMobile {
- display: none;
- @include portrait {
-   display: block;
- }
- @include mobile {
-   display: block;
- }
+   display: none;
+   @include mobile {
+     display: block;
+   }
+}
+.mobileOnly {
+  display: none;
+  @include mobile {
+    display: block;
+  }
+}
+.desktopOnly {
+  display: block;
+  @include mobile {
+    display: none;
+  }
 }
 
+
+
+
+// scrolling hero
 #AR #screenMask {
   margin-top: -2.5vh;
 }
 #AR #device, #AR #screenMask {
-  @include landscape {
+  @include notMobile {
     opacity: 1 !important;
     visibility: visible !important;
   }
 }
 #AR #screenMask {
-  @include landscape {
+  @include notMobile {
     height: 0;
   }
 }
 #AR #screen {
-  @include portrait {
+  @include mobile {
     top: 3%;
   }
 }
 
 
+
+
+
+
+
+
+
+
+//home
 #home #backgroundColor {
   display: none;
 }
@@ -266,9 +286,21 @@ canvas {
   }
 }
 
-.mobileOnly {
-  display: none;
-  @include portrait {
-    display: block;
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: .7s;
+  animation-fill-mode: both;
+
+}
+
+@keyframes fadeIn{
+  0% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
