@@ -45,7 +45,7 @@ export default class RexyRace extends React.Component {
       />
 
       <TextSection>
-        3 bespoke avatars were created for players to choose from at the beginning of the game. Working closely with the Illustrator to render out Rexy in Pixel Art for the first time.
+        Three bespoke avatars were created for players to choose from at the beginning of the game– working closely with the Illustrator to render out Rexy in Pixel Art for the first time.
       </TextSection>
 
       <VideoSectionSlim src='avatars.mp4' caption='Avatars' folder={projectClass}
@@ -73,7 +73,7 @@ export default class RexyRace extends React.Component {
       {/*<VideoSectionSlim src='bags.mp4' caption='Game Collectibles' folder={projectClass}/>*/}
 
       <TextSection>
-        Throughout it's limited run online, the game was recieved very well by our younger, social media savvy target audience.
+        Throughout its limited run online, the game was recieved very well by our younger, social media savvy target audience.
       </TextSection>
 
       <CarouselSectionSlim color={projectClass} caption='Social response'>

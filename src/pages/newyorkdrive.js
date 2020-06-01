@@ -36,7 +36,7 @@ export default class NewYorkDrive extends React.Component {
       <ProjectLink className="mobileOnly" href={externalLink} label={externalLinkLabel}  />
 
       <TextSection>
-        "The Arcade" took the Holiday campaign and brought it to life in an fun, unxpected way. Brand motifs, neon and 80’s inspired graphics were used to reimagine some of the classic arcade games of the era. The objective was to drive brand awareness and engangement, highlighting Coach as a gift-giving desitination for the holidays.
+        "The Arcade" took the Holiday campaign and brought it to life in a fun, unexpected way. Brand motifs, neon and 80’s inspired graphics were used to reimagine some of the classic arcade games of the era. The objective was to drive brand awareness and engangement, highlighting Coach as a gift-giving desitination for the holidays.
       </TextSection>
 
       <ImageSectionSlim src='logo.png' caption='"New York Drive" logo' folder={projectClass} />

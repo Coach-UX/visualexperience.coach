@@ -70,9 +70,9 @@ export default class Isetan extends React.Component {
 
 
       <Footer>
-       <FooterSection title="Key Results">
+       {/*<FooterSection title="Key Results">
          <Results p="Number of Signatures" b="000" />
-       </FooterSection>
+       </FooterSection>*/}
        <FooterSection title="Credits">
          <Credits left="Art Direction" right="Coach Creative Team" />
          <Credits left="Copywriting" right="Coach Creative Team" />

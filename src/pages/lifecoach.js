@@ -31,7 +31,7 @@ export default class LifeCoach extends React.Component {
       <ProjectWrapper projectName={projectName} projectYear={projectYear} projectClass={projectClass} nextProjectLink={nextProjectLink} nextProjectName={nextProjectName} nextProjectClass={nextProjectClass} className="heroLaptop" >
 
         <IntroSection>
-          Your future is calling. Are ready to pick up? And with that subversive messaging, we kicked off Coach’s first immersive pop-up experience. The interactive, open-to-the-public, pop-up melded established brand codes (NYC, nostalgia and Americana) with of-the-moment mysticism (tarot, sound baths and astrology). The result; an unexpected experiential that put a premium on user experience, production values and content opportunities over overt product marketing.
+          Your future is calling. Are ready to pick up? And with that subversive messaging, we kicked off Coach’s first immersive pop-up experience. The interactive, open-to-the-public, pop-up melded established brand codes (NYC, nostalgia and Americana) with of-the-moment mysticism (tarot, sound baths and astrology). The result: an unexpected experiential that put a premium on user experience, production values and content opportunities over overt product marketing.
         </IntroSection>
 
         <ScrollingHeroFlex
@@ -39,6 +39,8 @@ export default class LifeCoach extends React.Component {
           mobile="img/lifecoach/lifecoachny-mobile.mp4"
           Desktop_ScreenTop="21.5%"
           Desktop_MaskHeight="145vw"
+          Portrait_ScreenTop="20%"
+          Portrait_MaskHeight="135vw"
           Mobile_ScreenTop="32%"
           Mobile_MaskHeight="785vw"
         />
@@ -46,7 +48,7 @@ export default class LifeCoach extends React.Component {
         <ProjectLink href={externalLink} label={externalLinkLabel}/>
 
         <TextSection>
-          To support the both the New York and Tokyo activations, we designed and developed the website <u>startyourlife.coach</u> which served as a way to drive RSVP's and offered guests a hint of what to expect at the event.
+          To support the both the New York and Tokyo activations, we designed and developed the website <u>startyourlife.coach</u> which served as a way to drive RSVPs and offered guests a hint of what to expect at the event.
         </TextSection>
 
         {/*<VideoSectionSlim

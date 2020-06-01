@@ -27,7 +27,7 @@ export default class RexyRace extends React.Component {
     <ProjectWrapper projectName={projectName} projectYear={projectYear} projectClass={projectClass} nextProjectLink={nextProjectLink} nextProjectName={nextProjectName} nextProjectClass={nextProjectClass} >
 
       <IntroSection>
-        To support Michael B Jordan’s first collection with Coach we decided to celebrate its Anime influences. Developing an immersive, gesture-led gaming experience, utilizing a mixture of technology frameworks as Coach customers became "Students". Just as their hero Naruto had to, Students were tasked with trying to graduate from ‘The Academy’ at the base of Hokage Mountain.
+        To support Michael B Jordan’s first collection with Coach we decided to celebrate its Anime influences. Developing an immersive, gesture-led gaming experience, utilizing a mixture of technology frameworks as Coach customers became "Students". Just as their hero Naruto had to, Students were tasked with trying to graduate from "The Academy" at the base of Hokage Mountain.
       </IntroSection>
 
       <HeroVideoSlim projectClass={projectClass} />
@@ -72,11 +72,11 @@ export default class RexyRace extends React.Component {
 
 
       <Footer>
-       <FooterSection title="Key Results">
+       {/*<FooterSection title="Key Results">
          <Results p="Number of Unique Players" b="000" />
          <Results p="Number of Shares" b="000" />
          <Results p="Number of Graduates" b="000" />
-       </FooterSection>
+       </FooterSection>*/}
        <FooterSection title="Credits">
          <Credits left="Art Direction" right="Coach Creative Team" />
          <Credits left="Copywriting" right="Coach Creative Team" />

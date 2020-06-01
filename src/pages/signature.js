@@ -37,10 +37,12 @@ export default class Signature extends React.Component {
 
           <ScrollingHeroiframe
             src="https://art-of-signature.web.app"
-            Desktop_ScreenTop="-21%"
+            Desktop_ScreenTop="-24%"
             Desktop_MaskHeight="16vw"
+            Portrait_ScreenTop="-48%"
+            Portrait_MaskHeight="10vw"
+            Mobile_ScreenTop="-23%"
             Mobile_MaskHeight="35vh"
-            Mobile_ScreenTop="-20%"
            />
 
 
@@ -74,9 +76,9 @@ export default class Signature extends React.Component {
 
 
         <Footer>
-         <FooterSection title="Key Results">
+         {/*<FooterSection title="Key Results">
            <Results p="Total Number of Impressions" b="000" />
-         </FooterSection>
+         </FooterSection>*/}
          <FooterSection title="Credits">
            <Credits left="Art Direction" right="Coach Creative Team" />
            <Credits left="Copywriting" right="Coach Creative Team" />

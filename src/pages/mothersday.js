@@ -18,7 +18,7 @@ var projectName = "Mother's Day AR",
 
     nextProjectName="Rexy's Holiday Race",
     nextProjectClass="rexyrace",
-    nextProjectLink="/rexyrace";
+    nextProjectLink="/";
 
 
 
@@ -31,7 +31,7 @@ export default class Signature extends React.Component {
       <ProjectWrapper projectName={projectName} projectYear={projectYear} projectClass={projectClass} nextProjectLink={nextProjectLink} nextProjectName={nextProjectName} nextProjectClass={nextProjectClass} className="heroLaptop" >
 
         <IntroSection>
-          In a world at stand still due to CoVid-19 we decided to see what innovative ways we could reach our digital audience and support a key seasonal event in the yearly calendar. Seeing an opportunity to bring some joy to our social audience and in turn allowing them to spread our message of joy we placed them center stage in our Instagram lens.
+          In a world at standstill due to Covid-19 we decided to see what innovative ways we could reach our digital audience and support a key seasonal event in the yearly calendar. Seeing an opportunity to bring some joy to our social audience and in turn allowing them to spread our message of joy we placed them center stage in our Instagram lens.
         </IntroSection>
 
         <ScrollingHeroPhone folder={projectClass}
@@ -59,9 +59,11 @@ export default class Signature extends React.Component {
 
 
         <Footer>
-         <FooterSection title="Key Results">
-           <Results p="Total Number of Impressions" b="000" />
-         </FooterSection>
+        <FooterSection title="Key Results">
+          <Results p="Total Number of Impressions" b="124.2K" />
+          <Results p="Total Number of Captures" b="3.6K" />
+          <Results p="Total Number of Shares" b="322" />
+        </FooterSection>
          <FooterSection title="Credits">
            <Credits left="Art Direction" right="Coach Creative Team" />
            <Credits left="Copywriting" right="Coach Creative Team" />
