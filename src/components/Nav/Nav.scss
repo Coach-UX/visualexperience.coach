@@ -29,23 +29,38 @@
   right: 0;
   text-align: right;
 }
-.menuBtn {
-  top: 94px;
+.menu-label {
+  position: fixed;
+  left: calc(8vw + 15px);
+  text-align: left;
   z-index: 4;
+  @include portrait {
+    display: none;
+  }
+  &:before {
+    content: "Projects";
+  }
+}
+.menuBtn {
+  top: 91px;
+  z-index: 4;
+  cursor: pointer;
+  position: fixed;
   @include mobile {
     top: 50px;
   }
-  cursor: pointer;
-  position: fixed;
   & input {
     position: absolute;
     height: 60px;
-    width: 60px;
-    top: -22px;
-    left: -13px;
+    width: 150px;
     cursor: pointer;
     opacity: 0;
     z-index: 5;
+    top: -22px;
+    left: -13px;
+    @include portrait {
+      width: 60px;
+    }
   }
   & span {
     width: 20px;

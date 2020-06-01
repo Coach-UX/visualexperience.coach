@@ -11,8 +11,13 @@ export default class Menu extends React.Component {
   componentDidMount() {
     $(".menuBtn").click(function(){
       $("#menu").animate({ width: "toggle" });
-      $(".menuOverlay").fadeToggle(500);
       $("#menu").css('transition', 'width 0s ease');
+      $(".menuOverlay").fadeToggle(500);
+      $(".menu-label").toggleClass("menu-active");
+      $("#progressBar div").toggleClass("hide-progress-bar");
+      {/*$("#menu").toggleClass("menu-open");
+      $(".menuBtn").toggleClass("hide-menuBtn");*/}
+
     });
     // close menu by clicking outside of menu
     $(".menuOverlay").click(function(){
@@ -25,16 +30,17 @@ export default class Menu extends React.Component {
       <React.Fragment>
       <div id="menu">
         <ul className="menuItems">
-          <RevealCascade> <p>Projects</p></RevealCascade>
           <ul className="menuProject">
+              {/*<RevealCascade> <p>Projects</p></RevealCascade>
+*/}
               <li className="mothersday">
-                <MenuLink to="/" linktext="Mother's Day AR" />
+                <MenuLink to="/mothersday" linktext="Mother's Day AR" />
               </li>
               <li className="rexyrace">
-                <MenuLink to="/rexyrace" linktext="Rexy's Holiday Race" />
+                <MenuLink to="/" linktext="Rexy's Holiday Race" />
               </li>
               <li className="mbj">
-               <MenuLink to="/mbj" linktext="Coach x Michael B Jordan" />
+               <MenuLink to="/mbj" linktext="Coach x MBJ" />
               </li>
               <li className="signature">
                 <MenuLink to="/signature" linktext="Art of Signature" />
