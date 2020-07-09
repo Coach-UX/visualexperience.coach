@@ -15,9 +15,6 @@ export default class Menu extends React.Component {
       $(".menuOverlay").fadeToggle(500);
       $(".menu-label").toggleClass("menu-active");
       $("#progressBar div").toggleClass("hide-progress-bar");
-      {/*$("#menu").toggleClass("menu-open");
-      $(".menuBtn").toggleClass("hide-menuBtn");*/}
-
     });
     // close menu by clicking outside of menu
     $(".menuOverlay").click(function(){

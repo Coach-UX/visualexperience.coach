@@ -9,9 +9,8 @@ const HeroContainer = styled.div`
   width: 100%;
   grid-column: var(--gridSection-MD);
   top: 0%;
-  padding: 20% 0;
-    ${media.portrait`
-      padding: 20% 0 30%;
+  padding: 20% 0;K
+      padding: 30% 0 30%;
     `}
   & #introCopy {
     position: relative;
